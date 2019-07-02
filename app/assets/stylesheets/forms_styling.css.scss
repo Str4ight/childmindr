@@ -776,6 +776,12 @@
   background-color: #f6f6f6;
   padding: 15px !important; 
   height: 85px;
+  float: left !important;
+}
+@media only screen and (min-width: 1030px) {
+  .form_general_section .app_btn{
+    margin-left: 15px !important;
+  }
 }
 
 .form_general_section .modal_form_inner .triple_field ul li {
@@ -816,7 +822,7 @@
   color: #fff !important;
 }
 
-.user_firstname_display {
+.form_general_section .user_firstname_display {
   width: 313px;
   height: 49px;
   background-color: #FAFAFA;
@@ -828,7 +834,7 @@
   text-transform: capitalize;
 }
 
-.user_lastname_display {
+.form_general_section .user_lastname_display {
   width: 313px;
   height: 49px;
   background-color: #FAFAFA;
@@ -838,6 +844,10 @@
   color: rgba(0, 0, 0, 0.75);
   font-size: 0.875rem;
   text-transform: capitalize;
+}
+
+.form_general_section .modal_form_inner_section .app_btn {
+  margin-left: 0px !important;
 }
 
 

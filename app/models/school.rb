@@ -23,7 +23,6 @@ class School < ApplicationRecord
   validates_presence_of :category_zone_id, presence: true, message: "can't be blank"
   validates_presence_of :category_town_id, presence: true, message: "can't be blank"
   validates_presence_of :about, presence: true, message: "can't be blank"
-  validates_presence_of :category_schooltype_id, presence: true, message: "can't be blank"
   validates_presence_of :pupils, numericality: { only_integer: true }, message: "can't be blank"
   validates_presence_of :start_age, numericality: { only_integer: true }, message: "can't be blank"
   validates_presence_of :end_age, numericality: { only_integer: true }, message: "can't be blank"
