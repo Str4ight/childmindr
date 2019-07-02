@@ -153,7 +153,7 @@ cz05 = CategoryZone.create!(name:'Accra South')
 
 
 CategorySearch.delete_all
-cts01 = CategorySearch.create!(name:'Search by School Name')
+cts01 = CategorySearch.create!(name:'Search by Nursery Name')
 cts02 = CategorySearch.create!(name:'Search by Town')
 
 
