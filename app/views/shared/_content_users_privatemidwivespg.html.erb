@@ -9,7 +9,7 @@
           <%= search_form_for @search, url: search_private_midwives_path do |f| %>
             <div>
               <%= f.select :category_gender_id_eq, options_from_collection_for_select(CategoryGender.all, "id", "name", @search.category_gender_id_eq), prompt: "Select Gender" %>
-              <%= f.grouped_collection_select :category_town_id_eq, CategoryZone.order(:name), :category_towns, :name, :id, :name, include_blank: false, prompt: "Select Area" %>
+              <%= f.select :category_town_id_eq, options_from_collection_for_select(CategoryTown.all, "id", "name", @search.category_town_id_eq), prompt: "Select Town" %>
             </div>
             <div><%= link_to "display all", search_private_midwives_path, style: "color:#fff;", class: "button btn_display" %></div>
             <div><%= f.submit class: "button btn_submit" %></div>
