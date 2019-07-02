@@ -1,0 +1,24 @@
+/*===================================================
+    Page: ratings
+    File: views/shared/_content_ratings.html.erb
+    File: views/schools/_show.html.erb
+  ===================================================*/
+
+.content_ratings {
+  margin-top: 5px;
+}
+
+.content_ratings .reviewer_rating .fa-star {
+  color: #DA9549 !important;
+}
+
+.content_ratings .reviewer_rating .fa-star-o {
+  color: #777 !important;
+}
+
+.content_ratings .rating_category_name {
+  color: #777 !important;
+  font-weight: bold;
+  font-size: 14px;
+  margin-left: 5px;
+}

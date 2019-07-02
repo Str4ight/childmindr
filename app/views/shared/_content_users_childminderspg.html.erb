@@ -1,0 +1,68 @@
+<!-- content_usertypes_general_styling.css -->
+<div class="medium-12 columns content_users_babysitterspg_section content_usertypes_section">
+  <div class="content_inner">
+    <div class="page_content">
+
+      <!-- search_section -->
+      <div class="user_search_section">
+        <div class="serach_block">
+          <%= search_form_for @search, url: search_childminders_path do |f| %>
+            <div>
+              <%= f.select :category_gender_id_eq, options_from_collection_for_select(CategoryGender.all, "id", "name", @search.category_gender_id_eq), prompt: "Select Gender" %>
+              <%= f.grouped_collection_select :category_town_id_eq, CategoryZone.order(:name), :category_towns, :name, :id, :name, include_blank: false, prompt: "Select Area" %>
+            </div>
+            <div><%= link_to "display all", search_childminders_path, style: "color:#fff;", class: "button btn_display" %></div>
+            <div><%= f.submit class: "button btn_submit" %></div>
+          <% end %>
+        </div>
+      </div>
+      <!-- search_section -->
+
+      <div class="clear"></div>
+
+      <!-- about_section -->
+      <div class="medium-12 columns image_cover">
+        <div class="medium-5 columns image_text">
+          <div class="text_content">
+            <div class="img_header">Childminder</div>
+            <div class="sub_text">
+              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprelets:</div>
+              <div>
+                <ul>
+                  <li><%= link_to "What is a Childminder?", "#" %></li>
+                  <li><%= link_to "Who is a Childminder?", "#" %></li>
+                </ul>
+              </div>
+              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</div>
+            </div>
+          </div>
+        </div>
+        <div class="medium-7 columns backgrd_img"><%= image_tag("img_homepg.png") %></div>
+      </div>
+      <!-- about_section -->
+
+      <div class="clear"></div>
+
+      <!-- data -->
+      <% if @users.present? %>
+        <div><%= render 'shared/search_usertype_data' %></div>
+      <% else %>
+        <div><%= render 'shared/content_no_listing' %></div>
+      <% end %>
+      <!-- data -->
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,151 @@
+<!-- content_usertypes_general_styling.css -->
+<div class="search_data">
+  <ul>
+    <% @users.each do |user| %>
+      <li class="medium-12 columns user_block">
+        <div class="user_inner_block">
+          <div class="medium-2 columns left_content">
+            <div class="school_img">
+              <% if user.image.present? %>
+                <%= link_to(cl_image_tag("#{user.image}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]), user) %>
+              <% else %>
+                <%= link_to(image_tag('img_profile_default.png'), user_path(user)) %>
+              <% end %>
+            </div>
+            <% if user.service_provider? %>
+              <% if user.price.present? %>
+                <div class="user_charge"><%= "¢#{user.price}0/hour" %></div>
+              <% else %>
+                <div class="user_charge">no stated price</div>
+              <% end %>
+            <% end %>
+
+          </div>
+          <div class="medium-10 columns middle_content">
+            <div class="upper_text">
+              <% if user.service_provider? %>
+                <span class="user_headline">
+                  <span class="user_type">
+                    <% if user.category_service.present? %>
+                      <%= "#{user.category_service.name}" %>
+                    <% end %>
+                  </span>
+                  <span>in</span>
+                  <span>
+                    <% if user.category_town.present? %>
+                      <span><%= user.category_town.category_zone.name %></span>
+                      <span>/</span>
+                      <span><%= user.category_town.name %></span>
+                    <% end %>
+                  </span>
+                </span>
+              <% else %>
+                <span class="user_headline">
+                  <span class="user_type"><%= "#{user.firstname} #{user.lastname}" %></span>
+                  <span>in</span>
+                  <span>
+                    <% if user.category_town.present? %>
+                      <span><%= user.category_town.category_zone.name %></span>
+                      <span>/</span>
+                      <span><%= user.category_town.name %></span>
+                    <% else %>
+                      --
+                    <% end %>
+                  </span>
+                </span>
+              <% end %>
+              <span class="line_break"><br/></span>
+              <!-- ratings_section -->
+              <% if user.service_provider? %>
+                <span><%= render 'shared/content_overall_avg_ratings_index_user', user: user %></span>
+              <% end %>
+              <!-- ratings_section -->
+            </div>
+            <div class="lower_text">
+              <div class="user_name">
+                <span>
+                  <% if user.firstname.present? %>
+                    <%= "#{user.firstname}" %>
+                  <% else %>
+                    <%= "-" %>
+                  <% end %>
+                </span>
+                <span>
+                  <% if user.service_provider? %>
+                  <span>-</span>
+                  <span class="user_type">
+                    <% if user.category_service.present? %>
+                      <%= "#{user.category_service.name}" %>
+                    <% end %>
+                  </span>
+                  <span>in</span>
+                  <span>
+                    <% if user.category_town.present? %>
+                      <span><%= user.category_town.category_zone.name %></span>
+                      <span>/</span>
+                      <span><%= user.category_town.name %></span>
+                    <% end %>
+                  </span>
+                  <% end %>
+                </span>
+                <span class="line_break"><br/></span>
+                <span class="last_logged_in">
+                  <%# if user.current_sign_in_at.strftime('%a, %d %b %Y') == Date.today %>
+                  <% if user.last_sign_in_at == Date.today %>
+                    <span>Logged</span>
+                    <span>in</span>
+                    <span>today</span>
+                    <span>ago</span>
+                  <% else %>
+                    <span>Logged</span>
+                    <span>in</span>
+                    <span><%= time_ago_in_words(user.last_sign_in_at) %></span>
+                    <span>ago</span>
+                  <% end %>
+                </span>
+              </div>
+              <div class="clear"></div>
+              <% if user.about.present? %>
+                <div class="about_user"><%= raw "#{user.about}".truncate(350) %></div>
+              <% else %>
+                <div class="non_about_user">
+                  <div class="medium-12 columns first_block"></div>
+                  <div class="clear"></div>
+                  <div class="medium-10 columns second_block"></div>
+                  <div class="clear"></div>
+                  <div class="medium-8 columns third_block"></div>
+                  <div class="clear"></div>
+                  <div class="message_content_outter">
+                    <div class="message_content childcarer_section"><%= user.firstname %> currently has limited profile info</div>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+            <div class="user_buttons">
+              <ul>
+                <li><div class="main_btns btn_view"><%= link_to "view profile", user_path(user) %></div></li>
+                <li>
+                  <div class="main_btns btn_message">
+                    <% if user_signed_in? %>
+                      <% if current_user != user %>
+                        <%= mail_to "#{user.email}" do %>
+                          <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                          <span>message</span>
+                        <% end %>
+                      <% end %>
+                    <% else %>
+                      <%= link_to register_path do %>
+                        <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                        <span>message</span>
+                      <% end %>
+                    <% end %>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>

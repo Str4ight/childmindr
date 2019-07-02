@@ -1,0 +1,217 @@
+<!-- content_usertypes_general_styling.css -->
+<div class="medium-12 columns content_childcarerspg_section content_usertypes_section">
+  <div class="content_inner">
+    <div class="page_content">
+
+      <!-- search_section -->
+      <div class="user_search_section">
+        <div class="serach_block">
+          <%= search_form_for @search, url: child_carers_path do |f| %>
+            <div>
+              <%= f.select :category_service_id_eq, options_from_collection_for_select(CategoryService.all, "id", "name", @search.category_service_id_eq), prompt: "Select Service" %>
+              <%= f.grouped_collection_select :category_town_id_eq, CategoryZone.order(:name), :category_towns, :name, :id, :name, include_blank: false, prompt: "Select Area" %>
+            </div>
+            <div><%= link_to "display all", schools_path, style: "color:#fff;", class: "button btn_display" %></div>
+            <div><%= f.submit class: "button btn_submit" %></div>
+          <% end %>
+        </div>
+      </div>
+      <!-- search_section -->
+
+      <div class="clear"></div>
+
+      <!-- adbout_section -->
+      <div class="medium-12 columns image_cover">
+        <div class="medium-5 columns image_text">
+          <div class="text_content">
+            <div class="img_header">child carers</div>
+            <div class="sub_text">
+              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprelets:</div>
+              <div>
+                <ul>
+                  <li><%= link_to "What is a Child Carer?", "#" %></li>
+                  <li><%= link_to "Who is a Child Carer?", "#" %></li>
+                </ul>
+              </div>
+              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</div>
+            </div>
+          </div>
+        </div>
+        <div class="medium-7 columns backgrd_img"><%= image_tag("img_homepg.png") %></div>
+      </div>
+      <!-- adbout_section -->
+
+      <div class="clear"></div>
+
+      <!-- data -->
+      <% if @users.present? %>
+        <div class="search_data">
+          <ul>
+            <% @users.each do |user| %>
+              <li class="medium-12 columns user_block">
+                <div class="user_inner_block">
+                  <div class="medium-2 columns left_content">
+                    <div class="school_img">
+                      <% if user.image.present? %>
+                        <%= link_to(cl_image_tag("#{user.image}"), user_path(user)) %>
+                      <% else %>
+                        <%= link_to(image_tag('img_profile_default.png'), user_path(user)) %>
+                      <% end %>
+                      
+                    </div>
+                    <% if user.service_provider? %>
+                      <% if user.price.present? %>
+                        <div class="user_charge"><%= "¢#{user.price}0/hour" %></div>
+                      <% else %>
+                        <div class="user_charge">no stated price</div>
+                      <% end %>
+                    <% end %>
+
+                  </div>
+                  <div class="medium-10 columns middle_content">
+                    <div class="upper_text">
+                      <% if user.service_provider? %>
+                        <span class="user_headline">
+                          <span class="user_type">
+                            <% if user.category_service.present? %>
+                              <%= "#{user.category_service.name}" %>
+                            <% end %>
+                          </span>
+                          <span>in</span>
+                          <span>
+                            <% if user.category_town.present? %>
+                              <span><%= user.category_town.category_zone.name %></span>
+                              <span>/</span>
+                              <span><%= user.category_town.name %></span>
+                            <% end %>
+                          </span>
+                        </span>
+                      <% else %>
+                        <span class="user_headline">
+                          <span class="user_type"><%= "#{user.firstname} #{user.lastname}" %></span>
+                          <span>in</span>
+                          <span>
+                            <% if user.category_town.present? %>
+                              <span><%= user.category_town.category_zone.name %></span>
+                              <span>/</span>
+                              <span><%= user.category_town.name %></span>
+                            <% else %>
+                              --
+                            <% end %>
+                          </span>
+                        </span>
+                      <% end %>
+                      <span class="line_break"><br/></span>
+                      <!-- ratings_section -->
+                      <% if user.service_provider? %>
+                        <span><%= render 'shared/content_overall_avg_ratings_index_user', user: user %></span>
+                      <% end %>
+                      <!-- ratings_section -->
+                    </div>
+                    <div class="lower_text">
+                      <div class="user_name">
+                        <span>
+                          <% if user.firstname.present? %>
+                            <%= "#{user.firstname}" %>
+                          <% else %>
+                            <%= "-" %>
+                          <% end %>
+                        </span>
+                        <span>
+                          <% if user.service_provider? %>
+                          <span>-</span>
+                          <span class="user_type">
+                            <% if user.category_service.present? %>
+                              <%= "#{user.category_service.name}" %>
+                            <% end %>
+                          </span>
+                          <span>in</span>
+                          <span>
+                            <% if user.category_town.present? %>
+                              <span><%= user.category_town.category_zone.name %></span>
+                              <span>/</span>
+                              <span><%= user.category_town.name %></span>
+                            <% end %>
+                          </span>
+                          <% end %>
+                        </span>
+                        <span class="line_break"><br/></span>
+                        <span class="last_logged_in">
+                          <%# if user.current_sign_in_at.strftime('%a, %d %b %Y') == Date.today %>
+                          <% if user.last_sign_in_at == Date.today %>
+                            <span>Logged</span>
+                            <span>in</span>
+                            <span>today</span>
+                            <span>ago</span>
+                          <% else %>
+                            <span>Logged</span>
+                            <span>in</span>
+                            <span><%= time_ago_in_words(user.last_sign_in_at) %></span>
+                            <span>ago</span>
+                          <% end %>
+                        </span>
+                      </div>
+                      <div class="clear"></div>
+                      <% if user.about.present? %>
+                        <div class="about_user"><%= raw "#{user.about}".truncate(350) %></div>
+                      <% else %>
+                        <div class="non_about_user">
+                          <div class="medium-12 columns first_block"></div>
+                          <div class="clear"></div>
+                          <div class="medium-10 columns second_block"></div>
+                          <div class="clear"></div>
+                          <div class="medium-8 columns third_block"></div>
+                        </div>
+                        <div class="message_content_outter">
+                          <div class="message_content childcarer_all_section"><%= user.firstname %> currently has limited profile info</div>
+                        </div>
+                      <% end %>
+                    </div>
+                    <div class="user_buttons">
+                      <ul>
+                        <li><div class="main_btns btn_view"><%= link_to "view profile", user_path(user) %></div></li>
+                        <li>
+                          <div class="main_btns btn_message">
+                            <% if user_signed_in? %>
+                              <% if current_user != user %>
+                                <%= mail_to "#{user.email}" do %>
+                                  <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                                  <span>message</span>
+                                <% end %>
+                              <% end %>
+                            <% else %>
+                              <%= link_to register_path do %>
+                                <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                                <span>message</span>
+                              <% end %>
+                            <% end %>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      <% else %>
+        <div><%= render 'shared/content_no_listing' %></div>
+      <% end %>
+      <!-- data -->
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

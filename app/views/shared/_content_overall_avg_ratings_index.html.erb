@@ -1,0 +1,55 @@
+<!-- ratings_section -->
+<span class="ratings">
+  <span class="rating_header">ratings</span>
+  <% if school.overall_avg_ratings == nil %>
+    <span class="stars">
+      <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+      <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+      <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+      <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+      <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+    </span>
+  <% elsif school.overall_avg_ratings == 1 %>
+    <span class="stars">
+      <span><i class="fa fa-star" aria-hidden="true"></i></span>
+      <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+      <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+      <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+      <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+    </span>
+  <% elsif school.overall_avg_ratings == 2 %>
+    <span class="stars">
+      <span><i class="fa fa-star" aria-hidden="true"></i></span>
+      <span><i class="fa fa-star" aria-hidden="true"></i></span>
+      <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+      <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+      <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+    </span>
+  <% elsif school.overall_avg_ratings == 3 %>
+    <span class="stars">
+      <span><i class="fa fa-star" aria-hidden="true"></i></span>
+      <span><i class="fa fa-star" aria-hidden="true"></i></span>
+      <span><i class="fa fa-star" aria-hidden="true"></i></span>
+      <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+      <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+    </span>
+  <% elsif school.overall_avg_ratings == 4 %>
+    <span class="stars">
+      <span><i class="fa fa-star" aria-hidden="true"></i></span>
+      <span><i class="fa fa-star" aria-hidden="true"></i></span>
+      <span><i class="fa fa-star" aria-hidden="true"></i></span>
+      <span><i class="fa fa-star" aria-hidden="true"></i></span>
+      <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+    </span>
+    <% elsif school.overall_avg_ratings == 5 %>
+    <span class="stars">
+      <span><i class="fa fa-star" aria-hidden="true"></i></span>
+      <span><i class="fa fa-star" aria-hidden="true"></i></span>
+      <span><i class="fa fa-star" aria-hidden="true"></i></span>
+      <span><i class="fa fa-star" aria-hidden="true"></i></span>
+      <span><i class="fa fa-star" aria-hidden="true"></i></span>
+    </span>
+  <% end %>
+  <span class="rating_count"><%= "( #{school.reviews.count} )" %></span>
+</span>
+<!-- ratings_section -->

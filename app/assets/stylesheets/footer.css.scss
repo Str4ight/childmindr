@@ -1,0 +1,138 @@
+/*===================================================
+    Page: footer
+    File: views/shared/_footer.html.erb
+  ===================================================*/
+
+.footer_section {
+  background-color: #808fba;
+}
+
+.footer_section .footer_list {
+  padding: 0px !important;
+}
+
+.footer_section .inner_section {
+  background-color: transparent;
+  padding: 15px 0px;
+}
+@media only screen and (min-width: 1025px) {
+  .footer_section .inner_section  {
+    width: 1000px;
+    margin: auto;
+    height: 400px;
+  }
+}
+
+.footer_section .footer_column {
+  padding: 0px !important;
+}
+@media only screen and (max-width: 1025px) {
+  .footer_section .footer_column  {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+
+.footer_section .footer_header {
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+.footer_section .full_list ul {
+  list-style: none;
+  margin: 0px;
+}
+
+.footer_section .full_list ul li a {
+  color: #fff !important;
+  text-transform: capitalize;
+  font-size: 12px;
+}
+
+.footer_section .divider {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  margin: 30px;
+}
+
+.footer_section .social_links {
+  margin-top: 15px;
+}
+
+.footer_section .social_links ul {
+  list-style: none;
+  margin: 0px;
+}
+@media only screen and (max-width: 1025px) {
+  .footer_section .social_links ul  {
+    background-color: transparent;
+    width: 171px;
+    height: 37px;
+    margin: auto;
+  }
+}
+
+.footer_section .social_links ul li {
+  float: left;
+}
+
+.footer_section .social_links ul li a {
+  background-color: #bc4469;
+  display: inline-block;
+  padding: 10px 12px;
+  margin-right: 5px;
+  border-radius: 200px;
+  color: #fff !important;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.footer_section .social_links ul li a:hover {
+  opacity: 0.7;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.footer_section .data_info {
+  color: #fff !important;
+  font-size: 12px;
+  text-align: center;
+}
+
+.footer_section .footer_divider {
+  margin: 0px 10px;
+}
+@media only screen and (max-width: 460px) {
+  .footer_section .footer_divider {
+    display: none;
+  }
+}
+
+.footer_section .data_info a {
+  color: #fff !important;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 460px) {
+  .footer_section .break {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

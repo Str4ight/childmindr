@@ -1,0 +1,288 @@
+/*===================================================
+    Page: Modals
+    File: views/users/_show/_modal_review_user_rating.html.erb
+  ===================================================*/
+
+.modal_general_design .modal_header {
+  background-color: #808fba;
+  padding: 15px;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.modal_general_design .form_general_section {
+  padding: 0px !important;
+}
+
+.modal_general_design .rate_btn {
+  background-color: #3a98a2 !important;
+  width: 100%;
+  margin: 15px 0px 0px !important;
+  text-transform: capitalize;
+}
+
+.modal_general_design .modal_content {
+  padding: 0px !important;
+}
+
+.modal_general_design label {
+  color: #777 !important;
+}
+
+.modal_general_design .section_rating {
+  float: left;
+}
+
+.modal_general_design .rating_selector {
+  background-color: transparent;
+  margin-right: 15px;
+  width: 200px;
+}
+@media only screen and (max-width: 650px) {
+  .modal_general_design .rating_selector {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .modal_general_design #reviewuser_category_ratingcommunication_id {
+    margin-bottom: 0px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .modal_general_design #reviewuser_category_ratingclean_id {
+    margin-bottom: 0px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .modal_general_design #reviewuser_category_ratingfood_id {
+    margin-bottom: 0px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .modal_general_design #reviewuser_category_ratingsetting_id {
+    margin-bottom: 0px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .modal_general_design #review_category_ratingteaching_id {
+    margin-bottom: 0px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .modal_general_design #review_category_ratingfacility_id {
+    margin-bottom: 0px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .modal_general_design #review_category_ratingfood_id {
+    margin-bottom: 0px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .modal_general_design #review_category_ratingmusic_id {
+    margin-bottom: 0px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .modal_general_design #review_category_ratingsport_id {
+    margin-bottom: 0px;
+  }
+}
+
+.modal_general_design .rating_star {
+  background-color: #f6f6f6;
+  padding: 6px 10px;
+  height: 38px;
+  margin-bottom: 15px;
+  text-align: center;
+  width: 350px;
+}
+@media only screen and (max-width: 650px) {
+  .modal_general_design .rating_star {
+    width: 100%;
+  }
+}
+
+.modal_general_design .section_rating ul {
+  list-style-type: none !important;
+  margin: 0px !important;
+}
+
+.modal_general_design .section_rating ul li {
+  float: left;
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+.modal_general_design .inner_star_list {
+  background-color: transparent;
+  height: 25px;
+  width: 230px;
+  margin: auto;
+}
+
+.modal_general_design .yellow_star {
+  color: #DA9549 !important;
+}
+
+.modal_general_design .gray_star {
+  color: #777 !important;
+}
+
+.rate_info {
+  background-color: #f6f6f6;
+  color: #3a98a2 !important;
+  font-size: 12px;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  text-align: center;
+  padding: 5px;
+}
+
+.rating_header {
+  background-color: transparent;
+  color: #3a98a2 !important;
+  font-size: 10px !important;
+  letter-spacing: 1px !important;
+  width: 115px !important;
+  margin-right: 5px !important;
+  padding: 5px !important;
+  text-align: right;
+  text-transform: capitalize;
+}
+
+.rating_header a {
+  color: #3a98a2 !important;
+  margin-right: 3px; 
+}
+
+.modal_general_design .admin_section {
+  background-color: transparent;
+}
+
+
+.modal_general_design .create_btn a {
+  font-size: 17px;
+  text-align: center;
+  text-transform: capitalize;
+  word-spacing: 2px;
+  background-color: #3a98a2;
+  color: #fff !important;
+  font-weight: bold;
+  padding: 5px 25px;
+  border: 2px solid #7ac5cb;
+  border-radius: 5px;
+  width: 100%;
+  display: inline-block;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+
+.modal_general_design .create_btn a:hover {
+  color: #3a98a2 !important;
+  background-color: #fff;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.modal_general_design .data_container {
+  background-color: #f6f6f6;
+  margin-top: 15px;
+  padding: 10px;
+}
+
+.modal_general_design .data_header {
+  background-color: #777;
+  color: #fff !important;
+  font-size: 12px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  text-align: center;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.modal_general_design .listed_contents ul {
+  list-style-type: none !important;
+  margin: 0px !important;
+}
+
+.modal_general_design .listed_contents ul li {
+  float: left;
+  margin-right: 5px;
+  font-size: 11px;
+  text-transform: capitalize;
+  background-color: #808fba;
+  margin: 3px 5px 3px 0px;
+  padding: 5px;
+  color: #fff;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+}
+
+.modal_general_design .min_data_header {
+  background-color: transparent;
+}
+
+.modal_general_design .mini_data_content {
+  background-color: transparent;
+}
+
+.modal_general_design .school_section {
+  padding: 0px !important;
+}
+
+.modal_general_design .user_section {
+  padding: 0px !important;
+}
+
+.close-button {
+  background-color: transparent;
+  color: #fff !important;
+  padding: 15px !important;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.close-button:hover {
+  background-color: transparent;
+  opacity: 0.6;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+
+// -----------------------------
+//   workings
+// -----------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+

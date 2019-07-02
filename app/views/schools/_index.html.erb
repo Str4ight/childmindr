@@ -1,0 +1,170 @@
+<div class="medium-12 columns schools_index_section">
+  <div class="content_inner">
+    <div class="page_content">
+
+      <!-- search_section -->
+      <div class="search_section">
+        <div class="search_seletor">
+          <%= select_tag "list", options_from_collection_for_select(@category, "id", "name") %>
+        </div>
+        <!-- search_schoolname -->
+        <div class="statecontent 1">
+          <%= search_form_for(@search) do |f| %>
+            <div>
+              <%= f.search_field :name_cont, placeholder: "eg: Belmar Kindergarten" %>
+            </div>
+            <div><%= link_to "display all", schools_path, style: "color:#fff;", class: "button btn_display" %></div>
+            <div><%= f.submit class: "button btn_submit" %></div>
+          <% end %>
+        </div>
+        <!-- search_categories_zone_town -->
+        <div class="statecontent 2">
+          <%= search_form_for(@search) do |f| %>
+            <div>
+              <%= f.select :category_zone_id_eq, options_from_collection_for_select(CategoryZone.all, "id", "name", @search.category_zone_id_eq), prompt: "Select Zone" %>
+              <%= f.grouped_collection_select :category_town_id_eq, CategoryZone.order(:name), :category_towns, :name, :id, :name, include_blank: true, prompt: "Select Area" %>
+            </div>
+            <div><%= link_to "display all", schools_path, style: "color:#fff;", class: "button btn_display" %></div>
+            <div><%= f.submit class: "button btn_submit" %></div>
+          <% end %>
+        </div>
+        <!-- search_town -->
+        <div class="statecontent 3">
+          <%= search_form_for(@search) do |f| %>
+            <div>
+              <%= f.search_field :town_cont, placeholder: "eg: Cantoments" %>
+            </div>
+            <div><%= link_to "display all", schools_path, style: "color:#fff;", class: "button btn_display" %></div>
+            <div><%= f.submit class: "button btn_submit" %></div>           
+          <% end %>
+        </div>
+        <!-- search_schooltype -->
+        <div class="statecontent 4">
+          <%= search_form_for(@search) do |f| %>
+            <div>
+              <%= f.select :category_schooltype_id_eq, options_from_collection_for_select(CategorySchooltype.all, "id", "name", @search.category_schooltype_id_eq), prompt: "Select School" %>
+              <%= f.grouped_collection_select :category_town_id_eq, CategoryZone.order(:name), :category_towns, :name, :id, :name, include_blank: false, prompt: "Select Area" %>
+            </div>
+            <div><%= link_to "display all", schools_path, style: "color:#fff;", class: "button btn_display" %></div>
+            <div><%= f.submit class: "button btn_submit" %></div>           
+          <% end %>
+        </div>
+      </div>
+      <!-- search_section -->
+
+      <div class="clear"></div>
+      <div class="page_info">
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</div>
+      </div>
+
+      <!-- data -->
+      <% if @schools.present? %>
+        <div class="search_data">
+          <ul>
+            <% @schools.each do |school| %>
+              <li class="medium-12 columns school_block">
+                <div class="school_inner_block">
+                  <div class="medium-2 columns left_content">
+                    <div class="school_img">
+                      <% if school.image.present? %>
+                        <%= link_to(cl_image_tag("#{school.image}"), school_path(school)) %>
+                      <% else %>
+                        <%= link_to(image_tag('img_school.png'), school_path(school)) %>
+                      <% end %>
+                    </div>
+                  </div>
+                  <div class="medium-7 columns middle_content">
+                    <div class="upper_text">
+                      <span class="school_name">
+                        <% if school.name.present? %>
+                          <%= school.name %>
+                        <% else %>
+                          <%= "-" %>
+                        <% end %>
+                      </span>
+                      <!-- ratings_section -->
+                      <span><%= render 'shared/content_overall_avg_ratings_index', school: school %></span>
+                      <!-- ratings_section -->
+                    </div>
+                    <div class="lower_text">
+                      <div class="infor_row">
+                        <span class="school_header">location:</span>
+                        <span class="result_info">
+                          <span>
+                            <% if school.category_zone_id.present? %>
+                              <%= school.category_zone.name %>
+                            <% else %>
+                              <%= "-" %>
+                            <% end %>
+                          </span> 
+                          <span>/</span>
+                          <span>
+                            <% if school.category_town_id.present? %>
+                              <%= school.category_town.name %>
+                            <% else %>
+                              <%= "-" %>
+                            <% end %>
+                          </span>
+                        </span>
+                      </div>
+                      <div class="infor_row">
+                        <span class="school_header">pupils:</span>
+                        <span class="result_info">
+                          <% if school.pupils.present? %>
+                            <%= school.pupils %>
+                          <% else %>
+                            <%= "-" %>
+                          <% end %>
+                        </span>
+                      </div>
+                      <div class="infor_row">
+                        <span class="school_header">ages:</span>
+                        <span class="result_info">
+                          <% if school.start_age.present? && school.end_age.present?  %>
+                            <%= school.start_age %> - <%= school.end_age %>
+                          <% else %>
+                            <%= "-" %>
+                          <% end %>
+                        </span>
+                      </div>
+                      <div class="infor_row">
+                        <span class="school_header">type:</span>
+                        <span class="result_info">
+                          <% if school.category_schooltype_id.present? %>
+                            <%= school.category_schooltype.name %>
+                          <% else %>
+                            <%= "-" %>
+                          <% end %>
+                        </span>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="medium-3 columns right_content">
+                    <div class="btn_view"><%= link_to "view profile", school_path(school) %></div>
+                  </div>
+                </div>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      <% else %>
+        <div><%= render 'shared/content_no_listing' %></div>
+      <% end %>
+      <!-- data -->
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

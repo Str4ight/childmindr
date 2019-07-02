@@ -1,0 +1,97 @@
+<div class="medium-12 columns content_homepg_section">
+  <div class="content_inner">
+    <div class="page_content">
+      <div class="header">your local Childcare finder</div>
+      <div class="medium-12 columns image_cover">
+        <div class="medium-5 columns image_text">
+          <div class="text_content">
+            <div class="img_header">find local schools</div>
+            <div class="sub_text">Select the type of childcare school and town you are looking for.</div>
+          </div>
+          <div class="search_content">
+            <%= search_form_for @search, url: schools_path do |f| %>
+              <ul class="">
+                <li>
+                  <div class="serach_header">i am looking for a...</div>
+                  <div><%= f.select :category_schooltype_id_eq, options_from_collection_for_select(CategorySchooltype.all, "id", "name", @search.category_schooltype_id_eq), prompt: "Select School Type" %></div>
+                </li>
+                <li>
+                  <div class="serach_header">in the following area...</div>
+                  <div><%= f.grouped_collection_select :category_town_id_eq, CategoryZone.order(:name), :category_towns, :name, :id, :name, include_blank: false, prompt: "Select Area" %></div>
+                </li>
+                <li class="search_btn"><%= f.submit 'search' %></li>
+              </ul>
+            <% end %>
+          </div>
+        </div>
+        <div class="medium-7 columns backgrd_img"><%= image_tag("img_homepg.png") %></div>
+      </div>
+
+      <div class="medium-12 columns site_content">
+        <div class="minor_content"><span class="highlight">Childmindr.net</span> is an online social networking platform for parents looking to find the right schools for their children. Start your childcare search today, It's free and easy.</div>
+        <div>
+          <div class="content_header">Why choose Childmindr.net?</div>
+          <div>We're Ghana's largest childcrae school listing website. Over 2 million people have used our website to find childcare schools since we launched. You won't find a larger choice of childcare schools anywhere else!</div>
+        </div>
+      </div>
+
+      <div class="medium-12 columns search_click_content">
+        <div class="serach_cover_btn">
+          <%= link_to schools_path do %>
+          <div class="link_header">search a school now</div>
+          <div class="link_minor_content">Search in one minute, no registration, payment details required.</div>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="medium-12 columns reviews_content">
+        <div class="medium-12 columns inner_review_content">
+          <div class="medium-3 columns review_info">
+            <div class="inner_review_info">
+              <div class="quote_start"><%= image_tag("quote_start.png") %></div>
+              <div class="user_review">It's a fantastic site and I couldn't have found childcare without it.</div>
+              <div class="user_name">Helen, Parent</div>
+              <div class="user_loaction">Dorset</div>
+              <div class="quote_end"><%= image_tag("quote_end.png") %></div>
+            </div>
+          </div>
+          <div class="medium-3 columns review_info">
+            <div class="inner_review_info">
+              <div class="quote_start"><%= image_tag("quote_start.png") %></div>
+              <div class="user_review">It's a fantastic site and I couldn't have found childcare without it.</div>
+              <div class="user_name">Helen, Parent</div>
+              <div class="user_loaction">Dorset</div>
+              <div class="quote_end"><%= image_tag("quote_end.png") %></div>
+            </div>
+          </div>
+          <div class="medium-3 columns review_info">
+            <div class="inner_review_info">
+              <div class="quote_start"><%= image_tag("quote_start.png") %></div>
+              <div class="user_review">It's a fantastic site and I couldn't have found childcare without it.</div>
+              <div class="user_name">Helen, Parent</div>
+              <div class="user_loaction">Dorset</div>
+              <div class="quote_end"><%= image_tag("quote_end.png") %></div>
+            </div>
+          </div>
+          <div class="medium-3 columns review_info">
+            <div class="inner_review_info">
+              <div class="quote_start"><%= image_tag("quote_start.png") %></div>
+              <div class="user_review">It's a fantastic site and I couldn't have found childcare without it.</div>
+              <div class="user_name">Helen, Parent</div>
+              <div class="user_loaction">Dorset</div>
+              <div class="quote_end"><%= image_tag("quote_end.png") %></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+

@@ -1,0 +1,2 @@
+class CategorySearch < ApplicationRecord
+end

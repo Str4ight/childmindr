@@ -1,0 +1,73 @@
+<div><%= render 'shared/content_know_of_listing' %></div>
+<div class="medium-12 columns footer_section">
+  <div class="inner_section">
+    <div class="medium-12 columns footer_list">
+      <div class="medium-3 columns footer_column">
+        <div class="footer_header">help and advise</div>
+        <div class="full_list">
+          <ul>
+            <li><%= link_to "FAQs", faqs_path %></li>
+            <li><%= link_to "help and advise", help_and_advise_path %></li>
+            <li><%= link_to "latest ratings", latest_ratings_path %></li>
+            <li><%= link_to "safety advise", cookie_settiing_path %></li>
+            <li><%= link_to "provider documents", cookie_settiing_path %></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="medium-3 columns footer_column">
+        <div class="footer_header">search tips</div>
+        <div class="full_list">
+          <ul>
+            <li><%= link_to "finding the right school/nursey", finding_the_right_school_path %></li>
+            <li><%= link_to "parenting guides", parenting_guides_path %></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="medium-3 columns footer_column">
+        <div class="footer_header">terms</div>
+        <div class="full_list">
+          <ul>
+            <li><%= link_to "terms and conditions", terms_and_conditions_path %></li>
+            <li><%= link_to "privacy and cookie policy", privacy_and_cookie_policy_path %></li>
+            <li><%= link_to "cookie setting", cookie_settiing_path %></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="medium-3 columns footer_column">
+        <div class="footer_header">about us</div>
+        <div class="full_list">
+          <ul>
+            <li><%= link_to "about us", about_us_path %></li>
+            <li><%= link_to "contact us", contact_us_path %></li>
+            <% if user_signed_in? %>
+              <li><%= link_to "logout", destroy_user_session_path, method: :delete %></li>
+            <% else %>
+              <li><%= link_to "register", register_path %></li>
+              <li><%= link_to "login", login_path %></li>
+            <% end %>
+          </ul>
+        </div>
+        <div class="social_links">
+          <ul>
+            <li><%= link_to '', '#', class: "fa fa-youtube", target:"_blank" %></li>
+            <li><%= link_to '', '#', class: "fa fa-facebook-square", target:"_blank" %></li>
+            <li><%= link_to '', '#', class: "fa fa-twitter-square", target:"_blank" %></li>
+            <li><%= link_to '', '#', class: "fa fa-instagram", target:"_blank" %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="divider"></div>
+    <div class="data_info">
+      <span>© 2019 Childmindr.net - All rights reserved</span>
+      <span class="break"><br/></span>
+      <span class="footer_divider">|</span>
+      <span>Designed by</span>
+      <span><%= link_to "ARTLoeDesigns", "https://artloedesigns.herokuapp.com/" %></span>
+    </div>
+  </div>
+</div>

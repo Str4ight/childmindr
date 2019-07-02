@@ -1,0 +1,510 @@
+<div class="medium-12 columns user_show_section">
+  <div class="content_inner">
+    <div class="user_profile_details">
+
+      <!-- user_main_details -->
+      <div class="medium-12 columns user_main_details">
+        <div class="medium-2 user_left_secion">
+          <div class="memeber_title">
+            <% if @user.service_provider? %>
+              <span><%= "#{@user.firstname}" %></span>
+              <span>
+                <% if @user.category_service.present? %>
+                  (<%= "#{@user.category_service.name}" %>)
+                <% end %>
+              </span>
+            <% else %>
+              <span><%= "#{@user.firstname} #{@user.lastname}" %></span>
+            <% end %>
+          </div>
+          <div class="user_image_section">
+            <% if @user.image.present? %>
+              <%= cl_image_tag("#{@user.image}") %>
+            <% else %>
+              <%=image_tag('img_profile_default.png') %>
+            <% end %>
+          </div>
+          <% if @user.service_provider? %>
+            <% if @user.price.present? %>
+              <div class="user_price"><%= "¢#{@user.price}0/hour" %></div>
+            <% else %>
+              <div class="user_price">no stated price</div>
+            <% end %>
+          <% end %>
+          <div class="btn_edit">
+            <% if user_signed_in? %>
+              <% if current_user == @user || current_user.admin %>
+                <%= link_to 'edit profile', edit_user_path(@user) %>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+        <div class="medium-10 user_right_section">
+          <% if @user.service_provider? %>
+            <div class="user_more_details">
+              <span class="user_type">
+                <% if @user.category_service.present? %>
+                  <%= "#{@user.category_service.name}" %>
+                <% end %>
+              </span>
+              <span>in</span>
+              <span class="user_city">
+                <% if @user.category_town.present? %>
+                  <span><%= @user.category_town.category_zone.name %></span>
+                  <span>/</span>
+                  <span><%= @user.category_town.name %></span>
+                <% end %>
+              </span>
+            </div>
+          <% else %>
+            <div class="user_more_details">
+              <span class="user_type"><%= "#{@user.firstname} #{@user.lastname}" %></span>
+            </div>
+          <% end %>
+
+          <div class="user_name_info">
+            <% if @user.service_provider? %>
+              <span class="user_name"><%= "#{@user.firstname}" %></span>
+              <span class="user_type">
+                <% if @user.category_service.present? %>
+                  <%= "#{@user.category_service.name}" %>
+                <% end %>
+              </span>
+              <span>in</span>
+              <span class="user_city">
+                <% if @user.category_town.present? %>
+                  <span><%= @user.category_town.category_zone.name %></span>
+                  <span>/</span>
+                  <span><%= @user.category_town.name %></span>
+                <% end %>
+              </span>
+
+              <!-- admin_view -->
+              <% if signed_in? && current_user.admin %>
+                <span class="admin_details">
+                  <span class="desktop_view">
+                    <span class="member_ref">
+                      <% if @user.service_provider? || @user.parent? %>
+                        <span>Service Provider</span>
+                        <span>-</span>
+                        <span>Ref: <%= "#{@user.ref}" %></span>
+                      <% end %>
+                    </span>
+                    <span class="admin">
+                      <% if @user.admin %>
+                        <span>
+                          <a data-open="<%= dom_id(@user) %>_admin_acess">
+                            <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                            <span>admin</span>
+                          </a>
+                          <span><%= render 'shared/modal_admin_acess' %></span>
+                        </span>
+                      <% elsif @user.primary_admin %>
+                        <span>
+                          <a data-open="<%= dom_id(@user) %>_admin_acess">
+                            <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                            <span>primary admin</span>
+                          </a>
+                          <span><%= render 'shared/modal_admin_acess' %></span>
+                        </span>
+                      <% end %>
+                    </span>
+                  </span>
+                  <div class="mobile_view">
+                    <span class="member_ref">
+                      <% if @user.service_provider? %>
+                        <span>Service Provider</span>
+                        <span>-</span>
+                        <span>Ref: <%= "#{@user.ref}" %></span>
+                      <% end %>
+                    </span>
+                    <span class="admin">
+                      <% if @user.admin %>
+                        <span>
+                          <a data-open="<%= dom_id(@user) %>_admin_acess">
+                            <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                            <span>admin</span>
+                          </a>
+                          <span><%= render 'shared/modal_admin_acess' %></span>
+                        </span>
+                      <% elsif @user.primary_admin %>
+                        <span>
+                          <a data-open="<%= dom_id(@user) %>_admin_acess">
+                            <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                            <span>primary admin</span>
+                          </a>
+                          <span><%= render 'shared/modal_admin_acess' %></span>
+                        </span>
+                      <% end %>
+                    </span>
+                  </div>
+                </span>
+              <% end %>
+              <!-- admin_view -->
+            <% else %>
+              <span class="user_location">
+                <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                <span>Location: </span>
+              </span>
+              <span class="user_city">
+                <% if @user.category_town.present? %>
+                  <span><%= @user.category_town.category_zone.name %></span>
+                  <span>/</span>
+                  <span><%= @user.category_town.name %></span>
+                <% else %>
+                  <%= "--" %>
+                <% end %>
+              </span>
+
+              <!-- admin_view -->
+              <% if signed_in? && current_user.admin %>
+                <span class="admin_details">
+                  <span class="desktop_view">
+                    <span class="member_ref">
+                      <% if @user.parent? %>
+                        <span>Parent</span>
+                        <span>-</span>
+                        <span>Ref: <%= "#{@user.ref}" %></span>
+                      <% end %>
+                    </span>
+                  </span>
+                  <div class="mobile_view">
+                    <span class="member_ref">
+                      <% if @user.parent? %>
+                        <span>Parent</span>
+                        <span>-</span>
+                        <span>Ref: <%= "#{@user.ref}" %></span>
+                      <% end %>
+                    </span>
+                  </div>
+                </span>
+              <% end %>
+              <!-- admin_view -->
+
+            <% end %>
+          </div>
+          <!-- ratings_section -->
+          <% if @user.service_provider? %>
+            <span><%= render 'shared/content_overall_avg_ratings_show_user' %></span>
+          <% end %>
+          <!-- ratings_section -->
+          <div class="clear"></div>
+          <div class="user_listed_info">
+            <ul>
+              <% if @user.category_gender.present? %>
+                <li><%= @user.category_gender.name %></li>
+              <% end %>
+              
+              <% @user.checklists.each do |checklist| %>
+                <% if checklist.name == "Non-Smoker" %>
+                  <li><%= "Non-Smoker" %></li>
+                <% end %>
+              <% end %>
+              
+              <li>
+                <span>member since</span>
+                <span><%= @user.created_at.strftime("%b %Y") %></span>
+              </li>
+
+              <li>
+                <span>last updated</span>
+                <span><%= @user.updated_at.strftime("%b %Y") %></span>
+              </li>
+              <li>
+                <% if @user.last_sign_in_at == Date.today %>
+                  <span>Logged</span>
+                  <span>in</span>
+                  <span>today</span>
+                  <span>ago</span>
+                <% else %>
+                  <span>Logged</span>
+                  <span>in</span>
+                  <span><%= time_ago_in_words(@user.last_sign_in_at) %></span>
+                  <span>ago</span>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+          <div class="clear"></div>
+          <!-- ratings_section -->
+          <div class="user_action_btns">
+            <span class="btn_message">
+              <% if user_signed_in? %>
+                <% if current_user != @user %>
+                  <%= mail_to "#{@user.email}" do %>
+                    <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                    <span>message</span>
+                  <% end %>
+                <% end %>
+              <% else %>
+                <%= link_to register_path do %>
+                  <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                  <span>message</span>
+                <% end %>
+              <% end %>
+            </span>
+            <% if signed_in? %>
+              <% unless @user == current_user %>
+                <% unless @user.reviewed_user?(current_user) %>
+                  <% if @user.parent? || current_user.admin %>
+                    <span class="btn_rate">
+                      <a data-open="<%= dom_id(@user) %>_review_rating">
+                        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                        <span>add a review</span>
+                      </a>
+                      <div><%= render 'shared/modal_review_user_rating' %></div>
+                    </span> 
+                  <% end %>
+                <% end %>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <!-- user_main_details -->
+
+      <div class="divider"></div>
+      <% if @user.service_provider? %>
+        <div class="user_info_section user_summary">
+          <div class="content_header">my summary</div>
+          <div class="content_info">
+            <div class="medium-12 columns listed_chechlist">
+              <% if @user.checklists.present? %>
+                <ul>
+                  <% @user.checklists.each do |checklist| %>
+                    <li>
+                      <span class="check_icon"><i class="fa fa-check" aria-hidden="true"></i></span>
+                      <span><%= checklist.name %></span>
+                    </li>
+                  <% end %>
+                </ul>
+              <% else %>
+                <% if current_user == @user %>
+                  <div class="no_checklist"><%= link_to "add checklist", edit_user_path(@user) %></div>
+                  <div class="minor_text">We advise you complete the summary checklist to enable more views and clients to your profile.</div>
+                <% else %>
+                  <div class="no_checklist"><%= @user.firstname %> currently has no checklist summary</div>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+      <div class="clear"></div>
+
+      <div class="user_info_section user_about">
+        <div class="content_header">about me</div>
+        <div class="content_info">
+          <% if @user.about.present? %>
+            <div><%= raw @user.about %></div>
+          <% else %>
+            <% if signed_in? %>
+              <% if current_user == @user %>
+                <div class="no_checklist"><%= link_to "update profile information", edit_user_path(@user) %></div>
+              <% else %>
+                <div class="no_checklist">currently no info on member</div>
+              <% end %>
+            <% else %>
+              <div class="no_checklist">currently no info on member</div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+
+      <% if @user.service_provider? %>
+        <% if @user.qualifications.present? %>
+          <div class="user_info_section user_experience">
+            <div class="content_header">my experience</div>
+            <div class="content_info">
+              <% if @user.experience.present? %>
+                <div><%= raw @user.experience %></div>
+              <% else %>
+                <% if signed_in? %>
+                  <% if current_user == @user %>
+                    <div class="no_checklist"><%= link_to "update profile information", edit_user_path(@user) %></div>
+                  <% else %>
+                    <div class="no_checklist">currently no info on member</div>
+                  <% end %>
+                <% else %>
+                  <div class="no_checklist">currently no info on member</div>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+
+        <% if @user.qualifications.present? %>
+          <div class="user_info_section user_qualifications">
+            <div class="content_header">my qualifications</div>
+            <div class="content_info">
+              <% if @user.qualifications.present? %>
+                <div><%= raw @user.qualifications %></div>
+              <% else %>
+                <% if signed_in? %>
+                  <% if current_user == @user %>
+                    <div class="no_checklist"><%= link_to "update profile information", edit_user_path(@user) %></div>
+                  <% else %>
+                    <div class="no_checklist">currently no info on member</div>
+                  <% end %>
+                <% else %>
+                  <div class="no_checklist">currently no info on member</div>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+
+        <!-- user_availability -->   
+        <% if @user.mondays? || @user.tuesdays? || @user.wednesdays? || @user.thursdays? || @user.fridays? || @user.saturdays? || @user.sundays? %>     
+          <div class="medium-12 columns user_info_section user_availability">
+            <div class="content_header">my availability</div>
+            <div class="content_info">
+              <div class="medium-12 columns time_day_container">
+                <div class="medium-6 columns time_notes_section main_times">
+                  <% if @user.mondays? && @user.mstart_time.present? && @user.mend_time.present? %>
+                    <div class="main_day modays">
+                      <span class="check_icon"><i class="fa fa-check" aria-hidden="true"></i></span>
+                      <span class="day">mondays</span>
+                      <span><%= @user.mstart_time.strftime("%I:%M%p") %></span>
+                      <span>-</span>
+                      <span><%= @user.mend_time.strftime("%I:%M%p") %></span>
+                    </div>
+                  <% end %>
+                  <% if @user.tuesdays? && @user.tstart_time.present? && @user.tend_time.present? %>
+                    <div class="main_day tuesdays">
+                      <span class="check_icon"><i class="fa fa-check" aria-hidden="true"></i></span>
+                      <span class="day">tuesdays</span>
+                      <span><%= @user.tstart_time.strftime("%I:%M%p") %></span>
+                      <span>-</span>
+                      <span><%= @user.tend_time.strftime("%I:%M%p") %></span>
+                    </div>
+                  <% end %>
+                  <% if @user.wednesdays? && @user.wstart_time.present? && @user.wend_time.present? %>
+                    <div class="main_day wednesdays">
+                      <span class="check_icon"><i class="fa fa-check" aria-hidden="true"></i></span>
+                      <span class="day">wednesdays</span>
+                      <span><%= @user.wstart_time.strftime("%I:%M%p") %></span>
+                      <span>-</span>
+                      <span><%= @user.wend_time.strftime("%I:%M%p") %></span>
+                    </div>
+                  <% end %>
+                  <% if @user.thursdays? && @user.thstart_time.present? && @user.thend_time.present? %>
+                    <div class="main_day thursdays">
+                      <span class="check_icon"><i class="fa fa-check" aria-hidden="true"></i></span>
+                      <span class="day">thursdays</span>
+                      <span><%= @user.thstart_time.strftime("%I:%M%p") %></span>
+                      <span>-</span>
+                      <span><%= @user.thend_time.strftime("%I:%M%p") %></span>
+                    </div>
+                  <% end %>
+                  <% if @user.fridays? && @user.fstart_time.present? && @user.fend_time.present? %>
+                    <div class="main_day saturdays">
+                      <span class="check_icon"><i class="fa fa-check" aria-hidden="true"></i></span>
+                      <span class="day">fridays</span>
+                      <span><%= @user.fstart_time.strftime("%I:%M%p") %></span>
+                      <span>-</span>
+                      <span><%= @user.fend_time.strftime("%I:%M%p") %></span>
+                    </div>
+                  <% end %>
+                  <% if @user.saturdays? && @user.sstart_time.present? && @user.send_time.present? %>
+                    <div class="main_day fridays">
+                      <span class="check_icon"><i class="fa fa-check" aria-hidden="true"></i></span>
+                      <span class="day">saturdays</span>
+                      <span><%= @user.sstart_time.strftime("%I:%M%p") %></span>
+                      <span>-</span>
+                      <span><%= @user.send_time.strftime("%I:%M%p") %></span>
+                    </div>
+                  <% end %>
+                  <% if @user.sundays? && @user.sustart_time.present? && @user.suend_time.present? %>
+                    <div class="main_day sundays">
+                      <span class="check_icon"><i class="fa fa-check" aria-hidden="true"></i></span>
+                      <span class="day">sundays</span>
+                      <span><%= @user.sustart_time.strftime("%I:%M%p") %></span>
+                      <span>-</span>
+                      <span><%= @user.suend_time.strftime("%I:%M%p") %></span>
+                    </div>
+                  <% end %>
+                </div>
+                <div class="medium-6 columns time_notes_section main_times_notes">
+                  <% if @user.availability.present? %>
+                    <div class="av_header">notes on availability:</div>
+                    <div><%= raw @user.availability %></div>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% else %>
+          <div class="medium-12 columns user_info_section user_availability">
+            <div class="content_header">my availability</div>
+            <div class="content_info">
+              <div class="no_checklist">
+                <span><%= "#{@user.firstname}" %></span>
+                <span>currently has no stated availability</span>
+              </div>
+            </div>
+          </div>
+        <% end %>
+        <!-- user_availability -->
+
+        <div class="user_info_section user_fees">
+          <div class="content_header">my fees</div>
+          <% if @user.price.present? %>
+            <div class="content_info user_price"><%= "¢#{@user.price}0/hour" %></div>
+          <% else %>
+            <div class="content_info user_price">no stated price</div>
+          <% end %>
+        </div>
+
+        <!-- reviews -->
+        <div class="user_info_section user_reviews">
+          <% if @user.reviewusers.present? %>
+            <div class="content_header reviews_header">reviews & ratings <%= "(#{@user.reviewusers.count})" %></div>
+            <div class="content_info">
+              <div class="medium-12 columns reviews_rating_content">
+                <div class="reviews_rating_inner_content">
+                  <div class="reviews_ratings">
+                    <ul>
+                      <% @user.reviewusers.each do |review| %>
+                        <li>
+                          <div class="review_title_info">
+                            <div class="review_title"><%= review.title %></div>
+                            <div>
+                              <span class="minor_text_norm">Posted by</span>
+                              <span class="reviewer_img">
+                                <% if review.parent.image.present? %>
+                                  <%= link_to(cl_image_tag("#{review.parent.image}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]), "#") %>
+                                <% else %>
+                                  <%= link_to(image_tag('img_profile_default.png'), "#") %>
+                                <% end %>
+                              </span>
+                              <span class="reviewer_name"><%= link_to "#{review.parent.firstname}", "#" %></span>
+                              <span class="minor_text_norm">on</span>
+                              <span class="minor_text_norm"><%= review.created_at.strftime("%b/%d/%Y") %></span>
+                            </div>
+                          </div>
+                          <div class="reviewer_content"><%= review.content %></div>
+                          <!-- ratings_section -->
+                          <div>
+                            <!-- ratings_section -->
+                            <div><%= render 'shared/content_ratings_user', review: review %></div>
+                            <!-- ratings_section -->
+                          </div>
+                          <!-- ratings_section -->
+                        </li>
+                      <% end %>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+        <!-- reviews -->
+      <% end %>
+      <div class="compliance">This profile has been produced from information provided to us by the user. We have not verified or confirmed the accuracy of any of the information and members should undertake their own vigorous checks and references. Please ensure you read our <span class="weblink"><%= link_to "safety advice", "#" %></span> and information on how to <span class="weblink"><%= link_to "check childmindr provider documents", "#" %></span>.</div>
+    </div>
+  </div>
+</div>

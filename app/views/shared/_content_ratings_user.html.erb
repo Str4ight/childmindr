@@ -1,0 +1,228 @@
+<!-- ratings_section -->
+<div class="content_ratings">
+  <ul>
+    <li>
+      <!-- category_ratingcommunication -->
+      <div class="category_rating_teaching">
+        <% if review.category_ratingcommunication.name == "1" %>
+          <span class="reviewer_rating">
+            <span class="rating_stars">
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+            </span>
+          </span>
+        <% elsif review.category_ratingcommunication.name == "2" %>
+          <span class="reviewer_rating">
+            <span class="rating_stars">
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+            </span>
+          </span>
+        <% elsif review.category_ratingcommunication.name == "3" %>
+          <span class="reviewer_rating">
+            <span class="rating_stars">
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+            </span>
+          </span>
+        <% elsif review.category_ratingcommunication.name == "4" %>
+          <span class="reviewer_rating">
+            <span class="rating_stars">
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+            </span>
+          </span>
+        <% elsif review.category_ratingcommunication.name == "5" %>
+          <span class="reviewer_rating">
+            <span class="rating_stars">
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+            </span>
+          </span>
+        <% end %>
+        <span class="rating_category_name">Communication</span>
+      </div>
+      <!-- category_ratingclean -->
+      <div class="category_rating_facilities">
+        <% if review.category_ratingclean.name == "1" %>
+          <span class="reviewer_rating">
+            <span class="rating_stars">
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+            </span>
+          </span>
+        <% elsif review.category_ratingclean.name == "2" %>
+          <span class="reviewer_rating">
+            <span class="rating_stars">
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+            </span>
+          </span>
+        <% elsif review.category_ratingclean.name == "3" %>
+          <span class="reviewer_rating">
+            <span class="rating_stars">
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+            </span>
+          </span>
+        <% elsif review.category_ratingclean.name == "4" %>
+          <span class="reviewer_rating">
+            <span class="rating_stars">
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+            </span>
+          </span>
+        <% elsif review.category_ratingclean.name == "5" %>
+          <span class="reviewer_rating">
+            <span class="rating_stars">
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+            </span>
+          </span>
+        <% end %>
+        <span class="rating_category_name">Cleanliness</span>
+      </div>
+      <!-- category_rating_food -->
+      <div class="category_rating_food">
+        <% if review.category_ratingfood.name == "1" %>
+          <span class="reviewer_rating">
+            <span class="rating_stars">
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+            </span>
+          </span>
+        <% elsif review.category_ratingfood.name == "2" %>
+          <span class="reviewer_rating">
+            <span class="rating_stars">
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+            </span>
+          </span>
+        <% elsif review.category_ratingfood.name == "3" %>
+          <span class="reviewer_rating">
+            <span class="rating_stars">
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+            </span>
+          </span>
+        <% elsif review.category_ratingfood.name == "4" %>
+          <span class="reviewer_rating">
+            <span class="rating_stars">
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+            </span>
+          </span>
+        <% elsif review.category_ratingfood.name == "5" %>
+          <span class="reviewer_rating">
+            <span class="rating_stars">
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+            </span>
+          </span>
+        <% end %>
+        <span class="rating_category_name">Food</span>
+      </div>
+      <!-- category_ratingsetting -->
+      <div class="category_rating_music">
+        <% if review.category_ratingsetting.name == "1" %>
+          <span class="reviewer_rating">
+            <span class="rating_stars">
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+            </span>
+          </span>
+        <% elsif review.category_ratingsetting.name == "2" %>
+          <span class="reviewer_rating">
+            <span class="rating_stars">
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+            </span>
+          </span>
+        <% elsif review.category_ratingsetting.name == "3" %>
+          <span class="reviewer_rating">
+            <span class="rating_stars">
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+            </span>
+          </span>
+        <% elsif review.category_ratingsetting.name == "4" %>
+          <span class="reviewer_rating">
+            <span class="rating_stars">
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+            </span>
+          </span>
+        <% elsif review.category_ratingsetting.name == "5" %>
+          <span class="reviewer_rating">
+            <span class="rating_stars">
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+            </span>
+          </span>
+        <% end %>
+        <span class="rating_category_name">Setting</span>
+      </div>
+    </li>
+  </ul> 
+</div>
+<!-- ratings_section -->

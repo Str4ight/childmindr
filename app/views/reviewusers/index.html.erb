@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Reviewusers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th>User</th>
+      <th>Title</th>
+      <th>Category ratingclean</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reviewusers.each do |reviewuser| %>
+      <tr>
+        <td><%= reviewuser.content %></td>
+        <td><%= reviewuser.user_id %></td>
+        <td><%= reviewuser.title %></td>
+        <td><%= reviewuser.category_ratingclean_id %></td>
+        <td><%= link_to 'Show', reviewuser %></td>
+        <td><%= link_to 'Edit', edit_reviewuser_path(reviewuser) %></td>
+        <td><%= link_to 'Destroy', reviewuser, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reviewuser', new_reviewuser_path %>

@@ -1,0 +1,13 @@
+<!-- modal_general_design.css.scss -->
+<div class="reveal modal_general_design" id="<%= dom_id(@user) %>_review_rating" data-reveal>
+  <div class="modal_header">
+    <span><%= truncate("#{@user.firstname}", length: 40) %></span>
+    <span>|</span>
+    <span><%= truncate("#{@user.category_service.name}", length: 40) %></span>
+  </div>
+  <div class="rate_info">rate <%= "#{@user.firstname} services as a #{@user.category_service.name}" %></div>
+  <div class="modal_content"><%= render 'reviewusers/form' %></div>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>

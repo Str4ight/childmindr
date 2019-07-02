@@ -1,0 +1,822 @@
+/*===================================================
+    Page: website forms
+    File: views/users/sessions/_new.html.erb
+  ===================================================*/
+
+.form_general_section {
+  background-color: transparent;
+}
+
+.form_general_section .form_general_inner_section {
+  padding: 60px 15px 100px;
+  background-color: transparent;
+}
+@media only screen and (min-width: 550px) {
+  .form_general_section .form_general_inner_section  {
+    width: 500px;
+    margin: auto;
+  }
+}
+
+.form_general_section .user_inner_section {
+  padding: 60px 15px 100px;
+  background-color: transparent;
+}
+@media only screen and (min-width: 1030px) {
+  .form_general_section .user_inner_section  {
+    width: 1000px;
+    margin: auto;
+  }
+}
+
+.form_general_section .modal_form_inner_section {
+  padding: 15px 0px 0px 0px !important;
+  background-color: transparent;
+}
+
+.form_general_section .section_header {
+  color: #3a98a2;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 5px 0px 25px;
+  text-align: center;
+  line-height: 32px;
+  text-transform: capitalize;
+}
+
+.form_general_section #user_email {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 50px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #user_password {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 50px;
+}
+
+.form_general_section #user_password_confirmation {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 50px;
+}
+
+.form_general_section .input_section {
+  margin-bottom: 15px;
+}
+
+.form_general_section .minor_info {
+  margin-top: 3px;
+  color: #737373;
+  font-size: 11px;
+}
+
+.form_general_section #user_firstname {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 50px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #user_lastname {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 50px;
+  margin-bottom: 0px;
+}
+
+.form_general_section input[type="submit"] {
+  font-size: 19px;
+  margin: 0px 0px 20px 0px;
+  text-transform: capitalize;
+  word-spacing: 2px;
+  background-color: #3a98a2;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  font-weight: bold;
+  padding: 5px 25px;
+  border: 2px solid #7ac5cb;
+  margin-top: 30px;
+  border-radius: 5px !important;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.form_general_section .remember_box {
+  text-align: center;
+}
+
+.form_general_section #user_remember_me {
+  margin-right: 3px;
+}
+
+.form_general_section .form_links {
+  text-align: center;
+}
+
+.form_general_section .form_links a {
+  color: #bc4469 !important;
+  font-size: 12px;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+}
+
+.form_general_section .registration_inner_section .checkbox {
+  float: left;
+  margin-right: 7px;
+}
+
+.form_general_section .registration_inner_section .minor_info {
+  display: inherit;
+}
+
+.form_general_section .weblink a {
+  color: #bc4469 !important;
+}
+
+.form_general_section .double_field {
+  background-color: transparent;
+  margin-bottom: 10px;
+}
+
+.form_general_section .double_field ul {
+  list-style-type: none !important;
+  margin: 0px !important;
+}
+
+@media only screen and (min-width: 550px) {
+  .form_general_section .double_field ul .first_content {
+    float: left;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  .form_general_section .double_field ul .second_content {
+    float: right;
+  }
+}
+
+.form_general_section .double_field select {
+  width: 100% !important;
+}
+@media only screen and (min-width: 550px) {
+  .form_general_section .double_field select {
+    width: 230px !important;
+  }
+}
+
+.form_general_section .double_main_field ul {
+  list-style-type: none !important;
+  margin: 0px !important;
+}
+
+.form_general_section .double_main_field ul li {
+  width: 475px;
+}
+@media only screen and (max-width: 1030px) {
+  .form_general_section .double_main_field ul li {
+    width: 100%;
+  }
+}
+
+.form_general_section .double_main_field ul .first_section {
+  margin-right: 15px;
+  float: left;
+}
+
+.form_general_section .double_main_field ul .second_section {
+  float: right;
+}
+
+.form_general_section #user_price {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 50px;
+  margin-bottom: 0px;
+}
+@media only screen and (max-width: 1030px) {
+  .form_general_section #user_price {
+    margin-bottom: 15px;
+  }
+}
+
+.form_general_section #user_category_service_id {
+  height: 50px;
+}
+
+.form_general_section #user_category_town_id {
+  margin-bottom: 0px;
+}
+
+.form_general_section .user_inner_section {
+  background-color: transparent !important;
+}
+
+.form_general_section .triple_field {
+  margin-bottom: 15px;
+  padding: 0px !important;
+}
+
+.form_general_section .triple_field ul {
+  list-style-type: none !important;
+  margin: 0px !important;
+}
+
+.form_general_section .triple_field ul li {
+  width: 313px;
+}
+@media only screen and (max-width: 1030px) {
+  .form_general_section .triple_field ul li {
+    width: 100%;
+  }
+}
+
+.form_general_section .triple_field ul .first_section {
+  float: left;
+  margin-right: 15px;
+}
+
+.form_general_section .triple_field ul .second_section {
+  float: left;
+}
+
+.form_general_section .triple_field ul .third_section {
+  float: right;
+}
+
+.form_general_section #user_category_gender_id {
+  height: 50px;
+}
+
+.form_general_section #user_category_country_id {
+  height: 50px;
+}
+
+
+.form_general_section #user_category_town_id {
+  height: 50px;
+}
+
+
+.form_general_section #user_category_segment_id {
+  height: 50px;
+}
+
+.form_general_section label {
+  color: #bc4469 !important;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.form_general_section .form_label {
+  color: #bc4469 !important;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.form_general_section .user_info_details {
+  padding: 0px !important;
+  margin-bottom: 15px;
+}
+
+.form_general_section .description_left {
+  padding-left: 0px !important;
+}
+@media only screen and (max-width: 1030px) {
+  .form_general_section .description_left{
+    width: 100%;
+    padding: 0px !important;
+    margin-bottom: 15px;
+  }
+}
+
+.form_general_section .description_right {
+  padding-right: 0px !important;
+}
+@media only screen and (max-width: 1030px) {
+  .form_general_section .description_right{
+    width: 100%;
+    padding: 0px !important;
+  }
+}
+
+.form_general_section .minor_general_info {
+  background-color: #f6f6f6;
+  font-size: 10px;
+  padding: 8px 15px;
+  color: #3a98a2;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+}
+
+@media only screen and (max-width: 1030px) {
+  .form_general_section #user_firstname {
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 1030px) {
+  .form_general_section #user_lastname {
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 1030px) {
+  .form_general_section #user_category_gender_id {
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 1030px) {
+  .form_general_section #user_category_town_id {
+    margin-bottom: 15px;
+  }
+}
+
+.form_general_section .days_time_section {
+  margin-bottom: 10px;
+  height: 57px;
+}
+
+.form_general_section .days_times {
+  margin-bottom: 15px;
+}
+@media only screen and (min-width: 515px) {
+  .form_general_section .days_times {
+    border: 1px solid #d1d1d1;
+    padding: 20px;
+  }
+}
+
+.form_general_section .days_times ul {
+  list-style-type: none !important;
+  margin: 0px !important;
+}
+
+.form_general_section .days_times ul li {
+  float: left;
+  margin-bottom: 10px;
+  margin-right: 5px;
+}
+
+.form_general_section .av_day {
+  width: 125px;
+  background-color: #f6f6f6;
+  height: 57px;
+  padding: 21px 8px;
+}
+
+.form_general_section .beginning_day {
+  height: 75px !important;
+  padding: 10px 8px 21px !important;
+}
+
+.form_general_section .av_time {
+  background-color: #f6f6f6;
+  padding: 10px 10px;
+}
+
+.form_general_section .boolean {
+  margin: 0px !important;
+  margin-right: 7px !important;
+}
+
+.form_general_section .avalilabilty_section {
+  margin-bottom: 15px;
+}
+
+.form_general_section .avalilabilty_section .cke_contents {
+  height: 140px !important;
+}
+
+.form_general_section .qualification_section .cke_contents {
+  height: 140px !important;
+}
+
+.form_general_section .date_label {
+  color: #bc4469 !important;
+  font-size: 12px;
+  text-transform: capitalize;
+  margin-bottom: 7px;
+}
+
+.form_general_section #user_mstart_time_4i {
+  width: 60px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #user_mstart_time_5i {
+  width: 50px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #user_mend_time_4i {
+  width: 60px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #user_mend_time_5i {
+  width: 50px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #user_tstart_time_4i {
+  width: 60px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #user_tstart_time_5i {
+  width: 50px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #user_tend_time_4i {
+  width: 60px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #user_tend_time_5i {
+  width: 50px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #user_wstart_time_4i {
+  width: 60px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #user_wstart_time_5i {
+  width: 50px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #user_wend_time_4i {
+  width: 60px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #user_wend_time_5i {
+  width: 50px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #user_thstart_time_4i {
+  width: 60px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #user_thstart_time_5i {
+  width: 50px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #user_thend_time_4i {
+  width: 60px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #user_thend_time_5i {
+  width: 50px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #user_fstart_time_4i {
+  width: 60px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #user_fstart_time_5i {
+  width: 50px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #user_fend_time_4i {
+  width: 60px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #user_fend_time_5i {
+  width: 50px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #user_sstart_time_4i {
+  width: 60px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #user_sstart_time_5i {
+  width: 50px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #user_send_time_4i {
+  width: 60px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #user_send_time_5i {
+  width: 50px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #user_sustart_time_4i {
+  width: 60px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #user_sustart_time_5i {
+  width: 50px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #user_suend_time_4i {
+  width: 60px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #user_suend_time_5i {
+  width: 50px;
+  margin-bottom: 0px;
+}
+
+.form_general_section .inner_section_days_times {
+  background-color: transparent;
+  width: 428px;
+  margin: auto;
+}
+
+.form_general_section .listed_checklist {
+  background-color: #f6f6f6;
+  padding: 15px;
+  border: 1px solid #f6f6f6;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.form_general_section .listed_checklist .check_boxes {
+  margin-bottom: 0px;
+  margin-right: 5px;
+}
+
+.form_general_section .listed_checklist label {
+  background-color: #3a98a2;
+  color: #fff !important;
+  font-size: 12px;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 227px;
+  float: left;
+  margin-right: 5px;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  font-weight: bold;
+}
+
+
+// ---------------------------------------
+//   image_upload_start
+// ---------------------------------------
+.form_general_section .image_container {
+  max-width: 960px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f6f6f6;
+  border-radius: 5px;
+}
+
+.form_general_section .avatar-upload {
+  position: relative;
+  max-width: 205px;
+  margin: 30px auto 0px;
+  .avatar-edit {
+    position: absolute;
+    right: 20px;
+    z-index: 1;
+    top: 2px;
+    input {
+      display: none;
+      + label {
+          display: inline-block;
+          width: 34px;
+          height: 34px;
+          margin-bottom: 0;
+          border-radius: 100%;
+          background: #FFFFFF;
+          border: 1px solid transparent;
+          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+          cursor: pointer;
+          font-weight: normal;
+          transition: all .2s ease-in-out;
+          &:hover {
+            background: #f1f1f1;
+            border-color: #d6d6d6;
+          }
+          &:after {
+              content: "\f040";
+              font-family: 'FontAwesome';
+              color: #757575;
+              position: absolute;
+              top: 10px;
+              left: 0;
+              right: 0;
+              text-align: center;
+              margin: auto;
+          }
+      }
+    }
+  }
+  .avatar-preview {
+    width: 192px;
+    height: 192px;
+    position: relative;
+    border-radius: 100%;
+    border: 6px solid #F8F8F8;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    > div {
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+
+.form_general_section .current_image_cover {
+  background-color: transparent;
+  height: 43px;
+  width: 43px;
+  display: inline-block;
+  border-radius: 200px;
+  border: 1px solid #F8F8F8;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: -12px;
+}
+
+.form_general_section .current_image img {
+  border-radius: 200px;
+  height: 100%;
+}
+
+.form_general_section .image_header {
+  color: #ccc;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 35px;
+  text-align: center;
+}
+@media only screen and (max-width: 1030px) {
+  .form_general_section .image_header{
+    font-size: 25px;
+  }
+}
+
+// ---------------------------------------
+//   image_upload_end
+// ---------------------------------------
+
+.form_general_section #school_name {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.form_general_section #school_email {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.form_general_section #school_offsetreportlink {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 50px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #school_address {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.form_general_section #school_postcode {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.form_general_section #school_telepone {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 50px;
+  margin-bottom: 0px;
+}
+
+.form_general_section #school_category_country_id {
+  height: 50px;
+}
+
+.form_general_section #school_category_region_id {
+  height: 50px;
+}
+.form_general_section #school_category_zone_id {
+  height: 50px;
+}
+
+.form_general_section #school_category_town_id {
+  height: 50px;
+}
+
+.form_general_section #school_category_schooltype_id {
+  height: 50px;
+}
+
+.form_general_section .minor_triple_field {
+  background-color: #f6f6f6;
+  padding: 15px !important; 
+  height: 85px;
+  margin-bottom: 10px;
+}
+
+.form_general_section .minor_triple_field ul .mini_field {
+  float: left;
+  width: 88px !important;
+  margin-right: 8px;
+}
+
+.form_general_section .minor_triple_field ul .mini_field:last-child {
+  margin-right: 0px !important;
+}
+
+.form_general_section #school_pupils {
+  margin-bottom: 0px !important
+}
+
+.form_general_section #school_start_age {
+  margin-bottom: 0px !important
+}
+
+.form_general_section #school_end_age {
+  margin-bottom: 0px !important
+}
+
+.form_general_section .app_btn {
+  background-color: #f6f6f6;
+  padding: 15px !important; 
+  height: 85px;
+}
+
+.form_general_section .modal_form_inner .triple_field ul li {
+  width: 100% !important;
+}
+
+.form_general_section .modal_form_inner .minor_triple_field {
+  background-color: #f6f6f6;
+  padding: 15px !important; 
+  height: 85px;
+  margin-bottom: 10px;
+}
+
+.form_general_section .modal_form_inner .minor_triple_field ul .mini_field {
+  float: left;
+  width: 88px !important;
+  margin-right: 8px;
+}
+
+.form_general_section .modal_form_inner .minor_triple_field ul .mini_field:last-child {
+  margin-right: 0px !important;
+}
+
+.form_general_section .modal_form_inner .description_left {
+  width: 100% !important;
+  padding: 0px !important;
+  margin-bottom: 15px;
+}
+
+.form_general_section .modal_form_inner .description_right {
+  width: 100% !important;
+  padding: 0px !important;
+  margin-bottom: 15px;
+}
+
+.form_general_section .close-button {
+  background-color: transparent;
+  color: #fff !important;
+}
+
+
+
+
+

@@ -1,0 +1,171 @@
+<!-- forms_styling.css.scss -->
+<%= simple_form_for(@user) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <div class="image_container">
+      <div class="image_header">upload profile image</div>
+      <div class="avatar-upload">
+        <div class="avatar-edit">
+          <%= f.file_field :image, type: 'file', id: "imageUpload", accept: ".png, .jpg, .jpeg" %>
+          <%= f.hidden_field(:image_cache) %>
+          <label for="imageUpload"></label>
+        </div>
+
+        <div class="avatar-preview">
+          <% if @user.image.present? %>
+            <span class="current_image_cover">
+              <span class="current_image"><%= cl_image_tag("#{@user.image}") %></span>
+            </span>
+          <% end %>
+          <div id="imagePreview" style="background-image: url(https://res.cloudinary.com/childmindrnet/image/upload/v1561111366/profile%20images/rhihx4rzxdet0mi9n8iz.png);"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="clear"></div>
+
+    <div class="medium-12 columns triple_field">
+      <ul>
+        <li class="first_section"><%= f.input :firstname, label: "First Name" %></li>
+        <li class="second_section"><%= f.input :lastname, label: "Last Name" %></li>
+        <li class="third_section"><%= f.association :category_gender, collection: CategoryGender.all, prompt: "select gender", label: "Gender" %></li>
+      </ul>
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="medium-12 columns triple_field">
+      <ul>
+        <li class="first_section"><%= f.association :category_country, collection: CategoryCountry.all, prompt: "select country", label: false %></li>
+        <li class="second_section"><%= f.grouped_collection_select :category_town_id, CategoryZone.order(:name), :category_towns, :name, :id, :name, include_blank: false, prompt: "Select Area" %></li>
+        <li class="third_section"><%= f.association :category_segment, collection: CategorySegment.all, prompt: "select segment", label: false %></li>
+      </ul>
+    </div>
+
+    <div class="clear"></div>
+
+    <div id="row_dim_section">
+      <div class="double_main_field">
+        <ul>
+          <li class="first_section"><%= f.input :price, label: "¢ Price (price / hr)" %></li>
+          <li class="second_section"><%= f.association :category_service, required: true, collection: CategoryService.all, prompt: "select service", label: "Service Category" %></li>
+        </ul>
+      </div>
+      <div class="clear"></div>
+      <div class="checklist_section">
+        <div class="form_label">tick checklist that applies to you</div>
+        <div class="medium-12 columns listed_checklist"><%= f.association :checklists, collection: Checklist.all.order(:name), label_method: :name, label: false, as: :check_boxes %></div>
+      </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="medium-12 columns user_info_details">
+      <div class="medium-6 columns description_left">
+        <div class="form_label">about me</div>
+        <%= javascript_include_tag Ckeditor.cdn_url %>
+        <%= f.cktext_area :about, value: @user.about, label: "About me", id: 'text_01' %>
+        <div class="minor_general_info">Write a clear description about yourself</div>
+      </div>
+      <div class="medium-6 columns description_right">
+        <div class="form_label">my experience</div>
+        <%= javascript_include_tag Ckeditor.cdn_url %>
+        <%= f.cktext_area :experience, value: @user.experience, label: "My Experience", id: 'text_02' %>
+        <div class="minor_general_info">Write a clear description about your experience</div>
+      </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="medium-12 columns user_info_details">
+      <div class="medium-6 columns description_left">
+        <div class="avalilabilty_times_section">
+          <div class="form_label">my availability Times</div>
+          <div class="days_times">
+            <div class="inner_section_days_times">
+              <div class="days_time_section">
+                <ul>
+                  <li class="av_day beginning_day">
+                    <div class="date_label">days</div>
+                    <%= f.input :mondays %>
+                  </li>
+                  <li class="av_time"><%= f.input :mstart_time, label: "From:" %></li>
+                  <li class="av_time"><%= f.input :mend_time, label: "To:" %></li>
+                </ul>
+              </div>
+              <div class="clear"></div>
+              <div class="days_time_section">
+                <ul>
+                  <li class="av_day"><%= f.input :tuesdays %></li>
+                  <li class="av_time"><%= f.input :tstart_time, label: false %></li>
+                  <li class="av_time"><%= f.input :tend_time, label: false %></li>
+                </ul>
+              </div>
+              <div class="clear"></div>
+              <div class="days_time_section">
+                <ul>
+                  <li class="av_day"><%= f.input :wednesdays %></li>
+                  <li class="av_time"><%= f.input :wstart_time, label: false %></li>
+                  <li class="av_time"><%= f.input :wend_time, label: false %></li>
+                </ul>
+              </div>
+              <div class="clear"></div>
+              <div class="days_time_section">
+                <ul>
+                  <li class="av_day"><%= f.input :thursdays %></li>
+                  <li class="av_time"><%= f.input :thstart_time, label: false %></li>
+                  <li class="av_time"><%= f.input :thend_time, label: false %></li>
+                </ul>
+              </div>
+              <div class="clear"></div>
+              <div class="days_time_section">
+                <ul>
+                  <li class="av_day"><%= f.input :fridays %></li>
+                  <li class="av_time"><%= f.input :fstart_time, label: false %></li>
+                  <li class="av_time"><%= f.input :fend_time, label: false %></li>
+                </ul>
+              </div>
+              <div class="clear"></div>
+              <div class="days_time_section">
+                <ul>
+                  <li class="av_day"><%= f.input :saturdays %></li>
+                  <li class="av_time"><%= f.input :sstart_time, label: false %></li>
+                  <li class="av_time"><%= f.input :send_time, label: false %></li>
+                </ul>
+              </div>
+              <div class="clear"></div>
+              <div class="days_time_section">
+                <ul>
+                  <li class="av_day"><%= f.input :sundays %></li>
+                  <li class="av_time"><%= f.input :sustart_time, label: false %></li>
+                  <li class="av_time"><%= f.input :suend_time, label: false %></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="medium-6 columns description_right">
+        <div class="avalilabilty_section">
+          <div class="form_label">my availability [additional notes]</div>
+          <%= javascript_include_tag Ckeditor.cdn_url %>
+          <%= f.cktext_area :availability, value: @user.availability, label: "My Availability", id: 'text_04' %>
+          <div class="minor_general_info">State times during the week and weekend when you are available</div>
+        </div>
+        <div class="qualification_section">
+          <div class="form_label">my qualifications</div>
+          <%= javascript_include_tag Ckeditor.cdn_url %>
+          <%= f.cktext_area :qualifications, value: @user.qualifications, label: "My Qualifications", id: 'text_03' %>
+          <div class="minor_general_info">List qualifications certfications you currently have</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Update Profile", class: "profile_btn" %>
+  </div>
+<% end %>

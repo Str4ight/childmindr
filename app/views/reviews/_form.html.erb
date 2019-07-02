@@ -1,0 +1,364 @@
+<%= simple_form_for [@school, @review] do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <div><%= f.input :title %></div>
+    <div><%= f.input :content %></div>
+
+    <div class="form_ratings">
+      <!-- rating_teaching -->
+      <div class="rating_communication">
+        <div class="section_rating rating_selector"><%= f.association :category_ratingteaching, collection: CategoryRatingteaching.all, prompt: "rate teaching", label: false %></div>
+        <div class="section_rating rating_star">
+          <div class="inner_star_list row_dim_teach star_zero teach0">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the teaching service"><i class="fa fa-info-circle" aria-hidden="true"></i></a>teaching:</li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_teach star_one teach1">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the teaching service"><i class="fa fa-info-circle" aria-hidden="true"></i></a>teaching:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_teach star_two teach2">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the teaching service"><i class="fa fa-info-circle" aria-hidden="true"></i></a>teaching:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_teach star_three teach3">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the teaching service"><i class="fa fa-info-circle" aria-hidden="true"></i></a>teaching:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_teach star_four teach4">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the teaching service"><i class="fa fa-info-circle" aria-hidden="true"></i></a>teaching:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_teach star_five teach5">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the teaching service"><i class="fa fa-info-circle" aria-hidden="true"></i></a>teaching:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- rating_facility -->
+      <div class="rating_communication">
+        <div class="section_rating rating_selector"><%= f.association :category_ratingfacility, collection: CategoryRatingfacility.all, prompt: "rate facility", label: false %></div>
+        <div class="section_rating rating_star">
+          <div class="inner_star_list row_dim_fac star_zero fac0">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the nursery/school facilities"><i class="fa fa-info-circle" aria-hidden="true"></i></a>facility:</li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_fac star_one fac1">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the nursery/school facilities"><i class="fa fa-info-circle" aria-hidden="true"></i></a>facility:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_fac star_two fac2">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the nursery/school facilities"><i class="fa fa-info-circle" aria-hidden="true"></i></a>facility:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_fac star_three fac3">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the nursery/school facilities"><i class="fa fa-info-circle" aria-hidden="true"></i></a>facility:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_fac star_four fac4">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the nursery/school facilities"><i class="fa fa-info-circle" aria-hidden="true"></i></a>facility:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_fac star_five fac5">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the nursery/school facilities"><i class="fa fa-info-circle" aria-hidden="true"></i></a>facility:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- rating_food -->
+      <div class="rating_communication">
+        <div class="section_rating rating_selector"><%= f.association :category_ratingfood, collection: CategoryRatingfood.all, prompt: "rate food", label: false %></div>
+        <div class="section_rating rating_star">
+          <div class="inner_star_list row_dim_sfod star_zero sfod0">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the food served at the nursery/school"><i class="fa fa-info-circle" aria-hidden="true"></i></a>food:</li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_sfod star_one sfod1">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the food served at the nursery/school"><i class="fa fa-info-circle" aria-hidden="true"></i></a>food:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_sfod star_two sfod2">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the food served at the nursery/school"><i class="fa fa-info-circle" aria-hidden="true"></i></a>food:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_sfod star_three sfod3">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the food served at the nursery/school"><i class="fa fa-info-circle" aria-hidden="true"></i></a>food:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_sfod star_four sfod4">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the food served at the nursery/school"><i class="fa fa-info-circle" aria-hidden="true"></i></a>food:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_sfod star_five sfod5">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the food served at the nursery/school"><i class="fa fa-info-circle" aria-hidden="true"></i></a>food:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- rating_music -->
+      <div class="rating_communication">
+        <div class="section_rating rating_selector"><%= f.association :category_ratingmusic, collection: CategoryRatingmusic.all, prompt: "rate music", label: false %></div>
+        <div class="section_rating rating_star">
+          <div class="inner_star_list row_dim_mus star_zero mus0">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the music lesson taught at the nursery/school"><i class="fa fa-info-circle" aria-hidden="true"></i></a>music:</li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_mus star_one mus1">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the music lesson taught at the nursery/school"><i class="fa fa-info-circle" aria-hidden="true"></i></a>music:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_mus star_two mus2">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the music lesson taught at the nursery/school"><i class="fa fa-info-circle" aria-hidden="true"></i></a>music:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_mus star_three mus3">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the music lesson taught at the nursery/school"><i class="fa fa-info-circle" aria-hidden="true"></i></a>music:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_mus star_four mus4">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the music lesson taught at the nursery/school"><i class="fa fa-info-circle" aria-hidden="true"></i></a>music:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_mus star_five mus5">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the music lesson taught at the nursery/school"><i class="fa fa-info-circle" aria-hidden="true"></i></a>music:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- rating_sports -->
+      <div class="rating_communication">
+        <div class="section_rating rating_selector"><%= f.association :category_ratingsport, collection: CategoryRatingsport.all, prompt: "rate sport", label: false %></div>
+        <div class="section_rating rating_star">
+          <div class="inner_star_list row_dim_spot star_zero spot0">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the activities taught at the nursery/school"><i class="fa fa-info-circle" aria-hidden="true"></i></a>sports:</li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_spot star_one spot1">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the activities taught at the nursery/school"><i class="fa fa-info-circle" aria-hidden="true"></i></a>sports:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_spot star_two spot2">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the activities taught at the nursery/school"><i class="fa fa-info-circle" aria-hidden="true"></i></a>sports:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_spot star_three spot3">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the activities taught at the nursery/school"><i class="fa fa-info-circle" aria-hidden="true"></i></a>sports:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_spot star_four spot4">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the activities taught at the nursery/school"><i class="fa fa-info-circle" aria-hidden="true"></i></a>sports:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_spot star_five spot5">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the activities taught at the nursery/school"><i class="fa fa-info-circle" aria-hidden="true"></i></a>sports:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- hidden fields -->
+    <div class="hide">
+      <% if user_signed_in? %>
+        <%= f.input :user_id, input_html: {value: current_user.id} %>
+        <%= f.input :school_id, input_html: {value: @school.id}  %>
+      <% end %>
+    </div>
+    <!-- hidden fields -->
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "add a review", class: "rate_btn" %>
+  </div>
+<% end %>
+
+<script>
+  $( function() {
+    $( document ).tooltip();
+  } );
+</script>

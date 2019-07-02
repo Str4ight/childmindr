@@ -1,0 +1,18 @@
+<div class="reveal modal_general_design" id="<%= dom_id(@school) %>_school_edit_form" data-reveal>
+  <div class="modal_header"><%= truncate("#{@school.name}", length: 40) %></div>
+  <div class="modal_content">
+
+    <!-- forms_styling.css.scss -->
+    <div class="medium-12 columns form_general_section">
+      <div class="modal_form_inner">
+        <div class="inner_form_content">
+          <%= render 'editmodal' %>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>

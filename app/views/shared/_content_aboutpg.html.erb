@@ -1,0 +1,118 @@
+<!-- static_pages_content.css.scss -->
+<div class="medium-12 columns content_static_pages content_aboutuspg_section ">
+  <div class="content_inner">
+    <div class="page_content">
+
+      <!-- search_section -->
+      <div class="search_section">
+        <div class="search_seletor">
+          <%= select_tag "list", options_from_collection_for_select(@category, "id", "name") %>
+        </div>
+        <!-- search_schoolname -->
+        <div class="statecontent 1">
+          <%= search_form_for @search, url: schools_path do |f| %>
+            <div>
+              <%= f.search_field :name_cont, placeholder: "eg: Belmar Kindergarten" %>
+            </div>
+            <div><%= link_to "display all", schools_path, style: "color:#fff;", class: "button btn_display" %></div>
+            <div><%= f.submit class: "button btn_submit" %></div>
+          <% end %>
+        </div>
+        <!-- search_categories_zone_town -->
+        <div class="statecontent 2">
+          <%= search_form_for @search, url: schools_path do |f| %>
+            <div>
+              <%= f.select :category_zone_id_eq, options_from_collection_for_select(CategoryZone.all, "id", "name", @search.category_zone_id_eq), prompt: "Select Zone" %>
+              <%= f.grouped_collection_select :category_town_id_eq, CategoryZone.order(:name), :category_towns, :name, :id, :name, include_blank: true, prompt: "Select Area" %>
+            </div>
+            <div><%= link_to "display all", schools_path, style: "color:#fff;", class: "button btn_display" %></div>
+            <div><%= f.submit class: "button btn_submit" %></div>
+          <% end %>
+        </div>
+        <!-- search_town -->
+        <div class="statecontent 3">
+          <%= search_form_for @search, url: schools_path do |f| %>
+            <div>
+              <%= f.search_field :town_cont, placeholder: "eg: Cantoments" %>
+            </div>
+            <div><%= link_to "display all", schools_path, style: "color:#fff;", class: "button btn_display" %></div>
+            <div><%= f.submit class: "button btn_submit" %></div>           
+          <% end %>
+        </div>
+        <!-- search_schooltype -->
+        <div class="statecontent 4">
+          <%= search_form_for @search, url: schools_path do |f| %>
+            <div>
+              <%= f.select :category_schooltype_id_eq, options_from_collection_for_select(CategorySchooltype.all, "id", "name", @search.category_schooltype_id_eq), prompt: "Select School" %>
+              <%= f.grouped_collection_select :category_town_id_eq, CategoryZone.order(:name), :category_towns, :name, :id, :name, include_blank: false, prompt: "Select Area" %>
+            </div>
+            <div><%= link_to "display all", schools_path, style: "color:#fff;", class: "button btn_display" %></div>
+            <div><%= f.submit class: "button btn_submit" %></div>           
+          <% end %>
+        </div>
+      </div>
+      <!-- search_section -->
+
+      <!-- content -->
+      <div class="clear"></div>
+      <div class="page_info">
+        <div class="page_header">about us</div>
+
+        <div class="page_section">
+          <div class="page_title">Childmindr.net</div>
+          <div class="page_text_info">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+        </div>
+
+        <div class="page_section">
+          <div class="page_text_info">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+        </div>
+
+        <div class="page_section">
+          <div class="page_title">rate and review</div>
+          <div class="page_text_info">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure <span class="weblink"><%= link_to "dolor", "#" %></span> in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+          <div class="listings">
+            <ul>
+              <li>duis aute irure dolor</li>
+              <li>qui officia deserunt mollit</li>
+              <li>qui officia deserunt mollit</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="page_section">
+          <div class="page_title">our company</div>
+          <div class="page_text_info">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+        </div>
+
+        <div class="page_section">
+          <div class="page_text_info">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+        </div>
+      </div>
+      <!-- content -->
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

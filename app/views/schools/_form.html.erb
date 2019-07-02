@@ -1,0 +1,123 @@
+<%= simple_form_for [@user, @school] do |f| %>
+  <%= f.error_notification %>
+
+  <!-- form_start -->
+  <div class="form-inputs">
+
+    <div class="image_container">
+      <div class="image_header">upload image</div>
+      <div class="avatar-upload">
+        <div class="avatar-edit">
+          <%= f.file_field :image, type: 'file', id: "imageUpload", accept: ".png, .jpg, .jpeg" %>
+          <%= f.hidden_field(:image_cache) %>
+          <label for="imageUpload"></label>
+        </div>
+
+        <div class="avatar-preview">
+          <% if @school.image.present? %>
+            <span class="current_image_cover">
+              <span class="current_image"><%= cl_image_tag("#{@school.image}") %></span>
+            </span>
+          <% end %>
+          <div id="imagePreview" style="background-image: url(https://res.cloudinary.com/childmindrnet/image/upload/v1561130114/profile%20images/xqedrxhl2hr7mpqu3wrv.png"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="medium-12 columns triple_field">
+      <ul>
+        <li class="first_section"><%= f.input :name, label: "bursery/school name", placeholder: "Wallisdean Infant Nursery" %></li>
+        <li class="second_section"><%= f.input :email, placeholder: "adminoffice@wallisdean-inf.gh" %></li>
+        <li class="third_section"><%= f.input :offsetreportlink, label: "offset report link" %></li>
+      </ul>
+    </div>
+
+    <div class="medium-12 columns triple_field">
+      <ul>
+        <li class="first_section"><%= f.input :address, label: "Address", placeholder: "Yiyiwa Drive, Abelemkpe" %></li>
+        <li class="second_section"><%= f.input :postcode, label: "Postcode", placeholder: "P.O.Box 6581" %></li>
+        <li class="third_section"><%= f.input :telepone, label: "Telephone", placeholder: "+233 28 9114070" %></li>
+      </ul>
+    </div>
+
+    <div class="medium-12 columns triple_field">
+      <ul>
+        <li class="first_section"><%= f.association :category_country, collection: CategoryCountry.all, prompt: "select country", label: "Select Country" %></li>
+        <li class="second_section"><%= f.association :category_region, collection: CategoryRegion.all, prompt: "select city", label: "City" %></li>
+        <li class="third_section">
+          <%= f.hidden_field :town %>
+          <%= f.association :category_zone, collection: CategoryZone.all, prompt: "select a zone", label: "category zone" %>
+          <%= f.grouped_collection_select :category_town_id, CategoryZone.order(:name), :category_towns, :name, :id, :name, include_blank: true, prompt: "town sub-category" %>
+        </li>
+      </ul>
+    </div>
+
+    <div class="medium-12 columns user_info_details">
+      <div class="medium-6 columns description_left">
+        <div class="form_label">about the nursery/school</div>
+          <%= javascript_include_tag Ckeditor.cdn_url %>
+          <%= f.cktext_area :about, value: @school.about, label: "About Us", id: 'text_01' %>
+        <div class="minor_general_info">Write a clear description about the nursery/school</div>
+      </div>
+      <div class="medium-6 columns description_right">
+        <div class="form_label">our childcare provision</div>
+          <%= javascript_include_tag Ckeditor.cdn_url %>
+          <%= f.cktext_area :service, value: @school.service, label: "Our Childcare Provision", id: 'text_02' %>
+        <div class="minor_general_info">Write a clear description about the services the nursery/school provides</div>
+      </div>
+    </div>
+
+    <div class="medium-12 columns triple_field">
+      <ul>
+        <li class="first_section"><%= f.association :category_schooltype, collection: CategorySchooltype.all, prompt: "select nursery/school type", label: "Select Nursery/School Type" %></li>
+        <li class="second_section">
+          <div class="medium-12 columns minor_triple_field">
+            <ul>
+              <li class="mini_field"><%= f.input :pupils, placeholder: "94" %></li>
+              <li class="mini_field"><%= f.input :start_age, placeholder: "5"  %></li>
+              <li class="mini_field"><%= f.input :end_age, placeholder: "11" %></li>
+            </ul>
+          </div>
+        </li>
+        <li class="third_section app_btn">
+          <div><%= f.input :approve %></div>
+          <div class="minor_general_info">By ticking the approve box, the nurser/school will be displayed to the public</div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- hidden_field -->
+    <div class="hide">
+      <%= f.hidden_field :user_id %>
+    </div>
+    <!-- hidden_field -->
+
+
+
+      
+      
+
+  </div>
+  <!-- form_end -->
+
+  <div class="clear"></div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Add A Nursery" %>
+  </div>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,110 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require foundation
+ *= require font-awesome
+ *= require_tree .
+ *= require_self
+ *= require foundation_and_overrides
+
+ */
+
+
+/*=========================================
+    general css content
+  =========================================*/
+
+/*gray:           rgb: 118 118 118  | hex: #777*/
+/*light pink:     rgb: 210 116 124  | hex: #fa777f*/
+/*deep pink:      rgb: 178 79 118   | hex: #cd4e78*/
+/*blue:           rgb: 123 136 188  | hex: #4e92cd*/
+/*turquois green: rgb: 102 151 160  | hex: #7ac5cb*/
+/*olive green:    rgb: 137 150 92   | hex: #bad57a*/
+
+
+body {
+  line-height: 1.5 !important;
+}
+
+.clear { 
+  clear: both; 
+}
+
+.hide { 
+  display: none; 
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus,
+button:focus
+ {
+    outline: none !important;
+}
+
+a:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
+/*----------------------------------------
+    devise signin/signout error messages
+----------------------------------------*/
+
+#notice_wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: rgba(55,71,90, 0.9) !important;
+}
+
+#notice_wrapper p {
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  padding: 25px 0px;
+  text-align: center;
+  margin: 0px;
+  font-size: 22px;
+  font-weight: bold;
+  text-shadow: 0px 4px 30px #fff;
+  letter-spacing: 1px;
+  font-weight: 200;
+  line-height: 28px;
+}
+
+#alert_wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: rgba(225, 71, 62, 0.9) !important;
+}
+
+#alert_wrapper p {
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  padding: 22px 0px;
+  text-align: center;
+  margin: 0px;
+  font-size: 25px;
+  font-weight: bold;
+  text-shadow: 0px 4px 30px #fff;
+  letter-spacing: 1px;
+  font-weight: 200;
+  line-height: 28px;
+}
+
+
+

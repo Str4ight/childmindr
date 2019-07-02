@@ -1,0 +1,419 @@
+/*===================================================
+    Page: about us page
+    File: views/static_pages/_content_aboutuspg.html.erb
+  ===================================================*/
+
+.content_static_pages {
+  padding: 0px !important;
+  background-color: transparent;
+}
+
+.content_static_pages .content_inner {
+  padding: 15px;
+}
+@media only screen and (min-width: 1025px) {
+  .content_static_pages .content_inner  {
+    width: 1000px;
+    margin: auto;
+    padding: 15px 0px;
+  }
+}
+
+.content_static_pages .search_section {
+  margin-bottom: 25px;
+}
+@media only screen and (min-width: 1025px) {
+  .content_static_pages .search_section  {
+    height: 60px;
+    border-bottom: 1px solid #3a98a2;
+  }
+}
+
+.content_static_pages .search_seletor #list {
+  display: block;
+  width: 23%;
+  height: 40px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px !important;
+  float: left;
+  margin-right: 10px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+@media only screen and (max-width: 1025px) {
+  .content_static_pages .search_seletor #list  {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+
+.content_static_pages #q_category_zone_id_eq {
+  display: block;
+  width: 23%;
+  height: 40px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px !important;
+  float: left;
+  margin-right: 10px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+@media only screen and (max-width: 1025px) {
+  .content_static_pages #q_category_zone_id_eq  {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+.content_static_pages #q_category_town_id_eq {
+  display: block;
+  width: 23%;
+  height: 40px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px !important;
+  float: left;
+  margin-right: 10px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+@media only screen and (max-width: 1025px) {
+  .content_static_pages #q_category_town_id_eq  {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+.content_static_pages #q_name_cont {
+  display: block;
+  width: 23%;
+  height: 40px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px !important;
+  float: left;
+  margin-right: 10px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+@media only screen and (max-width: 1025px) {
+  .content_static_pages #q_name_cont  {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+.content_static_pages #q_town_cont {
+  display: block;
+  width: 23%;
+  height: 40px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px !important;
+  float: left;
+  margin-right: 10px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+@media only screen and (max-width: 1025px) {
+  .content_static_pages #q_town_cont  {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+.content_static_pages .statecontent .button {
+  float: right;
+  background-color: #808fba;
+  margin-left: 10px;
+  text-transform: capitalize;
+  font-size: 14px;
+  margin-bottom: 0px;
+  height: 40px;
+  padding: 12px 30px;
+  font-weight: bold;
+  text-align: center;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+@media only screen and (max-width: 1025px) {
+  .content_static_pages .statecontent .button  {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
+
+.content_static_pages #q_category_schooltype_id_eq {
+  display: block;
+  width: 23%;
+  height: 40px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px !important;
+  float: left;
+  margin-right: 10px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+@media only screen and (max-width: 1025px) {
+  .content_static_pages #q_category_schooltype_id_eq  {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+.content_static_pages .statecontent .button:hover {
+  background-color: #3a98a2 !important;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.content_static_pages .page_info {
+  margin: 30px 0px;
+  padding: 0px !important;
+  text-align: left;
+}
+@media only screen and (max-width: 1025px) {
+  .content_static_pages .page_info  {
+    text-align: justify;
+  }
+}
+
+.content_static_pages .page_header {
+  color: #3a98a2;
+  font-size: 50px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 1025px) {
+  .content_static_pages .page_header  {
+    text-align: center !important;
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+
+.content_static_pages .page_title {
+  color: #bc4469;
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.content_static_pages .page_text_info {
+  color: #777;
+}
+
+.content_static_pages .page_section {
+  margin-bottom: 15px;
+}
+
+.content_static_pages .view_info_section {
+  margin-bottom: 60px;
+}
+
+.content_static_pages .inner_info_section {
+  background-color: #808fba;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.content_static_pages .inner_info_section .text {
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: capitalize;
+  text-align: center;
+}
+@media only screen and (max-width: 700px) {
+  .content_static_pages .inner_info_section .text  {
+    font-size: 20px;
+  }
+}
+
+.content_static_pages .contact_box {
+  margin: 10px 0px 15px;
+}
+
+.content_static_pages .contact_inner_box {
+  background-color: #bc4469;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  text-align: center;
+  padding: 15px;
+}
+@media only screen and (min-width: 700px) {
+  .content_static_pages .contact_inner_box  {
+    width: 600px;
+    margin: auto;
+  }
+}
+
+.content_static_pages .contact_header {
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+@media only screen and (max-width: 700px) {
+  .content_static_pages .contact_header  {
+    font-size: 20px;
+  }
+}
+
+.content_static_pages .site_weblink a {
+  color: #fff !important;
+}
+@media only screen and (max-width: 700px) {
+  .content_static_pages .site_weblink a  {
+    font-size: 14px;
+  }
+}
+
+.content_static_pages .weblink a {
+  color: #3a98a2 !important;
+}
+
+.content_static_pages .listings ul {
+  margin-left: 35px;
+}
+
+.content_static_pages .listings ul li {
+  color: #777;
+}
+
+.content_static_pages .listings ul li a {
+  color: #bc4469;
+}
+
+@media only screen and (max-width: 960px) {
+  .content_static_pages .school_name_section  {
+    width: 100%;
+    text-align: center;
+  }
+  .content_static_pages .school_location_section  {
+    width: 100%;
+    text-align: center;
+  }
+  .content_static_pages .school_rating_section  {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.content_static_pages .school_reviews {
+  margin-bottom: 60px;
+  padding: 0px !important;
+}
+
+.content_static_pages .school_reviews ul {
+  list-style-type: none !important;
+  margin: 0px !important;
+}
+
+.content_static_pages .school_reviews ul li {
+  background-color: transparent;
+  margin-bottom: 5px;
+  padding: 10px 5px;
+  border-bottom: 1px solid #3a98a2;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.content_static_pages .school_reviews ul li:hover {
+  background-color: rgba(58, 152, 162, 0.2);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.content_static_pages .school_list_review {
+  background-color: transparent;
+}
+
+.content_static_pages .school_reviews img {
+  width: 30px;
+  border-radius: 200px
+}
+
+@media only screen and (max-width: 960px) {
+  .content_static_pages .school_reviews img {
+    display: none;
+  }
+}
+
+.content_static_pages .school_name {
+  font-size: 12px;
+  color: #808fba;
+  font-weight: bold;
+  margin-left: 10px;
+  text-transform: capitalize;
+}
+@media only screen and (max-width: 960px) {
+  .content_static_pages .school_name {
+    margin-left: 0px;
+  }
+}
+
+.content_static_pages .school_loaction {
+  font-size: 12px;
+  color: #777;
+}
+
+.content_static_pages .school_stars .stars {
+  margin: 0px 1px;
+  font-size: 12px;
+}
+
+.content_static_pages .school_stars .fa-star {
+  color: #DA9549 !important;
+}
+
+.content_static_pages .school_rating_count {
+  font-size: 12px;
+}
+
+.content_static_pages .updated {
+  color: #3a98a2;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.content_static_pages .fa-star {
+  color: #DA9549 !important;
+}
+
+.content_latestreviewspg_pages .ratings {
+  font-size: 13px !important;
+}

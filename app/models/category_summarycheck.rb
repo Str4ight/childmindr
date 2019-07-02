@@ -1,0 +1,2 @@
+class CategorySummarycheck < ApplicationRecord
+end

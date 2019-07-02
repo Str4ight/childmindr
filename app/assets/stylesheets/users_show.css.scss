@@ -1,0 +1,555 @@
+/*===================================================
+    Page: user profile page
+    File: views/users/_show.html.erb
+  ===================================================*/
+
+.user_show_section {
+  padding: 0px !important;
+  background-color: transparent;
+}
+
+.user_show_section .content_inner {
+  padding: 15px;
+}
+@media only screen and (min-width: 1025px) {
+  .user_show_section .content_inner  {
+    width: 1000px;
+    margin: auto;
+    padding: 15px 0px;
+  }
+}
+
+.user_show_section .user_main_details {
+  padding: 0px !important;
+}
+
+.user_show_section .user_left_secion {
+  padding: 0px !important;
+  float: left;
+  background-color: transparent;
+}
+@media only screen and (max-width: 1025px) {
+  .user_show_section .user_left_secion  {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .user_show_section .memeber_title  {
+    font-size: 25px;
+    font-weight: 700 !important;
+    color: #758abf;
+    text-align: center;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .user_show_section .memeber_title  {
+    display: none;
+    font-size: 36px;
+  }
+}
+
+.user_show_section .user_image_section {
+  box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  height: 150px;
+  width: 150px;
+  display: inherit;
+  border-radius: 200px;
+  padding: 3px;
+}
+
+@media only screen and (max-width: 1025px) {
+  .user_show_section .user_image_section  {
+    box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    height: 150px;
+    width: 150px;
+    display: inherit;
+    border-radius: 200px;
+    padding: 3px;
+    margin: auto;
+  }
+}
+
+.user_show_section .user_right_section {
+  padding: 0px 15px !important;
+  float: left;
+  background-color: transparent;
+}
+@media only screen and (max-width: 1025px) {
+  .user_show_section .user_right_section  {
+    width: 100% !important;
+  }
+}
+
+.user_show_section .user_image_section img {
+  border-radius: 200px;
+  height: 100%;
+}
+
+.user_show_section .user_price {
+  background-color: #f6f6f6;
+  color: #777;
+  font-size: 12px;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  padding: 5px 10px;
+  border-radius: 2px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.user_show_section .user_more_details {
+  font-size: 30px;
+  color: #808fba;
+  font-weight: bold;
+  line-height: 25px;
+}
+@media only screen and (max-width: 1025px) {
+  .user_show_section .user_more_details  {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 20px;
+  }
+}
+
+.user_show_section .user_type {
+  text-transform: capitalize;
+}
+
+.user_show_section .user_city {
+  text-transform: capitalize;
+}
+
+.user_show_section .btn_edit a {
+  background-color: #808fba;
+  color: #fff !important;
+  font-weight: 400;
+  text-transform: capitalize;
+  padding: 5px 10px;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  font-size: 12px;
+  border-radius: 2px;
+  text-align: center;
+  margin-top: 5px;
+  display: inline-block;
+  width: 100%;
+}
+
+.user_show_section .user_name_info {
+  font-size: 13px;
+  color: #777;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+@media only screen and (max-width: 1025px) {
+  .user_show_section .user_name_info  {
+    text-align: center;
+    font-size: 12px;
+  }
+}
+
+.user_show_section .user_name_info .user_name {
+  text-transform: capitalize;
+}
+
+@media only screen and (max-width: 1025px) {
+  .user_show_section .user_listed_info  {
+    width: 325px;
+    margin: auto;
+  }
+}
+
+.user_show_section .user_listed_info ul {
+  list-style-type: none !important;
+  margin: 0px !important;
+}
+
+.user_show_section .user_listed_info ul li {
+  background-color: #3a98a2;
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  text-transform: capitalize;
+  padding: 2px 8px;
+  font-weight: bold;
+  float: left;
+  margin-right: 5px;
+  border-radius: 2px;
+  margin-bottom: 5px;
+}
+
+// ---------- start ratings ---------- 
+.user_show_section .ratings {
+  color: #777;
+  text-transform: capitalize;
+  margin-top: 1px;
+  margin: 5px 0px 18px;
+  display: inline-block;
+  width: 100%;
+}
+@media only screen and (max-width: 1025px) {
+  .user_show_section .ratings  {
+    text-align: center;
+  }
+}
+
+.user_show_section .rating_header {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.user_show_section .stars {
+  margin: 0px 1px;
+  font-size: 12px;
+}
+
+.user_show_section .ratings .fa-star {
+  color: #DA9549 !important;
+}
+
+.user_show_section .rating_count {
+  font-size: 12px;
+}
+// ---------- start ratings ---------- 
+
+.user_show_section .user_action_btns {
+  margin-top: 17px;
+}
+@media only screen and (max-width: 1025px) {
+  .user_show_section .user_action_btns  {
+    margin-top: 18px;
+  }
+}
+
+.user_show_section .user_action_btns a {
+  width: 195px !important;
+  display: inline-block;
+  text-align: center;
+  font-size: 15px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: bold;
+  padding: 5px 25px;
+  border: 2px solid #7ac5cb;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.user_show_section .btn_message a {
+  background-color: #3a98a2;
+  color: #fff !important;
+}
+@media only screen and (max-width: 1025px) {
+  .user_show_section .btn_message a  {
+    width: 100% !important;
+    margin-bottom: 5px;
+  }
+}
+
+.user_show_section .btn_rate a {
+  background-color: #fff;
+  color: #3a98a2 !important;
+}
+@media only screen and (max-width: 1025px) {
+  .user_show_section .btn_rate a  {
+    width: 100% !important;
+    margin-bottom: 5px;
+  }
+}
+
+.user_show_section .user_action_btns a:hover {
+  color: #fff !important;
+  opacity: 0.8;
+  background-color: #3a98a2;
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.user_show_section .divider {
+  border-bottom: 1px solid #3a98a2;
+  margin: 35px 0px 25px;
+}
+
+.user_show_section .user_info_section {
+  margin-bottom: 20px;
+  padding: 0px !important;
+}
+
+.user_show_section .content_header {
+  font-size: 36px;
+  color: #3a98a2;
+  text-transform: capitalize;
+}
+
+.user_show_section .content_info {
+  color: #777;
+}
+
+.user_show_section .compliance {
+  font-size: 13px;
+  font-style: italic;
+  color: #777;
+  margin: 15px 0px;
+}
+
+.user_show_section .compliance .weblink a {
+  color: #3a98a2 !important;
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+
+.user_show_section .user_fees .user_price {
+  width: 300px;
+}
+@media only screen and (max-width: 1025px) {
+  .user_show_section .user_fees .user_price {
+    width: 100% !important;
+  }
+}
+
+.user_show_section .reviews_rating_content {
+  padding: 0px !important;
+  margin-bottom: 60px;
+}
+
+.user_show_section .review_section_title {
+  font-size: 36px;
+  color: #3a98a2;
+  text-transform: capitalize;
+}
+
+.user_show_section .reviews_ratings ul {
+  list-style-type: none !important;
+  margin: 0px !important;
+}
+
+.user_show_section .reviews_ratings ul  li {
+  margin-bottom: 25px;
+}
+
+.user_show_section .review_title_info {
+  border-bottom: 1px solid #ededed;
+  padding: 5px 0px;
+  margin-bottom: 8px;
+}
+
+.user_show_section .review_title {
+  font-size: 18px;
+  color: #808fba;
+  font-weight: bold;
+}
+
+.user_show_section .minor_text_norm {
+  font-size: 12px;
+  color: #777;
+}
+
+.user_show_section .reviewer_img img {
+  width: 30px;
+  border-radius: 200px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.user_show_section .reviewer_img img:hover {
+  opacity: 0.5;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.user_show_section .reviewer_name a {
+  color: #bc4469;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.user_show_section .reviewer_content {
+  color: #777;
+  font-size: 15px;
+}
+
+.user_show_section .user_location {
+  margin-bottom: 3px;
+  display: inline-block;
+}
+
+.user_show_section .user_location i {
+  color: #808fba;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+// ---------- start user review ratings ---------- 
+
+.user_show_section .user_content_ratings {
+  margin-top: 5px;
+}
+
+.user_show_section .user_content_ratings .reviewer_rating .fa-star {
+  color: #DA9549 !important;
+}
+
+.user_show_section .user_content_ratings .reviewer_rating .fa-star-o {
+  color: #777 !important;
+}
+
+.user_show_section .user_content_ratings .rating_category_name {
+  color: #777 !important;
+  font-weight: bold;
+  font-size: 14px;
+  margin-left: 5px;
+}
+// ---------- start user review ratings ---------- 
+
+
+.user_show_section .listed_chechlist {
+  padding: 0px !important;
+  margin: 5px 0px 15px;
+}
+
+.user_show_section .listed_chechlist ul {
+  list-style-type: none !important;
+  margin: 0px !important;
+}
+
+.user_show_section .listed_chechlist ul li {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 12px;
+  background-color: transparent;
+  width: 175px;
+  float: left;
+  margin-right: 5px;
+}
+
+.user_show_section .check_icon i {
+  background-color: #3a98a2;
+  padding: 5px;
+  border-radius: 200px;
+  color: #fff;
+  font-size: 10px;
+  margin-right: 2px;
+}
+
+.user_show_section .no_checklist {
+  background-color: #808fba;
+  color: #fff !important;
+  padding: 5px 10px;
+  width: 315px;
+  text-align: center;
+  border-radius: 2px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  text-transform: capitalize;
+}
+@media only screen and (max-width: 1025px) {
+  .user_show_section .no_checklist {
+    width: 100% !important;
+  }
+}
+
+.user_show_section .no_checklist a {
+  background-color: #808fba;
+  color: #fff !important;
+  padding: 5px 10px;
+  width: 315px;
+  text-align: center;
+  border-radius: 2px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  text-transform: capitalize;
+}
+@media only screen and (max-width: 1025px) {
+  .user_show_section .no_checklist a  {
+    width: 100% !important;
+  }
+}
+
+.user_show_section .minor_text {
+  font-size: 13px;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.user_show_section .member_divider {
+  margin: 0px 8px;
+}
+
+.user_show_section .member_ref {
+  color: #3a98a2;
+  background-color: #f6f6f6;
+  font-size: 12px;
+  padding: 5px 10px;
+  font-weight: 400;
+}
+
+.user_show_section .admin a {
+  color: #bc4469;
+  background-color: #f6f6f6;
+  font-size: 12px;
+  padding: 5px 10px;
+  font-weight: 400;
+  margin-left: 5px;
+  text-transform: capitalize;
+}
+
+@media only screen and (min-width: 1024px) {
+  .user_show_section .mobile_view {
+    display: none;
+  }
+  .user_show_section .desktop_view {
+    margin-left: 5px
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .user_show_section .desktop_view {
+    display: none;
+  }
+  .user_show_section .mobile_view {
+    margin-top: 5px;
+    margin-bottom: 11px;
+  }
+}
+
+.user_show_section .time_day_container {
+  padding: 15px 0px 0px 0px !important;
+  background-color: #f6f6f6;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.user_show_section .day {
+  background-color: transparent;
+  text-transform: capitalize;
+  width: 105px;
+  display: inline-block;
+}
+
+.user_show_section .main_day {
+  margin-bottom: 15px;
+}
+
+.user_show_section .av_header {
+  color: #808fba;
+  text-transform: capitalize;
+  text-decoration: underline;
+  font-size: 12px;
+  margin-bottom: 5px;
+}

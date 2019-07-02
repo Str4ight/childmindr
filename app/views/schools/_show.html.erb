@@ -1,0 +1,192 @@
+<div class="medium-12 columns schools_index_section schools_show_section">
+  <div class="content_inner">
+    <div class="page_content">
+      <div class="page_title"><%= @school.name %></div>
+        <div class="search_data">
+          <div class="medium-12 columns school_block">
+            <div class="school_inner_block">
+              <div class="medium-2 columns left_content">
+                <div class="school_img">
+                  <% if @school.image.present? %>
+                    <%= link_to(cl_image_tag("#{@school.image}"), school_path(@school)) %>
+                  <% else %>
+                    <%= link_to(image_tag('img_school.png'), school_path(@school)) %>
+                  <% end %>
+                </div>
+                <div class="review">
+                  <% if user_signed_in? %>
+                    <% unless @school.reviewed_school?(current_user) %>
+                      <div>
+                        <a class="view_link" data-open="<%= dom_id(@school) %>_review_rating">add a review</a>
+                        <div><%= render 'shared/modal_review_rating', locals: { school: @school } %></div>
+                      </div> 
+                    <% end %>
+                  <% end %>
+
+                  <% if user_signed_in? && current_user.admin %>
+                    <div>
+                      <a class="view_link" data-open="<%= dom_id(@school) %>_school_edit_form">edit school</a>
+                      <div><%= render 'shared/modal_edit_school_form', locals: { school: @school } %></div>
+                    </div> 
+                  <% end %>
+                </div>
+              </div>
+              <div class="medium-7 columns middle_content">
+                <div class="upper_text">
+                  <span class="school_name">
+                    <% if @school.name.present? %>
+                      <%= @school.name %>
+                    <% else %>
+                      <%= "-" %>
+                    <% end %>
+                  </span>
+                  <!-- ratings_section -->
+                  <span><%= render 'shared/content_overall_avg_ratings_show' %></span>
+                  <!-- ratings_section -->
+                </div>
+                <div class="lower_text">
+                  <div class="infor_row">
+                    <span class="school_header">location:</span>
+                    <span class="result_info">
+                      <span>
+                        <% if @school.category_zone_id.present? %>
+                          <%= @school.category_zone.name %>
+                        <% else %>
+                          <%= "-" %>
+                        <% end %>
+                      </span> 
+                      <span>/</span>
+                      <span>
+                        <% if @school.category_town_id.present? %>
+                          <%= @school.category_town.name %>
+                        <% else %>
+                          <%= "-" %>
+                        <% end %>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="infor_row">
+                    <span class="school_header">pupils:</span>
+                    <span class="result_info">
+                      <% if @school.pupils.present? %>
+                        <%= @school.pupils %>
+                      <% else %>
+                        <%= "-" %>
+                      <% end %>
+                    </span>
+                  </div>
+                  <div class="infor_row">
+                    <span class="school_header">ages:</span>
+                    <span class="result_info">
+                      <% if @school.start_age.present? && @school.end_age.present?  %>
+                        <%= @school.start_age %> - <%= @school.end_age %>
+                      <% else %>
+                        <%= "-" %>
+                      <% end %>
+                    </span>
+                  </div>
+                  <div class="infor_row">
+                    <span class="school_header">type:</span>
+                    <span class="result_info">
+                      <% if @school.category_schooltype_id.present? %>
+                        <%= @school.category_schooltype.name %>
+                      <% else %>
+                        <%= "-" %>
+                      <% end %>
+                    </span>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="medium-3 columns school_contact">
+                <% if user_signed_in? %>
+                  <div class="lower_text">
+                    <div class="infor_row right_content">
+                      <div class="school_header">email:</div>
+                      <div class="result_info email"><%= mail_to "#{@school.email}" %></div>
+                    </div>
+                    <div class="infor_row right_content">
+                      <div class="school_header">telephone:</div>
+                      <div class="result_info"><%= @school.telepone %></div>
+                    </div>
+                    <div class="infor_row right_content">
+                      <div class="school_header">address:</div>
+                      <div class="result_info">
+                        <div><%= @school.address %></div>
+                        <div><%= @school.category_town.name %></div>
+                        <div><%= @school.postcode %></div>
+                      </div>
+                    </div>
+                  </div>
+                <% else %>
+                  <div class="lower_text">
+                    <div class="infor_row right_content">
+                      <div class="school_header">contact info:</div>
+                      <div class="result_info contact_register"><%= link_to "view #{@school.name} contact details", register_path %></div>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="medium-12 columns about_content">
+          <div class="about_inner_content">
+            <div class="content_section">
+              <% if @school.about.present? %>
+                <div class="content_header">about us</div>
+                <div class="school_about"><%= raw @school.about %></div>
+              <% end %>
+            </div>
+
+            <div class="content_section">
+              <% if @school.service.present? %>
+                <div class="content_header">our provision</div>
+                <div class="school_about"><%= raw @school.service %></div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+
+        <!-- reviews -->
+        <% if @school.reviews.present? %>
+        <div class="medium-12 columns reviews_rating_content">
+          <div class="reviews_rating_inner_content">
+            <div class="review_section_title">reviews & ratings <%= "(#{@school.reviews.count})" %></div>
+            <div class="reviews_ratings">
+              <ul>
+                <% @school.reviews.each do |review| %>
+                  <li>
+                    <div class="review_title_info">
+                      <div class="review_title"><%= review.title %></div>
+                      <div>
+                        <span class="minor_text_norm">Posted by</span>
+                        <span class="reviewer_img">
+                          <% if review.user.image.present? %>
+                            <%= link_to(cl_image_tag("#{review.user.image}"), "#") %>
+                          <% else %>
+                            <%= link_to(image_tag('img_profile_default.png'), "#") %>
+                          <% end %>
+                        </span>
+                        <span class="reviewer_name"><%= link_to "#{review.user.firstname}", "#" %></span>
+                        <span class="minor_text_norm">on</span>
+                        <span class="minor_text_norm"><%= review.created_at.strftime("%b/%d/%Y") %></span>
+                      </div>
+                    </div>
+                    <div class="reviewer_content"><%= review.content %></div>
+                    <!-- ratings_section -->
+                    <div><%= render 'shared/content_ratings', review: review %></div>
+                    <!-- ratings_section -->
+                  </li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <% end %>
+        <!-- reviews -->
+    </div>
+  </div>
+</div>
+

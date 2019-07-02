@@ -1,0 +1,22 @@
+<!-- forms_styling.css.scss -->
+<div class="medium-12 columns passwordconfirmation_section form_general_section">
+  <div class="form_general_inner_section passwordconfirmation_inner_section">
+    <div class="section_header">Resend confirmation instructions</div>
+    <div class="inner_form_content">
+      <%= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+        <%= f.error_notification %>
+        <%= f.full_error :confirmation_token %>
+        <div class="form-inputs">
+          <div class="input_section">
+            <div><%= f.input :email, required: true, autofocus: true, placeholder: "Email Address", label: false %></div>
+          </div>
+        </div>
+        <div class="form-actions">
+          <%= f.button :submit, "Resend confirmation instructions" %>
+        </div>
+      <% end %>
+      <div class="form_links"><%= render "users/shared/links" %></div>
+    </div>
+  </div>
+</div>
+

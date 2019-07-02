@@ -1,0 +1,299 @@
+<!-- modal_general_design.css.scss -->
+<%= simple_form_for [@user, @reviewuser] do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <div><%= f.input :title %></div>
+    <div><%= f.input :content %></div>
+    
+    <div class="form_ratings">
+      <!-- rating_communication -->
+      <div class="rating_communication">
+        <div class="section_rating rating_selector"><%= f.association :category_ratingcommunication, collection: CategoryRatingcommunication.all, prompt: "rate communication", label: false %></div>
+        <div class="section_rating rating_star">
+          <div class="inner_star_list row_dim_com star_zero com0">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the communication level of the member"><i class="fa fa-info-circle" aria-hidden="true"></i></a>communication:</li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_com star_one com1">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the communication level of the member"><i class="fa fa-info-circle" aria-hidden="true"></i></a>communication:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_com star_two com2">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the communication level of the member"><i class="fa fa-info-circle" aria-hidden="true"></i></a>communication:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_com star_three com3">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the communication level of the member"><i class="fa fa-info-circle" aria-hidden="true"></i></a>communication:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_com star_four com4">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the communication level of the member"><i class="fa fa-info-circle" aria-hidden="true"></i></a>communication:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_com star_five com5">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the communication level of the member"><i class="fa fa-info-circle" aria-hidden="true"></i></a>communication:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- rating_cleaniness -->
+      <div class="rating_cleaniness">
+        <div class="section_rating rating_selector"><%= f.association :category_ratingclean, collection: CategoryRatingclean.all, prompt: "rate cleaniness", label: false %></div>
+        <div class="section_rating rating_star">
+          <div class="inner_star_list row_dim_cln star_zero cln0">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the hygiene and neatness level of the member"><i class="fa fa-info-circle" aria-hidden="true"></i></a>cleaniness:</li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_cln star_one cln1">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the hygiene and neatness level of the member"><i class="fa fa-info-circle" aria-hidden="true"></i></a>cleaniness:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_cln star_two cln2">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the hygiene and neatness level of the member"><i class="fa fa-info-circle" aria-hidden="true"></i></a>cleaniness:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_cln star_three cln3">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the hygiene and neatness level of the member"><i class="fa fa-info-circle" aria-hidden="true"></i></a>cleaniness:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_cln star_four cln4">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the hygiene and neatness level of the member"><i class="fa fa-info-circle" aria-hidden="true"></i></a>cleaniness:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_cln star_five cln5">
+            <ul>
+              <li class="rating_header"><a href="#" title="Rate the hygiene and neatness level of the member"><i class="fa fa-info-circle" aria-hidden="true"></i></a>cleaniness:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- rating_food -->
+      <div class="rating_food">
+        <div class="section_rating rating_selector"><%= f.association :category_ratingfood, collection: CategoryRatingfood.all, prompt: "rate food", label: false %></div>
+        <div class="section_rating rating_star">
+          <div class="inner_star_list row_dim_fod star_zero fod0">
+            <ul>
+              <li class="rating_header"><a href="#" title="How well is the member good with food and feeding times with your little ones?"><i class="fa fa-info-circle" aria-hidden="true"></i></a>food:</li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_fod star_one fod1">
+            <ul>
+              <li class="rating_header"><a href="#" title="How well is the member good with food and feeding times with your little ones?"><i class="fa fa-info-circle" aria-hidden="true"></i></a>food:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_fod star_two fod2">
+            <ul>
+              <li class="rating_header"><a href="#" title="How well is the member good with food and feeding times with your little ones?"><i class="fa fa-info-circle" aria-hidden="true"></i></a>food:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_fod star_three fod3">
+            <ul>
+              <li class="rating_header"><a href="#" title="How well is the member good with food and feeding times with your little ones?"><i class="fa fa-info-circle" aria-hidden="true"></i></a>food:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_fod star_four fod4">
+            <ul>
+              <li class="rating_header"><a href="#" title="How well is the member good with food and feeding times with your little ones?"><i class="fa fa-info-circle" aria-hidden="true"></i></a>food:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_fod star_five fod5">
+            <ul>
+              <li class="rating_header"><a href="#" title="How well is the member good with food and feeding times with your little ones?"><i class="fa fa-info-circle" aria-hidden="true"></i></a>food:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- rating_setting -->
+      <div class="rating_setting">
+        <div class="section_rating rating_selector"><%= f.association :category_ratingsetting, collection: CategoryRatingsetting.all, prompt: "rate setting", label: false %></div>
+        <div class="section_rating rating_star">
+          <div class="inner_star_list row_dim_set star_zero set0">
+            <ul>
+              <li class="rating_header"><a href="#" title="How good is the member with the little ones when in different surroudings and environment? Are they gentle? Aggressive? Caring? Mindful? etc"><i class="fa fa-info-circle" aria-hidden="true"></i></a>settings:</li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_set star_one set1">
+            <ul>
+              <li class="rating_header"><a href="#" title="How good is the member with the little ones when in different surroudings and environment? Are they gentle? Aggressive? Caring? Mindful? etc"><i class="fa fa-info-circle" aria-hidden="true"></i></a>settings:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_set star_two set2">
+            <ul>
+              <li class="rating_header"><a href="#" title="How good is the member with the little ones when in different surroudings and environment? Are they gentle? Aggressive? Caring? Mindful? etc"><i class="fa fa-info-circle" aria-hidden="true"></i></a>settings:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_set star_three set3">
+            <ul>
+              <li class="rating_header"><a href="#" title="How good is the member with the little ones when in different surroudings and environment? Are they gentle? Aggressive? Caring? Mindful? etc"><i class="fa fa-info-circle" aria-hidden="true"></i></a>settings:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_set star_four set4">
+            <ul>
+              <li class="rating_header"><a href="#" title="How good is the member with the little ones when in different surroudings and environment? Are they gentle? Aggressive? Caring? Mindful? etc"><i class="fa fa-info-circle" aria-hidden="true"></i></a>settings:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star-o gray_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="inner_star_list row_dim_set star_five set5">
+            <ul>
+              <li class="rating_header"><a href="#" title="How good is the member with the little ones when in different surroudings and environment? Are they gentle? Aggressive? Caring? Mindful? etc"><i class="fa fa-info-circle" aria-hidden="true"></i></a>settings:</li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+              <li><i class="fa fa-star yellow_star" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- hidden fields -->
+    <div class="hide">
+      <% if user_signed_in? %>
+        <%= f.input :parent_id, input_html: {value: current_user.id} %>
+        <%= f.input :provider_id, input_html: {value: @user.id} %>
+      <% end %>
+    </div>
+    <!-- hidden fields -->
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "rate #{@user.firstname} services", class: "rate_btn" %>
+  </div>
+<% end %>
+
+<script>
+  $( function() {
+    $( document ).tooltip();
+  } );
+</script>
+

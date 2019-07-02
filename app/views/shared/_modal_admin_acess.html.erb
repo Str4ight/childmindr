@@ -1,0 +1,117 @@
+<div class="reveal modal_general_design" id="<%= dom_id(@user) %>_admin_acess" data-reveal>
+  <div class="modal_header data_modal_header">admin access info</div>
+  <div class="medium-12 columns modal_content admin_section">
+
+    <div class="medium-12 columns data_container">
+      <div class="medium-12 columns school_section">
+        <div class="create_btn"><%= link_to "create school", new_user_school_path(current_user) %></div>
+        <div class="data_header">
+          <span>total nurseries/schools: </span>
+          <span><%= @schools.count %></span>
+        </div>
+        <div class="listed_contents">
+          <ul>
+            <li>
+              <span class="min_data_header">academy converter schools:</span>
+              <span class="mini_data_content"><%= @schools.academy_converter_schools.count %></span>
+            </li>
+            <li>
+              <span class="min_data_header">academy sponsor led schools:</span>
+              <span class="mini_data_content"><%= @schools.academy_sponsor_led_schools.count %></span>
+            </li>
+            <li>
+              <span class="min_data_header">community schools:</span>
+              <span class="mini_data_content"><%= @schools.community_schools.count %></span>
+            </li>
+            <li>
+              <span class="min_data_header">foundation schools:</span>
+              <span class="mini_data_content"><%= @schools.foundation_schools.count %></span>
+            </li>
+            <li>
+              <span class="min_data_header">nursery schools:</span>
+              <span class="mini_data_content"><%= @schools.nursery_schools.count %></span>
+            </li>
+            <li>
+              <span class="min_data_header">other independent schools:</span>
+              <span class="mini_data_content"><%= @schools.other_independent_schools.count %></span>
+            </li>
+            <li>
+              <span class="min_data_header">voluntary aided schools:</span>
+              <span class="mini_data_content"><%= @schools.voluntary_aided_schools.count %></span>
+            </li>
+            <li>
+              <span class="min_data_header">voluntary controlled school:</span>
+              <span class="mini_data_content"><%= @schools.voluntary_controlled_school.count %></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    
+      <div class="medium-12 columns user_section">
+        <div class="data_header">
+          <span>total members: </span>
+          <span><%= @users.clients.count %></span>
+        </div>
+
+        <div class="listed_contents">
+          <ul>
+            <li>
+              <span class="min_data_header">admins: </span>
+              <span class="mini_data_content"><%= @users.admins.count %></span>
+            </li>
+            <li>
+              <span class="min_data_header">total primary admins: </span>
+              <span class="mini_data_content"><%= @users.primary_admins.count %></span>
+            </li>
+            <li>
+              <span class="min_data_header">total service providers: </span>
+              <span class="mini_data_content"><%= @users.client_providers.count %></span>
+            </li>
+            <li>
+              <span class="min_data_header">total parents: </span>
+              <span class="mini_data_content"><%= @users.client_parents.count %></span>
+            </li>
+            <li>
+              <span class="min_data_header">au pairs: </span>
+              <span class="mini_data_content"><%= @users.au_pairs.count %></span>
+            </li>
+            <li>
+              <span class="min_data_header">babysitters: </span>
+              <span class="mini_data_content"><%= @users.babysitters.count %></span>
+            </li>
+            <li>
+              <span class="min_data_header">childminders: </span>
+              <span class="mini_data_content"><%= @users.childminders.count %></span>
+            </li>
+            <li>
+              <span class="min_data_header">maternity nurses: </span>
+              <span class="mini_data_content"><%= @users.maternity_nurses.count %></span>
+            </li>
+            <li>
+              <span class="min_data_header">nannies: </span>
+              <span class="mini_data_content"><%= @users.nannies.count %></span>
+            </li>
+            <li>
+              <span class="min_data_header">nursery nurse: </span>
+              <span class="mini_data_content"><%= @users.nursery_nurse.count %></span>
+            </li>
+            <li>
+              <span class="min_data_header">private midwives: </span>
+              <span class="mini_data_content"><%= @users.private_midwives.count %></span>
+            </li>
+            <li>
+              <span class="min_data_header">household helps: </span>
+              <span class="mini_data_content"><%= @users.household_helps.count %></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
