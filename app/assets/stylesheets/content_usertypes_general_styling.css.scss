@@ -711,6 +711,11 @@
   text-transform: capitalize;
   font-size: 14px;
 }
+@media only screen and (max-width: 1025px) {
+  .content_usertypes_section .message_content  {
+    display: none;
+  }
+}
 
 .content_usertypes_section .childcarer_all_section {
   margin-top: 79px;
