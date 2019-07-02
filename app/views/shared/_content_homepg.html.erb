@@ -20,6 +20,7 @@
                   <div><%= f.select :category_town_id_eq, options_from_collection_for_select(CategoryTown.all, "id", "name", @search.category_town_id_eq), prompt: "Select Town" %></div>
                 </li>
               </ul>
+              <div><%= f.submit "Search", class: "button" %></div>
             <% end %>
           </div>
 
