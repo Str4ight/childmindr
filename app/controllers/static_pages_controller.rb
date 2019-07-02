@@ -58,6 +58,12 @@ class StaticPagesController < ApplicationController
   def errorpg
   end
 
+  def safetyadvisepg
+  end
+
+  def providerdocumentpg
+  end
+
 
   # ------------ user_types ------------
   def childcarerspg

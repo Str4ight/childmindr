@@ -26,12 +26,15 @@ Rails.application.routes.draw do
   get  'contact-us',                  to: 'static_pages#contactpg'
   get  'cookie-settiing',             to: 'static_pages#cookiesettingpg'
   get  'faqs',                        to: 'static_pages#faqpg'
-  get  'finding-the-right-school',    to: 'static_pages#findingtherightschoolpg'
+  get  'finding-the-right-nursery',    to: 'static_pages#findingtherightschoolpg'
   get  'latest-ratings',              to: 'static_pages#latestratingspg'
   get  'parenting-guides',            to: 'static_pages#parentingguidespg'
   get  'privacy-and-cookie-policy',   to: 'static_pages#privacypg'
   get  'terms-and-conditions',        to: 'static_pages#termspg'
   get  'error',                       to: 'static_pages#errorpg'
+
+  get  'safety-advise',               to: 'static_pages#safetyadvisepg'
+  get  'provider-documents',          to: 'static_pages#providerdocumentpg'
 
   # user_types_urls
   get  'search/babysitters',          to: 'static_pages#usersbabysitterspg'
