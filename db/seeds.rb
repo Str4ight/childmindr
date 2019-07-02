@@ -152,6 +152,11 @@ cz04 = CategoryZone.create!(name:'Accra East')
 cz05 = CategoryZone.create!(name:'Accra South')
 
 
+CategorySearch.delete_all
+cts01 = CategorySearch.create!(name:'Search by School Name')
+cts02 = CategorySearch.create!(name:'Search by Town')
+
+
 CategoryTown.delete_all
 ctn01 = CategoryTown.create!(name:'Abeka')
 ctn02 = CategoryTown.create!(name:'Abelemkpe')

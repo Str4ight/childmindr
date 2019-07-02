@@ -49,8 +49,8 @@
                     <span class="school_header">location:</span>
                     <span class="result_info">
                       <span>
-                        <% if @school.category_zone_id.present? %>
-                          <%= @school.category_zone.name %>
+                        <% if @school.category_country_id.present? %>
+                          <%= @school.category_country.name %>
                         <% else %>
                           <%= "-" %>
                         <% end %>

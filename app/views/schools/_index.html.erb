@@ -17,33 +17,12 @@
             <div><%= f.submit class: "button btn_submit" %></div>
           <% end %>
         </div>
-        <!-- search_categories_zone_town -->
+        <!-- search_town -->
         <div class="statecontent 2">
           <%= search_form_for(@search) do |f| %>
             <div>
-              <%= f.select :category_zone_id_eq, options_from_collection_for_select(CategoryZone.all, "id", "name", @search.category_zone_id_eq), prompt: "Select Zone" %>
-              <%= f.grouped_collection_select :category_town_id_eq, CategoryZone.order(:name), :category_towns, :name, :id, :name, include_blank: true, prompt: "Select Area" %>
-            </div>
-            <div><%= link_to "display all", schools_path, style: "color:#fff;", class: "button btn_display" %></div>
-            <div><%= f.submit class: "button btn_submit" %></div>
-          <% end %>
-        </div>
-        <!-- search_town -->
-        <div class="statecontent 3">
-          <%= search_form_for(@search) do |f| %>
-            <div>
-              <%= f.search_field :town_cont, placeholder: "eg: Cantoments" %>
-            </div>
-            <div><%= link_to "display all", schools_path, style: "color:#fff;", class: "button btn_display" %></div>
-            <div><%= f.submit class: "button btn_submit" %></div>           
-          <% end %>
-        </div>
-        <!-- search_schooltype -->
-        <div class="statecontent 4">
-          <%= search_form_for(@search) do |f| %>
-            <div>
-              <%= f.select :category_schooltype_id_eq, options_from_collection_for_select(CategorySchooltype.all, "id", "name", @search.category_schooltype_id_eq), prompt: "Select School" %>
-              <%= f.grouped_collection_select :category_town_id_eq, CategoryZone.order(:name), :category_towns, :name, :id, :name, include_blank: false, prompt: "Select Area" %>
+              
+              <%= f.select :category_town_id_eq, options_from_collection_for_select(CategoryTown.all, "id", "name", @search.category_town_id_eq), prompt: "Select Town" %>
             </div>
             <div><%= link_to "display all", schools_path, style: "color:#fff;", class: "button btn_display" %></div>
             <div><%= f.submit class: "button btn_submit" %></div>           
@@ -91,8 +70,8 @@
                         <span class="school_header">location:</span>
                         <span class="result_info">
                           <span>
-                            <% if school.category_zone_id.present? %>
-                              <%= school.category_zone.name %>
+                            <% if school.category_country_id.present? %>
+                              <%= school.category_country.name %>
                             <% else %>
                               <%= "-" %>
                             <% end %>

@@ -23,12 +23,9 @@ $(document).ready(function () {
   });
 });
 
-
 // drop down filter selection
 $(document).ready(function() {
   $('.2').hide();
-  $('.3').hide();
-  $('.4').hide();
   $('#list').change(function() {
     $('.statecontent').hide();
     $('.' + $(this).val()).show();    
