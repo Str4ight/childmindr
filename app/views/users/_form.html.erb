@@ -27,8 +27,14 @@
 
     <div class="medium-12 columns triple_field">
       <ul>
-        <li class="first_section"><%= f.input :firstname, label: "First Name" %></li>
-        <li class="second_section"><%= f.input :lastname, label: "Last Name" %></li>
+        <li class="first_section">
+          <div class="form_label">first name</div>
+          <div class="user_firstname_display"><%= @user.firstname %></div>
+        </li>
+        <li class="second_section">
+          <div class="form_label">last name</div>
+          <div class="user_lastname_display"><%= @user.lastname %></div>
+        </li>
         <li class="third_section"><%= f.association :category_gender, collection: CategoryGender.all, prompt: "select gender", label: "Gender" %></li>
       </ul>
     </div>
