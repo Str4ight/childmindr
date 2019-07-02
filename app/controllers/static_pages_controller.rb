@@ -1,7 +1,10 @@
 class StaticPagesController < ApplicationController
   def homepg
-    @search = School.search(params[:q])
-    @schools = @search.result(distinct: true).approved_schools.order("created_at DESC")
+    # @search = School.search(params[:q])
+    # @schools = @search.result(distinct: true).approved_schools.order("created_at DESC")
+
+    @search = User.client_providers.search(params[:q])
+    @users = @search.result(distinct: true).order("created_at DESC")
   end
 
   def aboutpg

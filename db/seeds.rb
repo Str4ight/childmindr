@@ -40,6 +40,9 @@ csc16 = CategorySummarycheck.create!(name:'Nanny Housekeeper')
 csc17 = CategorySummarycheck.create!(name:'Special Needs Experience')
 csc18 = CategorySummarycheck.create!(name:'Mothers Help')
 
+# cat = Checklist.find_by_name("Ofsted Registered")
+# cat = Checklist.find_by_name("DBS Check")
+
 CategoryService.delete_all
 csv01 = CategoryService.create!(name:'Au Pair')
 csv02 = CategoryService.create!(name:'Babysitter')

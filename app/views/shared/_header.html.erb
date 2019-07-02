@@ -19,7 +19,6 @@
       <div class="right_section non_responsive_header">
         <ul>
           <% if user_signed_in? %>
-            <div class="header_line">Trusted by over 2 million members</div>
             <li>
               <span class="profile_menu_icon">
                 <span><i class="fa fa-user" aria-hidden="true"></i></span>
@@ -37,14 +36,9 @@
             </li>
             <li>
               <span><%= link_to "view latest ratings", latest_ratings_path %></span>
-              <!-- <span><%# link_to "Members", users_path %></span> -->
-              <!-- <span><%# link_to "Schools", schools_path %></span> -->
-              <!-- <span><%# link_to "New School", new_user_school_path(current_user) %></span> -->
-              <!-- <span><%# link_to "logout", destroy_user_session_path, method: :delete %></span> -->
             </li>
           <% else %>
             <li>
-              <div class="header_line">Trusted by over 2 million members</div>
               <span class=""><%= link_to "login", login_path %></span>
               <span class=""><%= link_to "create a free account", register_path %></span>
             </li>
