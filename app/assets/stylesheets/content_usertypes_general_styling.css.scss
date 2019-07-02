@@ -469,7 +469,7 @@
 }
 @media only screen and (min-width: 1025px) {
   .content_usertypes_section .btn_view {
-    margin-right: 15px;
+    margin-right: 5px;
   }
 }
 
@@ -722,4 +722,20 @@
 
 .content_usertypes_section .upper_text_info {
   margin-bottom: 15px;
+}
+
+.content_usertypes_section .btn_telephone {
+  margin-bottom: 10px;
+  display: inline-block;
+}
+@media only screen and (max-width: 1025px) {
+  .content_usertypes_section .btn_telephone {
+    width: 100% !important
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .content_usertypes_section .user_telephone {
+    margin-bottom: 10px;
+  }
 }

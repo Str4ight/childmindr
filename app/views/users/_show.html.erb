@@ -235,11 +235,26 @@
                     <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
                     <span>message</span>
                   <% end %>
+                  <% if @user.telephone.present? %>
+                    <span>
+                      <a data-open="<%= dom_id(@user) %>_user_telephone">
+                        <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                        <span>phone</span>
+                      </a>
+                      <span><%= render 'shared/modal_telephone' %></span>
+                    </span>
+                  <% end %>
                 <% end %>
               <% else %>
                 <%= link_to register_path do %>
                   <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
                   <span>message</span>
+                <% end %>
+                <% if @user.telephone.present? %>
+                  <%= mail_to register_path do %>
+                    <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                    <span>phone</span>
+                  <% end %>
                 <% end %>
               <% end %>
             </span>
