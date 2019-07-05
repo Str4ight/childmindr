@@ -148,7 +148,7 @@
               </span>
               <span class="user_city">
                 <% if @user.category_town.present? %>
-                  <span><%= @user.category_town.category_zone.name %></span>
+                  <span><%= @user.category_country.name %></span>
                   <span>/</span>
                   <span><%= @user.category_town.name %></span>
                 <% else %>
