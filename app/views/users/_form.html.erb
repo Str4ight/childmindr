@@ -163,6 +163,24 @@
           <div class="minor_general_info">List qualifications certfications you currently have</div>
         </div>
       </div>
+
+      <div class="clear"></div>
+
+      <!-- admin_view -->
+      <% if current_user.admin %>
+        <div class="medium-12 columns admin_background">
+          <div class="admin_header">only displayed to admin</div>
+          <div><%= f.association :category_role, collection: CategoryRole.all, prompt: "select role", label: "Role" %></div>
+        </div>
+        <div class="medium-12 columns double_main_field admin_background hide">
+          <div class="admin_header">only displayed to admin</div>
+          <ul>
+            <li class="first_section"><%= f.input :password %></li>
+            <li class="second_section"><%= f.association :category_role, collection: CategoryRole.all, prompt: "select role", label: "Role" %></li>
+          </ul>
+        </div>
+      <% end %>
+      <!-- admin_view -->
     </div>
   </div>
 
