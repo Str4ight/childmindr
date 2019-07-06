@@ -167,6 +167,25 @@
                         <span>Ref: <%= "#{@user.ref}" %></span>
                       <% end %>
                     </span>
+                    <span class="admin">
+                      <% if @user.admin %>
+                        <span>
+                          <a data-open="<%= dom_id(@user) %>_admin_acess">
+                            <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                            <span>admin</span>
+                          </a>
+                          <span><%= render 'shared/modal_admin_acess' %></span>
+                        </span>
+                      <% elsif @user.primary_admin %>
+                        <span>
+                          <a data-open="<%= dom_id(@user) %>_admin_acess">
+                            <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                            <span>primary admin</span>
+                          </a>
+                          <span><%= render 'shared/modal_admin_acess' %></span>
+                        </span>
+                      <% end %>
+                    </span>
                   </span>
                   <div class="mobile_view">
                     <span class="member_ref">
@@ -174,6 +193,25 @@
                         <span>Parent</span>
                         <span>-</span>
                         <span>Ref: <%= "#{@user.ref}" %></span>
+                      <% end %>
+                    </span>
+                    <span class="admin">
+                      <% if @user.admin %>
+                        <span>
+                          <a data-open="<%= dom_id(@user) %>_admin_acess">
+                            <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                            <span>admin</span>
+                          </a>
+                          <span><%= render 'shared/modal_admin_acess' %></span>
+                        </span>
+                      <% elsif @user.primary_admin %>
+                        <span>
+                          <a data-open="<%= dom_id(@user) %>_admin_acess">
+                            <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                            <span>primary admin</span>
+                          </a>
+                          <span><%= render 'shared/modal_admin_acess' %></span>
+                        </span>
                       <% end %>
                     </span>
                   </div>
