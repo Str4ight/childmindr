@@ -35,6 +35,7 @@ Rails.application.routes.draw do
 
   get  'safety-advise',               to: 'static_pages#safetyadvisepg'
   get  'provider-documents',          to: 'static_pages#providerdocumentpg'
+  get  'new-design',                  to: 'static_pages#designpg'
 
   # user_types_urls
   get  'search/babysitters',          to: 'static_pages#usersbabysitterspg'
