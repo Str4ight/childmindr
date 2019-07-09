@@ -1,0 +1,33 @@
+/*===================================================
+    Page: homepage
+    File: views/shared/_content_designpg.html.erb
+  ===================================================*/
+
+.content_designpg_section {
+  padding: 0px !important;
+  background-color: transparent;
+}
+
+.upper_content {
+  position: relative;
+}
+
+.background_content {
+  background-color: red;
+  height: 500px;
+}
+
+.middle_content {
+  background-color: transparent;
+  height: 500px;
+  position: absolute;
+  width: 100%;
+  top: 180px;
+}
+
+.inner_middle_content {
+  background-color: orange;
+  height: 400px;
+  width: 400px;
+  margin: auto;
+}
