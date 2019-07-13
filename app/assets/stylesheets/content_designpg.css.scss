@@ -13,7 +13,7 @@
 }
 
 .background_content {
-  background-color: red;
+  background-image: url("img_background.png");
   height: 500px;
 }
 
@@ -22,12 +22,154 @@
   height: 500px;
   position: absolute;
   width: 100%;
-  top: 180px;
+  top: 60px;
 }
 
 .inner_middle_content {
   background-color: orange;
-  height: 400px;
-  width: 400px;
+  height: 525px;
+  width: 1200px;
   margin: auto;
 }
+
+.header_content {
+  background-color: red;
+  padding: 0px !important;
+  margin-bottom: 40px;
+}
+
+.left_content {
+  float: left;
+}
+
+.left_content .main_logo {
+  font-size: 45px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  font-style: italic;
+}
+
+.left_content .logo_text {
+  font-size: 12px;
+  color: #fff;
+}
+
+.right_content {
+  float: right;
+}
+
+.right_content .contact_title {
+  text-align: right;
+}
+
+.right_content .contact_list {
+  text-align: right;
+  color: #fff;
+  font-size: 12px;
+}
+
+.right_content .tel {
+  text-transform: capitalize;
+}
+
+
+.tab_header ul {
+  margin: 0px;
+  list-style-type: none;
+}
+
+.tab_header ul li a {
+  display: inline-block;
+  background-color: green;
+  margin-right: 1px;
+  color: #fff !important;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  padding: 25px 0px;
+  height: 125px;
+  width: 125px;
+  border-radius: 15px;
+  float: left;
+  font-size: 14px;
+}
+
+.image_inner_content {
+  background-color: pink;
+  width: 99%;
+  margin: auto;
+  position: relative;
+}
+
+.main_img_cover {
+  position: absolute;
+  top: 60px;
+  width: 100%;
+}
+
+.inner_img_cover {
+  border: 15px solid #fff;
+  overflow: hidden;
+  height: 350px;
+  border-radius: 15px;
+}
+
+.inner_img_cover img {
+  width: 100%;
+}
+
+
+.tab_header {
+  background-color: transparent;
+  height: 125px;
+  width: 1135px;
+  margin: auto;
+}
+
+
+
+.tab_tilt_left {
+  -ms-transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  background-color: red !important;
+}
+
+.tab_text_tilt_left {
+  -ms-transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  transform: rotate(5deg);
+}
+
+.tab_tilt_right {
+  -ms-transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  transform: rotate(5deg);
+  background-color: purple !important;
+}
+
+.tab_text_tilt_right {
+  -ms-transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
