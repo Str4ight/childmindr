@@ -40,12 +40,16 @@
 
 .content_designpg_section .inner_middle_content {
   background-color: transparent;
-  height: 550px;
 }
 @media only screen and (min-width: 1250px) {
   .content_designpg_section .inner_middle_content {
     width: 1200px;
     margin: auto;
+  }
+}
+@media only screen and (min-width: 780px) {
+  .content_designpg_section .inner_middle_content {
+    height: 550px;
   }
 }
 
@@ -125,9 +129,9 @@
 
 .content_designpg_section .main_img_cover .inner_img_cover {
   border: 15px solid #fff;
+  border-radius: 15px;
   overflow: hidden;
   height: 350px;
-  border-radius: 15px;
 }
 
 .content_designpg_section .main_img_cover .inner_img_cover img {
@@ -222,6 +226,7 @@
     width: 1200px;
     margin: auto;
     margin-top: 80px;
+    padding: 15px;
   }
 }
 
@@ -641,7 +646,7 @@
 }
 
 .responsive_header_content {
-  background-color: rgba(102, 151, 160, 0.9) !important;
+  background-color: rgba(255, 255, 255, 0.2) !important;
   height: 420px;
 }
 @media only screen and (min-width: 1251px) {
