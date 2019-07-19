@@ -1,4 +1,4 @@
-<div class="medium-12 columns content_designpg_section">
+<div class="medium-12 columns content_designpg_section content_homepg_section">
   <!-- upper_section -->
   <div class="upper_content">
     <div class="background_content"></div>
@@ -17,9 +17,21 @@
           <div class="right_content">
             <div class="contact_title">contact:</div>
             <div class="contact_list">
-              <div>8901 Marmora Road, Glasgow, D04 89GR</div>
+              <div class="colour_blue_text">8901 Marmora Road, Glasgow, D04 89GR</div>
               <div class="tel">telephone (GH): +233 55 209 9793</div>
               <div class="tel">telephone (UK): +44 77 22 016771</div>
+              <div>
+                <% if user_signed_in? %>
+                  <span><%= link_to "logout", destroy_user_session_path %></span>
+                  <span class="divider">|</span>
+                  <span><%= link_to "profile", user_path(current_user) %></span>
+                <% else %>
+                  <span><%= link_to "login", login_path %></span>
+                  <span class="divider">|</span>
+                  <span><%= link_to "create account", register_path %></span>
+                <% end %>
+              </div>
+              <div></div>
             </div>
           </div>
           <!-- right_section -->
@@ -31,47 +43,47 @@
             <div class="tab_header">
               <ul>
                 <li>
-                  <%= link_to "#", class: "tab_tilt_left colour_red" do %>
+                  <%= link_to about_us_path, class: "tab_tilt_left colour_red" do %>
                     <div class="tab_text_tilt_left">about</div>
                   <% end %>
                 </li> 
                 <li>
-                  <%= link_to "#", class: "tab_tilt_right colour_orange" do %>
-                    <div class="tab_text_tilt_right">home</div>
+                  <%= link_to search_babysitters_path, class: "tab_tilt_right colour_orange" do %>
+                    <div class="tab_text_tilt_right">babysitters</div>
                   <% end %>
                 </li> 
                 <li>
-                  <%= link_to "#", class: "tab_tilt_left colour_yellow" do %>
-                    <div class="tab_text_tilt_left">teachers</div>
+                  <%= link_to search_childminders_path, class: "tab_tilt_left colour_yellow" do %>
+                    <div class="tab_text_tilt_left">childminders</div>
                   <% end %>
                 </li> 
                 <li>
-                  <%= link_to "#", class: "colour_green" do %>
-                    <div class="">events</div>
+                  <%= link_to search_nannies_path, class: "colour_green" do %>
+                    <div class="">nannies</div>
                   <% end %>
                 </li> 
                 <li>
-                  <%= link_to "#", class: "tab_tilt_right colour_deepblue" do %>
-                    <div class="tab_text_tilt_right">activities</div>
+                  <%= link_to search_au_pairs_path, class: "tab_tilt_right colour_light_blue" do %>
+                    <div class="tab_text_tilt_right">au pairs</div>
                   <% end %>
                 </li>
                 <li>
-                  <%= link_to "#", class: "tab_tilt_left colour_lightblue" do %>
-                    <div class="tab_text_tilt_left">FAQ</div>
+                  <%= link_to search_nursery_nurses_path, class: "tab_tilt_left colour_blue" do %>
+                    <div class="tab_text_tilt_left">nurses</div>
                   <% end %>
                 </li> 
                 <li>
-                  <%= link_to "#", class: "tab_tilt_right colour_purple" do %>
-                    <div class="tab_text_tilt_right">tab_07</div>
+                  <%= link_to search_household_helpers_path, class: "tab_tilt_right colour_purple" do %>
+                    <div class="tab_text_tilt_right">House Help</div>
                   <% end %>
                 </li> 
                 <li>
-                  <%= link_to "#", class: "colour_thinking" do %>
+                  <%= link_to "#", class: "colour_light_orange" do %>
                     <div class="">tab_07</div>
                   <% end %>
                 </li> 
                 <li>
-                  <%= link_to "#", class: "tab_tilt_right colour_thinking" do %>
+                  <%= link_to contact_us_path, class: "tab_tilt_right colour_blue" do %>
                     <div class="tab_text_tilt_right">contacts</div>
                   <% end %>
                 </li>
@@ -98,13 +110,15 @@
 
         <!-- section -->
         <div class="medium-4 columns mini_section" style="padding-left:0px">
-          <div class="mini_inner_section">
-            <div class="mini_content_title">about us</div>
+          <div class="mini_inner_section colour_orange">
+            <div class="mini_content_title colour_light_orange">about us</div>
             <div class="img_text_section">
               <div class="mini_image_section"><%= image_tag("img_homepg03.png") %></div>
-              <div class="mini_text_section">
+              <div class="mini_text_section mini_text_overflow colour_orange_text">
                 <div class="mini_text_title">Lorem ipsum dolor sit amet</div>
-                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div>
+                <div>Childmindr is a platform aimed at making the process of locating effective childcare a breeze. All the information required to locate a suitable place for your child has been made available at your fingertips.</div></br>
+                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div></br>
+                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</div>
               </div>
               <div class="next_arrow"><%= link_to '', '#', class: "fa fa-chevron-right", target:"_blank" %></div>
             </div>
@@ -113,13 +127,28 @@
 
         <!-- section -->
         <div class="medium-4 columns mini_section">
-          <div class="mini_inner_section">
-            <div class="mini_content_title">our childcarers</div>
+          <div class="mini_inner_section colour_green">
+            <div class="mini_content_title colour_light_green">our childcarers</div>
             <div class="img_text_section">
               <div class="mini_image_section"><%= image_tag("img_homepg03.png") %></div>
-              <div class="mini_text_section">
+              <div class="mini_text_section colour_green_text">
                 <div class="mini_text_title">Lorem ipsum dolor sit amet</div>
                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div>
+              </div>
+              <div class="search_content">
+                <%= search_form_for @search, url: child_carers_path do |f| %>
+                  <ul>
+                    <li>
+                      <div class="serach_header">i am looking for a...</div>
+                      <div><%= f.select :category_service_id_eq, options_from_collection_for_select(CategoryService.all, "id", "name", @search.category_service_id_eq), prompt: "Select Service" %></div>
+                    </li>
+                    <li>
+                      <div class="serach_header">in the following area...</div>
+                      <div><%= f.select :category_town_id_eq, options_from_collection_for_select(CategoryTown.all, "id", "name", @search.category_town_id_eq), prompt: "Select Town" %></div>
+                    </li>
+                  </ul>
+                  <div><%= f.submit "Search", class: "button" %></div>
+                <% end %>
               </div>
               <div class="next_arrow"><%= link_to '', '#', class: "fa fa-chevron-right", target:"_blank" %></div>
             </div>
@@ -128,13 +157,28 @@
 
         <!-- section -->
         <div class="medium-4 columns mini_section" style="padding-right:0px">
-          <div class="mini_inner_section">
-            <div class="mini_content_title">our nurseries</div>
+          <div class="mini_inner_section colour_blue">
+            <div class="mini_content_title colour_light_blue">our nurseries</div>
             <div class="img_text_section">
               <div class="mini_image_section"><%= image_tag("img_homepg03.png") %></div>
-              <div class="mini_text_section">
+              <div class="mini_text_section colour_blue_text">
                 <div class="mini_text_title">Lorem ipsum dolor sit amet</div>
                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div>
+              </div>
+              <div class="search_content">
+                <%= search_form_for @search, url: child_carers_path do |f| %>
+                  <ul>
+                    <li>
+                      <div class="serach_header">i am looking for a...</div>
+                      <div><%= f.select :category_service_id_eq, options_from_collection_for_select(CategoryService.all, "id", "name", @search.category_service_id_eq), prompt: "Select Service" %></div>
+                    </li>
+                    <li>
+                      <div class="serach_header">in the following area...</div>
+                      <div><%= f.select :category_town_id_eq, options_from_collection_for_select(CategoryTown.all, "id", "name", @search.category_town_id_eq), prompt: "Select Town" %></div>
+                    </li>
+                  </ul>
+                  <div><%= f.submit "Search", class: "button" %></div>
+                <% end %>
               </div>
               <div class="next_arrow"><%= link_to '', '#', class: "fa fa-chevron-right", target:"_blank" %></div>
             </div>

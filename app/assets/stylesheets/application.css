@@ -23,6 +23,23 @@
     general css content
   =========================================*/
 
+/*  colour_red               rgb: 200 80 59     hex: #C8503B
+    colour_orange            rgb: 206 93 61     hex: #CE5D3D
+    colour_light_orange      rgb: 215 138 70    hex: #D78A46
+    colour_orange_text       rgb: 240 215 90    hex: #F0D75A
+    colour_yellow            rgb: 222 208 85    hex: #DED055
+    colour_green             rgb: 152 181 67    hex: #98B543
+    colour_light_green       rgb: 199 208 81    hex: #C7D051
+    colour_green_text        rgb: 244 248 126   hex: #F4F87E
+    colour_blue              rgb: 77 117 184    hex: #4D75B8
+    colour_light_blue        rgb: 107 160 210   hex: #6BA0D2
+    colour_blue_text         rgb: 174 206 247   hex: #AECEF7
+    colour_purple            rgb: 92 57 159     hex: #5C399F
+    colour_light_brown       rgb: 241 238 234   hex: #F1EEEA
+    colour_medium_brown:     rgb: 218 211 205   hex: #DAD3CD
+    colour_dark_brown_text:  rgb: 118 109 101   hex: #766D65 */
+
+
 /*gray:           rgb: 118 118 118  | hex: #777*/
 /*light pink:     rgb: 210 116 124  | hex: #fa777f*/
 /*deep pink:      rgb: 178 79 118   | hex: #cd4e78*/
@@ -104,6 +121,110 @@ a:hover {
   letter-spacing: 1px;
   font-weight: 200;
   line-height: 28px;
+}
+
+/*----------------------------------------
+    colours
+----------------------------------------*/
+
+.colour_red {
+  background-color: red;
+}
+
+.colour_red:hover {
+  background-color: red;
+  opacity: 1;
+}
+
+.colour_orange {
+  background-color: #CE5D3D;
+}
+
+.colour_orange:hover {
+  background-color: #CE5D3D;
+  opacity: 1;
+}
+
+.colour_light_orange {
+  background-color: #D78A46;
+}
+
+.colour_light_orange:hover {
+  background-color: #D78A46;
+  opacity: 1;
+}
+
+.colour_orange_text {
+  color: #F0D75A;
+}
+
+.colour_yellow {
+  background-color: #DED055;
+}
+
+.colour_yellow:hover {
+  background-color: #DED055;
+  opacity: 1;
+}
+
+.colour_green {
+  background-color: #98B543;
+}
+
+.colour_green:hover {
+  background-color: #98B543;
+  opacity: 1;
+}
+
+.colour_light_green {
+  background-color: #C7D051;
+}
+
+.colour_green_text {
+  color: #F4F87E;
+}
+
+.colour_blue {
+  background-color: #4D75B8;
+}
+
+.colour_blue:hover {
+  background-color: #4D75B8;
+  opacity: 1;
+}
+
+.colour_light_blue {
+  background-color: #6BA0D2;
+}
+
+.colour_light_blue:hover {
+  background-color: #6BA0D2;
+  opacity: 1;
+}
+
+.colour_blue_text {
+  color: #AECEF7;
+}
+
+.colour_purple {
+  background-color: #5C399F;
+}
+
+.colour_purple:hover {
+  background-color: #5C399F;
+  opacity: 1;
+}
+
+.colour_light_brown {
+  background-color: #F1EEEA;
+}
+
+.colour_medium_brown {
+  background-color: #DAD3CD;
+}
+
+.colour_dark_brown_text {
+  color: #766D65;
 }
 
 
