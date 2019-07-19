@@ -283,7 +283,8 @@
 .content_designpg_section .mini_image_section {
   margin-bottom: 5px;
 }
-@media only screen and (max-width: 1250px) {
+
+@media only screen and (min-width: 650px) and (max-width: 1250px) {
   .content_designpg_section .mini_image_section {
     height: 250px;
     overflow: hidden;
@@ -713,3 +714,7 @@
   color: #fff !important;
   font-size: 30px;
 }
+
+
+
+
