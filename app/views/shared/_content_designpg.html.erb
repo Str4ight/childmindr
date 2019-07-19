@@ -14,7 +14,7 @@
           <!-- left_section -->
 
           <!-- right_section -->
-          <div class="right_content">
+          <div class="right_content hide">
             <div class="contact_title">contact:</div>
             <div class="contact_list">
               <div class="colour_blue_text">8901 Marmora Road, Glasgow, D04 89GR</div>
@@ -35,7 +35,40 @@
             </div>
           </div>
           <!-- right_section -->
+
+          <!-- right_section: responsive_menu_icon -->
+          <div class="right_content responsive_header">
+            <div class="icon_menu">
+              <%= link_to "#" do %>
+                <i class="fa fa-bars" aria-hidden="true"></i>
+              <% end %>
+            </div>
+          </div>
+          <!-- right_section: responsive_menu_icon -->
+
+          <div class="clear"></div>
+
+          <!-- responsive header content -->
+          <div class="responsive_header_content">
+            <ul>
+              <li><%= link_to "home", root_path %></li>
+              <li><%= link_to "about us", about_us_path %></li>
+              <li><%= link_to "child carers", child_carers_path %></li>
+              <li><%= link_to "nursery schools", schools_path %></li>
+              <li><%= link_to "contact us", contact_us_path %></li>
+              <% if user_signed_in? %>
+                <li><%= link_to "profile", user_path(current_user) %></li>
+                <li><%= link_to "logout", destroy_user_session_path, method: :delete, class: "last_child" %></li>
+              <% else %>
+                <li><%= link_to "register", register_path %></li>
+                <li><%= link_to "login", login_path, class: "last_child" %></li>
+              <% end %>
+            </ul>
+          </div>
+          <div class="clear"></div>
+          <!-- responsive header content -->
         </div>
+
         <div class="clear"></div>
 
         <div class="image_display_content">
@@ -193,8 +226,9 @@
 </div>
 
 
-
-
+<!-- .content_designpg_section .inner_middle_content
+.content_designpg_section .tab_header
+.content_designpg_section .section_main_info 1250px-->
 
 
 
