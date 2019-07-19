@@ -12,10 +12,6 @@
   position: relative;
 }
 
-// .content_designpg_section .background_content {
-//   background-image: url("img_background.png");
-//   height: 550px;
-// }
 @media only screen and (min-width: 1250px) {
   .content_designpg_section .background_content {
     background-image: url("img_background.png");
@@ -157,7 +153,6 @@
 
 .content_designpg_section .tab_header ul li a {
   display: inline-block;
-  // background-color: transparent;
   margin-right: 1px;
   color: #fff !important;
   text-decoration: none;
@@ -186,7 +181,6 @@
   -ms-transform: rotate(-5deg);
   -webkit-transform: rotate(-5deg);
   transform: rotate(-5deg);
-  // background-color: transparent;
 }
 
 .content_designpg_section .tab_header .tab_text_tilt_left {
@@ -199,7 +193,6 @@
   -ms-transform: rotate(5deg);
   -webkit-transform: rotate(5deg);
   transform: rotate(5deg);
-  // background-color: transparent;
 }
 
 .content_designpg_section .tab_header .tab_text_tilt_right {
@@ -211,7 +204,6 @@
 .content_designpg_section .content_section {
   background-color: #F1EEEA;
   padding: 0px 0px 100px 0px !important;
-  // z-index: -1;
 }
 
 .content_designpg_section .section_main_info {
@@ -240,16 +232,7 @@
   }
 }
 
-
-
-
-
-// ----------------------------
-//   workings
-// ----------------------------
-
 .content_designpg_section .mini_inner_section {
-  // height: 680px;
   padding: 15px;
   border-radius: 15px;
 }
@@ -263,7 +246,6 @@
     margin-bottom: 15px;
   }
 }
-
 
 .content_designpg_section .mini_content_title {
   font-size: 25px;
@@ -307,10 +289,6 @@
   font-size: 12px;
 }
 
-// .content_designpg_section .mini_text_overflow {
-//   height: 348px;
-//   overflow: hidden;
-// }
 @media only screen and (min-width: 1250px) {
   .content_designpg_section .mini_text_overflow {
     height: 348px;
@@ -349,12 +327,6 @@
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
-
-
-/*===================================================
-    Page: homepage
-    File: views/shared/_content_homepg.html.erb
-  ===================================================*/
 
 .content_designpg_section {
   padding: 0px !important;
@@ -509,7 +481,6 @@
   -o-transition: all 0.3s ease;
 }
 
-
 .content_designpg_section .site_content {
  margin: 30px 0px;
  padding: 0px !important; 
@@ -653,8 +624,6 @@
 }
 
 
-
-
 // ----------------------------------
 //   responsive header
 // ----------------------------------
@@ -738,47 +707,3 @@
   color: #fff !important;
   font-size: 30px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
