@@ -173,7 +173,7 @@
 }
 
 .content_designpg_section .section_main_info {
-  background-color: orange;
+  background-color: transparent;
   height: 550px;
   width: 1200px;
   margin: auto;
@@ -186,12 +186,12 @@
 // ----------------------------
 
 .mini_section {
-  background-color: red;
+  background-color: transparent;
 }
 
 .mini_inner_section {
   background-color: yellow;
-  height: 500px;
+  height: 470px;
   padding: 15px;
   border-radius: 15px;
 }
@@ -202,8 +202,8 @@
   text-transform: uppercase;
   font-weight: bold;
   color: #fff;
-  border-radius: 5px;
-  padding: 5px 10px !important;
+  border-radius: 20px;
+  padding: 10px 15px !important;
   margin-bottom: 5px;
 }
 
@@ -226,6 +226,14 @@
 .mini_text_title {
   margin: 10px 0px;
   font-size: 14px;
+}
+
+.next_arrow a {
+  color: #fff;
+  float: right;
+  display: inline-block;
+  font-size: 50px;
+  margin-top: 15px;
 }
 
 
