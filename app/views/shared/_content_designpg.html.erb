@@ -1,4 +1,4 @@
-<div class="medium-12 columns content_designpg_section content_homepg_section">
+<div class="medium-12 columns content_designpg_section">
   <!-- upper_section -->
   <div class="upper_content">
     <div class="background_content"></div>
@@ -28,7 +28,7 @@
                 <% else %>
                   <span><%= link_to "login", login_path %></span>
                   <span class="divider">|</span>
-                  <span><%= link_to "create account", register_path %></span>
+                  <span><%= link_to "create free account", register_path %></span>
                 <% end %>
               </div>
               <div></div>
@@ -120,7 +120,7 @@
                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div></br>
                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</div>
               </div>
-              <div class="next_arrow"><%= link_to '', '#', class: "fa fa-chevron-right", target:"_blank" %></div>
+              <div class="next_arrow"><%= link_to '', about_us_path, class: "fa fa-chevron-right" %></div>
             </div>
           </div>
         </div>
@@ -150,7 +150,7 @@
                   <div><%= f.submit "Search", class: "button" %></div>
                 <% end %>
               </div>
-              <div class="next_arrow"><%= link_to '', '#', class: "fa fa-chevron-right", target:"_blank" %></div>
+              <div class="next_arrow"><%= link_to '', child_carers_path, class: "fa fa-chevron-right" %></div>
             </div>
           </div>
         </div>
@@ -166,11 +166,11 @@
                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div>
               </div>
               <div class="search_content">
-                <%= search_form_for @search, url: child_carers_path do |f| %>
+                <%= search_form_for @search_school, url: schools_path do |f| %>
                   <ul>
                     <li>
                       <div class="serach_header">i am looking for a...</div>
-                      <div><%= f.select :category_service_id_eq, options_from_collection_for_select(CategoryService.all, "id", "name", @search.category_service_id_eq), prompt: "Select Service" %></div>
+                      <div><%= f.select :category_schooltype_id_eq, options_from_collection_for_select(CategorySchooltype.all, "id", "name", @search.category_service_id_eq), prompt: "Select Nursery" %></div>
                     </li>
                     <li>
                       <div class="serach_header">in the following area...</div>
@@ -180,7 +180,7 @@
                   <div><%= f.submit "Search", class: "button" %></div>
                 <% end %>
               </div>
-              <div class="next_arrow"><%= link_to '', '#', class: "fa fa-chevron-right", target:"_blank" %></div>
+              <div class="next_arrow"><%= link_to '', schools_path, class: "fa fa-chevron-right" %></div>
             </div>
           </div>
         </div>
