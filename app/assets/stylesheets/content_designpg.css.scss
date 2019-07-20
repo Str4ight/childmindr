@@ -207,7 +207,17 @@
 
 .content_designpg_section .content_section {
   background-color: #F1EEEA;
-  padding: 0px 0px 100px 0px !important;
+  padding: 0px 0px 100px 0px;
+}
+
+.content_designpg_section .usertypes_inner_section .content_section {
+  background-color: #F1EEEA;
+  padding: 0px 0px 65px 0px;
+}
+@media only screen and (max-width: 1250px) {
+  .content_designpg_section .usertypes_inner_section .content_section {
+    padding: 0px 0px 15px 0px !important;
+  }
 }
 
 .content_designpg_section .section_main_info {
