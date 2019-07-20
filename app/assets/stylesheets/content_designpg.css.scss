@@ -68,12 +68,23 @@
   float: left;
 }
 
-.content_designpg_section .left_content .main_logo {
+.content_designpg_section .left_content .main_logo a {
   font-size: 45px;
   text-transform: uppercase;
   font-weight: bold;
-  color: #fff;
+  color: #fff !important;
   font-style: italic;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.content_designpg_section .left_content .main_logo a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
 
 .content_designpg_section .left_content .logo_text {
