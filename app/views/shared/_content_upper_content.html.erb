@@ -123,7 +123,50 @@
           </div>
           <div class="clear"></div>
           <div class="main_img_cover">
-            <div class="inner_img_cover"><%= image_tag("img_homepg03.png") %></div>
+            <div class="inner_img_cover">
+              <% if action_name == 'homepg' %>
+                <%= image_tag("img_homepg03.png") %>
+
+              <% elsif action_name == 'usersbabysitterspg' %>
+                <div class="section_name">babysitters</div>
+                <%= image_tag("img_banner_01.png") %>
+
+              <% elsif action_name == 'userschildminderspg' %>
+                <div class="section_name">childminders</div>
+                <%= image_tag("img_banner_02.png") %>
+
+              <% elsif action_name == 'usersnanniespg' %>
+                <div class="section_name">nannies</div>
+                <%= image_tag("img_banner_03.png") %>
+
+              <% elsif action_name == 'usersaupairspg' %>
+                <div class="section_name">au pairs</div>
+                <%= image_tag("img_banner_04.png") %>
+
+              <% elsif action_name == 'usersnurserynursespg' %>
+                <div class="section_name">nursery nurses</div>
+                <%= image_tag("img_banner_05.png") %>
+
+              <% elsif action_name == 'usershouseholdhelpspg' %>
+                <div class="section_name">household helps</div>
+                <%= image_tag("img_banner_02.png") %>
+
+              <% elsif action_name == 'childcarerspg' %>
+                <div class="section_name">child carers</div>
+                <%= image_tag("img_banner_02.png") %>
+
+              <% elsif action_name == 'usersmaternitynursespg' %>
+                <div class="section_name">maternity nurses</div>
+                <%= image_tag("img_homepg03.png") %>
+
+              <% elsif action_name == 'usersprivatemidwivespg' %>
+                <div class="section_name">private midwives</div>
+                <%= image_tag("img_homepg03.png") %>
+                
+              <% else %>
+                <%= image_tag("img_homepg03.png") %>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>
