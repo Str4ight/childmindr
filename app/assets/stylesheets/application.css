@@ -221,7 +221,7 @@ a:hover {
 }
 
 .colour_light_purple {
-  color: #7966BE;
+  background-color: #7966BE !important;
 }
 
 .colour_turquois {

@@ -300,7 +300,8 @@
 }
 
 .content_static_pages .weblink a {
-  color: #3a98a2 !important;
+  color: #fff !important;
+  text-decoration: underline;
 }
 
 .content_static_pages .listings ul {
@@ -416,4 +417,9 @@
 
 .content_latestreviewspg_pages .ratings {
   font-size: 13px !important;
+}
+
+.content_static_pages .divider_line {
+  border-bottom: 1px #fff dashed;
+  margin: 25px 0px 22px 0px;
 }
