@@ -177,6 +177,11 @@
   }
 }
 
+.form_general_section .double_main_field {
+  padding: 0px !important;
+  margin-bottom: 15px;
+}
+
 .form_general_section .double_main_field ul {
   list-style-type: none !important;
   margin: 0px !important;
@@ -278,7 +283,7 @@
 }
 
 .form_general_section label {
-  color: #fff !important;
+  color: #bc4469 !important;
   font-size: 12px;
   text-transform: capitalize;
 }
@@ -313,6 +318,13 @@
     width: 100%;
     padding: 0px !important;
   }
+}
+
+.form_general_section .mini_general_info {
+  font-size: 10px;
+  color: #3a98a2;
+  letter-spacing: 1px;
+  word-spacing: 1px;
 }
 
 .form_general_section .minor_general_info {
@@ -754,6 +766,7 @@
 
 .form_general_section #school_category_town_id {
   height: 50px;
+  display: inline-block !important;
 }
 
 .form_general_section #school_category_schooltype_id {
@@ -802,6 +815,14 @@
 }
 
 .form_general_section .modal_form_inner .triple_field ul li {
+  width: 100% !important;
+}
+
+.form_general_section .modal_form_inner .double_main_field ul li {
+  width: 100% !important;
+}
+
+.form_general_section .modal_form_inner .double_main_field {
   width: 100% !important;
 }
 

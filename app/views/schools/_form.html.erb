@@ -26,11 +26,10 @@
 
     <div class="clear"></div>
 
-    <div class="medium-12 columns triple_field">
+    <div class="medium-12 columns double_main_field">
       <ul>
         <li class="first_section"><%= f.input :name, label: "bursery/school name", placeholder: "Wallisdean Infant Nursery" %></li>
         <li class="second_section"><%= f.input :email, placeholder: "adminoffice@wallisdean-inf.gh" %></li>
-        <li class="third_section"><%= f.input :offsetreportlink, label: "offset report link" %></li>
       </ul>
     </div>
 
@@ -47,9 +46,10 @@
         <li class="first_section"><%= f.association :category_country, collection: CategoryCountry.all, prompt: "select country", label: "Select Country" %></li>
         <li class="second_section"><%= f.association :category_region, collection: CategoryRegion.all, prompt: "select city", label: "City" %></li>
         <li class="third_section">
-          <%= f.hidden_field :town %>
-          <%= f.association :category_zone, collection: CategoryZone.all, prompt: "select a zone", label: "category zone" %>
-          <%= f.grouped_collection_select :category_town_id, CategoryZone.order(:name), :category_towns, :name, :id, :name, include_blank: true, prompt: "town sub-category" %>
+          <%= f.association :category_town, collection: CategoryTown.all, prompt: "select town", label: "town" %>
+          <%# f.hidden_field :town %>
+          <%# f.association :category_zone, collection: CategoryZone.all, prompt: "select a zone", label: "category zone" %>
+          <%# f.grouped_collection_select :category_town_id, CategoryZone.order(:name), :category_towns, :name, :id, :name, include_blank: true, prompt: "town sub-category" %>
         </li>
       </ul>
     </div>
@@ -82,7 +82,7 @@
         </li>
         <li class="third_section app_btn">
           <div><%= f.input :approve %></div>
-          <div class="minor_general_info">By ticking the approve box, the nursery/school will be displayed to the public</div>
+          <div class="mini_general_info">By ticking the approve box, the nursery/school will be displayed to the public</div>
         </li>
       </ul>
     </div>
