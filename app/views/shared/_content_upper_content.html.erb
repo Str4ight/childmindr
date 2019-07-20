@@ -23,7 +23,7 @@
               <% if user_signed_in? %>
                 <span><%= link_to "logout", destroy_user_session_path, method: :delete %></span>
                 <span class="divider">|</span>
-                <span><%= link_to "profile", user_path(current_user) %></span>
+                <span><i class="fa fa-user" aria-hidden="true"></i> <%= link_to "profile", user_path(current_user) %></span>
               <% else %>
                 <span><%= link_to "login", login_path %></span>
                 <span class="divider">|</span>
