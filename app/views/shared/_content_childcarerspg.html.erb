@@ -25,7 +25,7 @@
               <%= f.select :category_service_id_eq, options_from_collection_for_select(CategoryService.all, "id", "name", @search.category_service_id_eq), prompt: "Select Service" %>
               <%= f.select :category_town_id_eq, options_from_collection_for_select(CategoryTown.all, "id", "name", @search.category_town_id_eq), prompt: "Select Town" %>
             </div>
-            <div><%= link_to "display all", schools_path, style: "color:#fff;", class: "button btn_display" %></div>
+            <div><%= link_to "display all", child_carers_path, style: "color:#fff;", class: "button btn_display" %></div>
             <div><%= f.submit class: "button btn_submit" %></div>
           <% end %>
         </div>
