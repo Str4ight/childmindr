@@ -289,7 +289,7 @@
                   <span>message</span>
                 <% end %>
                 <% if @user.telephone.present? %>
-                  <%= mail_to register_path do %>
+                  <%= link_to register_path do %>
                     <span><i class="fa fa-phone" aria-hidden="true"></i></span>
                     <span>phone</span>
                   <% end %>
@@ -557,7 +557,7 @@
         </div>
         <!-- reviews -->
       <% end %>
-      <div class="compliance">This profile has been produced from information provided to us by the user. We have not verified or confirmed the accuracy of any of the information and members should undertake their own vigorous checks and references. Please ensure you read our <span class="weblink"><%= link_to "safety advice", "#" %></span> and information on how to <span class="weblink"><%= link_to "check childmindr provider documents", "#" %></span>.</div>
+      <div class="compliance">This profile has been produced from information provided to us by the user. We have not verified or confirmed the accuracy of any of the information and members should undertake their own vigorous checks and references. Please ensure you read our <span class="weblink"><%= link_to "safety advice", safety_advise_path %></span> and <span class="weblink"><%= link_to "help and advise", help_and_advise_path %></span> pages.</div>
     </div>
   </div>
 </div>

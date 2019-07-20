@@ -21,7 +21,7 @@
             <div class="tel">telephone (UK): +44 77 22 016771</div>
             <div>
               <% if user_signed_in? %>
-                <span><%= link_to "logout", destroy_user_session_path %></span>
+                <span><%= link_to "logout", destroy_user_session_path, method: :delete %></span>
                 <span class="divider">|</span>
                 <span><%= link_to "profile", user_path(current_user) %></span>
               <% else %>
