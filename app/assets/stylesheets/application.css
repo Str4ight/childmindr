@@ -35,9 +35,14 @@
     colour_light_blue        rgb: 107 160 210   hex: #6BA0D2
     colour_blue_text         rgb: 174 206 247   hex: #AECEF7
     colour_purple            rgb: 92 57 159     hex: #5C399F
+    colour_light_purple:     rgb: 121 102 190   hex: #7966BE
+    colour_turquois:         rgb: 100 147 170   hex: #6493AA
+    colour_light_turquois:   rgb: 114 169 196   hex: #72A9C4
     colour_light_brown       rgb: 241 238 234   hex: #F1EEEA
     colour_medium_brown:     rgb: 218 211 205   hex: #DAD3CD
-    colour_dark_brown_text:  rgb: 118 109 101   hex: #766D65 */
+    colour_dark_brown_text:  rgb: 118 109 101   hex: #766D65 
+    color_pink:                                 hex: #bc4469
+    */
 
 
 /*gray:           rgb: 118 118 118  | hex: #777*/
@@ -215,6 +220,32 @@ a:hover {
   opacity: 1;
 }
 
+.colour_light_purple {
+  color: #7966BE;
+}
+
+.colour_turquois {
+  background-color: #6493AA;
+}
+
+.colour_turquois:hover {
+  background-color: #6493AA;
+  opacity: 1;
+}
+
+.colour_light_turquois {
+  color: #72A9C4;
+}
+
+.color_pink {
+  background-color: #bc4469
+}
+
+.color_pink:hover {
+  background-color: #bc4469;
+  opacity: 1;
+}
+
 .colour_light_brown {
   background-color: #F1EEEA;
 }
@@ -226,6 +257,3 @@ a:hover {
 .colour_dark_brown_text {
   color: #766D65;
 }
-
-
-
