@@ -1,53 +1,97 @@
-<div class="medium-12 columns content_homepg_section">
-  <div class="content_inner">
-    <div class="page_content">
-      <div class="header">your local Childcare finder</div>
-      <div class="medium-12 columns image_cover">
-        <div class="medium-5 columns image_text">
-          <div class="text_content">
-            <div class="img_header">find local childcare</div>
-            <div class="sub_text">Select the type of childcare and town you are looking for.</div>
+<!-- content_designpg.css.scss -->
+<div class="medium-12 columns content_designpg_section content_homepg_section">
+  <div class="homepg_inner_content">
+    <!-- upper_section -->
+    <%= render 'shared/content_upper_content' %>
+    <!-- upper_section -->
+
+    <div class="clear"></div>
+
+    <!-- section -->
+    <div class="medium-12 columns content_section">
+      <div class="content_inner_section">
+        <div class="section_main_info">
+          <!-- about us / our childcarers / our nurseries -->
+
+          <!-- section -->
+          <div class="medium-4 columns mini_section" style="padding-left:0px">
+            <div class="mini_inner_section colour_orange">
+              <div class="mini_content_title colour_light_orange">about us</div>
+              <div class="img_text_section">
+                <div class="mini_image_section"><%= image_tag("img_homepg03.png") %></div>
+                <div class="mini_text_section mini_text_overflow colour_orange_text">
+                  <div class="mini_text_title">Lorem ipsum dolor sit amet</div>
+                  <div>Childmindr is a platform aimed at making the process of locating effective childcare a breeze. All the information required to locate a suitable place for your child has been made available at your fingertips.</div><br/>
+                  <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div></br/>
+                  <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</div>
+                </div>
+                <div class="next_arrow"><%= link_to '', about_us_path, class: "fa fa-chevron-right" %></div>
+              </div>
+            </div>
           </div>
-          <div class="search_content">
-            <%= search_form_for @search, url: child_carers_path do |f| %>
-              <ul>
-                <li>
-                  <div class="serach_header">i am looking for a...</div>
-                  <div><%= f.select :category_service_id_eq, options_from_collection_for_select(CategoryService.all, "id", "name", @search.category_service_id_eq), prompt: "Select Service" %></div>
-                </li>
-                <li>
-                  <div class="serach_header">in the following area...</div>
-                  <div><%= f.select :category_town_id_eq, options_from_collection_for_select(CategoryTown.all, "id", "name", @search.category_town_id_eq), prompt: "Select Town" %></div>
-                </li>
-              </ul>
-              <div><%= f.submit "Search", class: "button" %></div>
-            <% end %>
+
+          <!-- section -->
+          <div class="medium-4 columns mini_section">
+            <div class="mini_inner_section colour_green">
+              <div class="mini_content_title colour_light_green">our childcarers</div>
+              <div class="img_text_section">
+                <div class="mini_image_section"><%= image_tag("img_homepg03.png") %></div>
+                <div class="mini_text_section colour_green_text">
+                  <div class="mini_text_title">Lorem ipsum dolor sit amet</div>
+                  <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div>
+                </div>
+                <div class="search_content">
+                  <%= search_form_for @search, url: child_carers_path do |f| %>
+                    <ul>
+                      <li>
+                        <div class="serach_header">i am looking for a...</div>
+                        <div><%= f.select :category_service_id_eq, options_from_collection_for_select(CategoryService.all, "id", "name", @search.category_service_id_eq), prompt: "Select Service" %></div>
+                      </li>
+                      <li>
+                        <div class="serach_header">in the following area...</div>
+                        <div><%= f.select :category_town_id_eq, options_from_collection_for_select(CategoryTown.all, "id", "name", @search.category_town_id_eq), prompt: "Select Town" %></div>
+                      </li>
+                    </ul>
+                    <div><%= f.submit "Search", class: "button" %></div>
+                  <% end %>
+                </div>
+                <div class="next_arrow"><%= link_to '', child_carers_path, class: "fa fa-chevron-right" %></div>
+              </div>
+            </div>
           </div>
 
+          <!-- section -->
+          <div class="medium-4 columns mini_section" style="padding-right:0px">
+            <div class="mini_inner_section colour_blue">
+              <div class="mini_content_title colour_light_blue">our nurseries</div>
+              <div class="img_text_section">
+                <div class="mini_image_section"><%= image_tag("img_homepg03.png") %></div>
+                <div class="mini_text_section colour_blue_text">
+                  <div class="mini_text_title">Lorem ipsum dolor sit amet</div>
+                  <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div>
+                </div>
+                <div class="search_content">
+                  <%= search_form_for @search_school, url: schools_path do |f| %>
+                    <ul>
+                      <li>
+                        <div class="serach_header">i am looking for a...</div>
+                        <div><%= f.select :category_schooltype_id_eq, options_from_collection_for_select(CategorySchooltype.all, "id", "name", @search.category_service_id_eq), prompt: "Select Nursery" %></div>
+                      </li>
+                      <li>
+                        <div class="serach_header">in the following area...</div>
+                        <div><%= f.select :category_town_id_eq, options_from_collection_for_select(CategoryTown.all, "id", "name", @search.category_town_id_eq), prompt: "Select Town" %></div>
+                      </li>
+                    </ul>
+                    <div><%= f.submit "Search", class: "button" %></div>
+                  <% end %>
+                </div>
+                <div class="next_arrow"><%= link_to '', schools_path, class: "fa fa-chevron-right" %></div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="medium-7 columns backgrd_img"><%= image_tag("img_homepg.png") %></div>
       </div>
-
-      <div class="medium-12 columns site_content">
-        <div class="minor_content"><span class="highlight">Childmindr</span> is a platform aimed at making the process of locating effective childcare a breeze. All the information required to locate a suitable place for your child has been made available at your fingertips.</div>
-      </div>
-
-      <div class="medium-12 columns search_click_content">
-        <div class="serach_cover_btn">
-          <%= link_to child_carers_path do %>
-          <div class="link_header">search for childcare now</div>
-          <div class="link_minor_content">Do a quick free search, no registration required.</div>
-          <% end %>
-        </div>
-      </div>
-
     </div>
+    <!-- section -->
   </div>
 </div>
-
-
-
-
-
-
-

@@ -63,9 +63,6 @@ class StaticPagesController < ApplicationController
   def providerdocumentpg
   end
 
-  def designpg 
-  end
-
 
   # ------------ user_types ------------
   def childcarerspg

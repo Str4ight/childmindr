@@ -3,10 +3,11 @@
     File: views/shared/_content_childcarerspg.html.erb
     File: views/shared/_content_users_babysitterspg.html.erb
   ===================================================*/
+// #98B543
 
 .content_usertypes_section {
   padding: 0px !important;
-  background-color: transparent;
+  background-color: #F1EEEA;
 }
 
 .content_usertypes_section .content_inner {
@@ -26,7 +27,7 @@
 @media only screen and (min-width: 1025px) {
   .content_usertypes_section .search_section  {
     height: 60px;
-    border-bottom: 1px solid #3a98a2;
+    border-bottom: 1px solid #CE5D3D;
   }
 }
 
@@ -172,7 +173,7 @@
 
 .content_usertypes_section .statecontent .button {
   float: right;
-  background-color: #808fba;
+  background-color: #98B543;
   margin-left: 10px;
   text-transform: capitalize;
   font-size: 14px;
@@ -239,7 +240,7 @@
 }
 
 .content_usertypes_section .statecontent .button:hover {
-  background-color: #3a98a2 !important;
+  background-color: #CE5D3D !important;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -264,7 +265,6 @@
 }
 
 .content_usertypes_section .search_data ul li:first-child {
-  padding-top: 0px !important;
   margin-top: 30px;
 }
 
@@ -274,9 +274,10 @@
 }
 
 .content_usertypes_section .user_block {
-  background-color: transparent;
-  padding: 50px 0px !important;
-  border-bottom: 1px solid #3a98a2;
+  background-color: #fff;
+  padding: 30px 0px !important;
+  border-bottom: 1px solid #CE5D3D;
+  margin-bottom: 15px;
 }
 
 .content_usertypes_section .left_content {
@@ -350,7 +351,7 @@
 
 .content_usertypes_section .user_name {
   font-size: 17px;
-  color: #808fba;
+  color: #98B543;
   font-weight: bold;
   text-transform: capitalize;
 }
@@ -395,7 +396,7 @@
 
 .content_usertypes_section .user_headline {
   font-size: 13px;
-  color: #3a98a2;
+  color: #CE5D3D;
   font-weight: bold;
 }
 
@@ -483,7 +484,7 @@
   word-spacing: 2px;
   font-weight: bold;
   padding: 5px 25px;
-  border: 2px solid #7ac5cb;
+  border: 2px solid #CE5D3D;
   border-radius: 5px;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -497,7 +498,7 @@
 
 .content_usertypes_section .main_btns a:hover {
   opacity: 0.8;
-  background-color: #3a98a2;
+  background-color: #CE5D3D;
   color: #fff;
   text-decoration: none;
   -webkit-transition: all 0.3s ease;
@@ -506,7 +507,7 @@
 }
 
 .content_usertypes_section .btn_view a {
-  background-color: #3a98a2;
+  background-color: #CE5D3D;
   color: #fff;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -515,7 +516,7 @@
 
 .content_usertypes_section .btn_message a {
   background-color: #fff;
-  color: #3a98a2;
+  color: #CE5D3D;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -553,13 +554,13 @@
 .content_usertypes_section .serach_block {
   background-color: transparent;
   height: 60px;
-  border-bottom: 1px solid #3a98a2;
+  border-bottom: 1px solid #CE5D3D;
 }
 
 .content_usertypes_section .image_cover {
   position: relative;
   border-radius: 8px;
-  background-color: #758abf;
+  background-color: #98B543;
   padding: 0px !important;
   margin-top: 15px;
 }
@@ -632,7 +633,7 @@
 
 .content_usertypes_section .button {
   float: right;
-  background-color: #808fba;
+  background-color: #98B543;
   margin-left: 10px;
   text-transform: capitalize;
   font-size: 14px;
@@ -653,7 +654,7 @@
 }
 
 .content_usertypes_section .button:hover {
-  background-color: #3a98a2 !important;
+  background-color: #CE5D3D !important;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -701,7 +702,7 @@
 }
 
 .content_usertypes_section .message_content {
-  background-color: #808fba;
+  background-color: #98B543;
   color: #fff;
   padding: 15px;
   opacity: 0.7;

@@ -1,6 +1,6 @@
 /*===================================================
     Page: homepage
-    File: views/shared/_content_designpg.html.erb
+    File: views/shared/_content_homepg.html.erb
   ===================================================*/
 
 .content_designpg_section {
@@ -242,7 +242,7 @@
   border-radius: 15px;
 }
 @media only screen and (min-width: 1250px) {
-  .content_designpg_section .mini_inner_section {
+  .content_designpg_section .homepg_inner_content .mini_inner_section {
     height: 680px;
   }
 }

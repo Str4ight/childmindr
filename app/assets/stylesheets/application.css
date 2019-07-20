@@ -225,16 +225,24 @@ a:hover {
 }
 
 .colour_turquois {
-  background-color: #6493AA;
+  background-color: rgb(12, 150, 177);
 }
 
 .colour_turquois:hover {
-  background-color: #6493AA;
+  background-color: rgb(12, 150, 177);
   opacity: 1;
 }
 
 .colour_light_turquois {
-  color: #72A9C4;
+  background-color: rgb(11, 172, 203) !important;
+}
+
+.colour_light_turquois_text {
+  color: rgb(11, 172, 203) !important;
+}
+
+.colour_white_text {
+  color: #fff !important;
 }
 
 .color_pink {
