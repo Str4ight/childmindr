@@ -3,9 +3,12 @@
     File: views/schools/_index.html.erb
   ===================================================*/
 
+// #4D75B8
+// #6BA0D2
+// #98B543
 .schools_index_section {
   padding: 0px !important;
-  background-color: transparent;
+  background-color: #F1EEEA;
 }
 
 .schools_index_section .content_inner {
@@ -25,7 +28,7 @@
 @media only screen and (min-width: 1025px) {
   .schools_index_section .search_section  {
     height: 60px;
-    border-bottom: 1px solid #3a98a2;
+    border-bottom: 1px solid #4D75B8;
   }
 }
 
@@ -146,7 +149,7 @@
 
 .schools_index_section .statecontent .button {
   float: right;
-  background-color: #808fba;
+  background-color: #98B543;
   margin-left: 10px;
   text-transform: capitalize;
   font-size: 14px;
@@ -190,17 +193,20 @@
 }
 
 .schools_index_section .statecontent .button:hover {
-  background-color: #3a98a2 !important;
+  background-color: #4D75B8 !important;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
 
 .schools_index_section .page_info {
-  margin: 30px 0px;
-  padding: 0px !important;
-  color: #777;
-  font-weight: 500;
+  position: relative;
+  border-radius: 8px;
+  background-color: #4D75B8;
+  color: #fff;
+  font-size: 14px;
+  padding: 15px !important;
+  margin-top: 30px;
   text-align: left;
 }
 @media only screen and (max-width: 1025px) {
@@ -215,19 +221,18 @@
 }
 
 .schools_index_section .search_data ul li:first-child {
-  padding-top: 0px !important;
   margin-top: 30px;
 }
 
 .schools_index_section .search_data ul li:last-child {
-  border-bottom: 1px solid transparent;
   margin-bottom: 80px;
 }
 
 .schools_index_section .school_block {
-  background-color: transparent;
-  padding: 50px 0px !important;
-  border-bottom: 1px solid #3a98a2;
+  background-color: #fff;
+  padding: 30px 0px !important;
+  border-bottom: 1px solid #4D75B8;
+  margin-bottom: 15px;
 }
 
 .schools_index_section .left_content {
@@ -295,7 +300,7 @@
 
 .schools_index_section .school_name {
   font-size: 17px;
-  color: #808fba;
+  color: #98B543;
   font-weight: bold;
   text-transform: capitalize;
 }
@@ -354,11 +359,11 @@
   text-transform: capitalize;
   letter-spacing: 1px;
   word-spacing: 2px;
-  background-color: #3a98a2;
+  background-color: #4D75B8;
   color: #fff;
   font-weight: bold;
   padding: 5px 25px;
-  border: 2px solid #7ac5cb;
+  border: 2px solid #6BA0D2;
   border-radius: 5px;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -368,7 +373,7 @@
 .schools_index_section .btn_view a:hover {
   background-color: #fff !important;
   text-decoration: none;
-  color: #7ac5cb !important;
+  color: #6BA0D2 !important;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
