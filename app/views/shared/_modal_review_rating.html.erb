@@ -3,9 +3,10 @@
   <div class="modal_header">
     <span><%= truncate("#{@school.name}", length: 40) %></span>
     <span>|</span>
-    <span><%= truncate("#{@school.category_schooltype.name}", length: 40) %></span>
+    <!-- <span><%# truncate("#{@school.category_schooltype.name}", length: 40) %></span> -->
   </div>
-  <div class="rate_info">rate <%= "#{@school.name} as a #{@school.category_schooltype.name}" %></div>
+  <!-- <div class="rate_info">rate <%# "#{@school.name} as a #{@school.category_schooltype.name}" %></div> -->
+  <div class="rate_info">rate <%= "#{@school.name}" %></div>
   <div class="modal_content"><%= render 'reviews/form' %></div>
   <button class="close-button" data-close aria-label="Close modal" type="button">
     <span aria-hidden="true">&times;</span>

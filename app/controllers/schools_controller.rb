@@ -33,7 +33,7 @@ class SchoolsController < ApplicationController
       # @school.town = @school.category_town_id
       respond_to do |format|
         if @school.save
-          format.html { redirect_to @school, notice: 'School was successfully created.' }
+          format.html { redirect_to @school, notice: 'Nursery was successfully created.' }
           format.json { render :show, status: :created, location: @school }
         else
           format.html { render :new }
@@ -51,7 +51,7 @@ class SchoolsController < ApplicationController
       # @school.town = @school.category_town_id
       respond_to do |format|
         if @school.update_attributes(school_params)
-          format.html { redirect_to @school, notice: 'School was successfully updated.' }
+          format.html { redirect_to @school, notice: 'Nursery was successfully updated.' }
           format.json { render :show, status: :ok, location: @school }
         else
           format.html { render :edit }
@@ -69,7 +69,7 @@ class SchoolsController < ApplicationController
       @school = @user.schools.friendly.find(params[:id])
       @school.destroy
       respond_to do |format|
-        format.html { redirect_to schools_url, notice: 'School was successfully destroyed.' }
+        format.html { redirect_to schools_url, notice: 'Nursery was successfully destroyed.' }
         format.json { head :no_content }
       end
     else
