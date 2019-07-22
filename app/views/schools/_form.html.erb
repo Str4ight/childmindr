@@ -101,8 +101,9 @@
   <div class="form-actions">
     <% if action_name == 'new' %>
       <%= f.button :submit, "Add A Nursery" %>
-    <% elsif action_name == 'edit' %>
+    <% else %>
       <%= f.button :submit, "Update A Nursery" %>
     <% end %>
   </div>
 <% end %>
+
