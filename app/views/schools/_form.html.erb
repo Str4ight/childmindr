@@ -93,30 +93,16 @@
     </div>
     <!-- hidden_field -->
 
-
-
-      
-      
-
   </div>
   <!-- form_end -->
 
   <div class="clear"></div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Add A Nursery" %>
+    <% if action_name == 'new' %>
+      <%= f.button :submit, "Add A Nursery" %>
+    <% elsif action_name == 'edit' %>
+      <%= f.button :submit, "Update A Nursery" %>
+    <% end %>
   </div>
 <% end %>
-
-
-
-
-
-
-
-
-
-
-
-
-
