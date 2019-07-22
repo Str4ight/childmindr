@@ -1,0 +1,134 @@
+<!-- content_designpg.css.scss -->
+<div class="upper_content">
+  <div class="background_content"></div>
+  <div class="middle_content">
+    <div class="inner_middle_content">
+      <div class="medium-12 columns header_content">
+
+        <!-- left_section -->
+        <div class="left_content">
+          <div class="main_logo"><%= link_to "childmindr", root_path %></div>
+          <div class="logo_text">your local child care finder</div>
+        </div>
+        <!-- left_section -->
+
+        <!-- right_section -->
+        <div class="right_content non_responsive_header">
+          <div class="contact_title">contact:</div>
+          <div class="contact_list">
+            <div class="colour_blue_text">8901 Marmora Road, Glasgow, D04 89GR</div>
+            <div class="tel">telephone (GH): +233 55 209 9793</div>
+            <div class="tel">telephone (UK): +44 77 22 016771</div>
+            <div>
+              <% if user_signed_in? %>
+                <span><%= link_to "logout", destroy_user_session_path, method: :delete %></span>
+                <span class="divider">|</span>
+                <span><i class="fa fa-user" aria-hidden="true"></i> <%= link_to "profile", user_path(current_user) %></span>
+              <% else %>
+                <span><%= link_to "login", login_path %></span>
+                <span class="divider">|</span>
+                <span><%= link_to "create free account", register_path %></span>
+              <% end %>
+            </div>
+            <div></div>
+          </div>
+        </div>
+        <!-- right_section -->
+
+        <!-- right_section: responsive_menu_icon -->
+        <div class="right_content responsive_header">
+          <div class="icon_menu">
+            <%= link_to "#" do %>
+              <i class="fa fa-bars" aria-hidden="true"></i>
+            <% end %>
+          </div>
+        </div>
+        <!-- right_section: responsive_menu_icon -->
+
+        <div class="clear"></div>
+
+        <!-- responsive header content -->
+        <div class="responsive_header_content">
+          <ul>
+            <li><%= link_to "home", root_path %></li>
+            <li><%= link_to "about us", about_us_path %></li>
+            <li><%= link_to "child carers", child_carers_path %></li>
+            <li><%= link_to "nursery schools", schools_path %></li>
+            <li><%= link_to "contact us", contact_us_path %></li>
+            <% if user_signed_in? %>
+              <li><%= link_to "profile", user_path(current_user) %></li>
+              <li><%= link_to "logout", destroy_user_session_path, method: :delete, class: "last_child" %></li>
+            <% else %>
+              <li><%= link_to "register", register_path %></li>
+              <li><%= link_to "login", login_path, class: "last_child" %></li>
+            <% end %>
+          </ul>
+        </div>
+        <div class="clear"></div>
+        <!-- responsive header content -->
+      </div>
+
+      <div class="clear"></div>
+
+      <div class="image_display_content">
+        <div class="image_inner_content">
+          <div class="tab_header">
+            <ul>
+              <li>
+                <%= link_to root_path, class: "tab_tilt_left colour_red" do %>
+                  <div class="tab_text_tilt_left">home</div>
+                <% end %>
+              </li> 
+              <li>
+                <%= link_to search_babysitters_path, class: "tab_tilt_right colour_orange" do %>
+                  <div class="tab_text_tilt_right">babysitters</div>
+                <% end %>
+              </li> 
+              <li>
+                <%= link_to search_childminders_path, class: "tab_tilt_left colour_yellow" do %>
+                  <div class="tab_text_tilt_left">childminders</div>
+                <% end %>
+              </li> 
+              <li>
+                <%= link_to search_nannies_path, class: "colour_green" do %>
+                  <div class="">nannies</div>
+                <% end %>
+              </li> 
+              <li>
+                <%= link_to search_au_pairs_path, class: "tab_tilt_right colour_light_blue" do %>
+                  <div class="tab_text_tilt_right">au pairs</div>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to search_nursery_nurses_path, class: "tab_tilt_left color_pink" do %>
+                  <div class="tab_text_tilt_left">nurses</div>
+                <% end %>
+              </li> 
+              <li>
+                <%= link_to search_household_helpers_path, class: "tab_tilt_right colour_purple" do %>
+                  <div class="tab_text_tilt_right">House Help</div>
+                <% end %>
+              </li> 
+              <li>
+                <%= link_to schools_path, class: "colour_light_orange" do %>
+                  <div class="">nurseries</div>
+                <% end %>
+              </li> 
+              <li>
+                <%= link_to contact_us_path, class: "tab_tilt_right colour_blue" do %>
+                  <div class="tab_text_tilt_right">contacts</div>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+          <div class="clear"></div>
+          <div class="main_img_cover">
+            <div class="inner_img_cover">
+              <%# image_tag("img_homepg03.png") %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
