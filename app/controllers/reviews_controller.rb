@@ -37,10 +37,10 @@ class ReviewsController < ApplicationController
     @review = @school.reviews.create(review_params)
     respond_to do |format|
       if @review.save
-        format.html { redirect_to @school, notice: 'Review was successfully created.' }
+        format.html { redirect_to @school, notice: 'Review was successfully added.' }
         format.json { render :show, status: :created, location: @review }
       else
-        format.html { redirect_to @school, notice: 'Review was not created.' }
+        format.html { redirect_to @school, notice: 'Review was not added.' }
       end
     end
   end

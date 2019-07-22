@@ -40,10 +40,10 @@ class ReviewusersController < ApplicationController
 
     respond_to do |format|
       if @reviewuser.save
-        format.html { redirect_to user_path(@provider), notice: 'Review was successfully created.' }
+        format.html { redirect_to user_path(@provider), notice: 'Review was successfully added.' }
         format.json { render :show, status: :created, location: @reviewuser }
       else
-        format.html { redirect_to user_path(@provider), notice: 'Review was not created.' }
+        format.html { redirect_to user_path(@provider), notice: 'Review was not added.' }
       end
     end
   end
