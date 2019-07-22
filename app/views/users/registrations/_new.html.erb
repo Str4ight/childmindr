@@ -1,83 +1,85 @@
 <!-- forms_styling.css.scss -->
 <!-- content_designpg.css.scss -->
 <div class="medium-12 columns content_designpg_section login_section form_general_section">
-  <!-- upper_section -->
-  <%= render 'shared/content_upper_content' %>
-  <!-- upper_section -->
+  <div class="register_inner_content">
+    <!-- upper_section -->
+    <%= render 'shared/content_upper_content' %>
+    <!-- upper_section -->
 
-  <div class="clear"></div>
+    <div class="clear"></div>
 
-  <!-- section -->
-  <div class="medium-12 columns content_section">
-    <div class="content_inner_section">
-      <div class="section_main_info">
-        <!-- about us / our childcarers / our nurseries -->
+    <!-- section -->
+    <div class="medium-12 columns content_section">
+      <div class="content_inner_section">
+        <div class="section_main_info">
+          <!-- about us / our childcarers / our nurseries -->
 
-        <!-- section -->
-        <div class="medium-12 columns mini_section">
-          <div class="mini_inner_section colour_turquois">
-            <div class="mini_content_title form_title colour_light_turquois">Free Registration</div>
+          <!-- section -->
+          <div class="medium-12 columns mini_section">
+            <div class="mini_inner_section colour_turquois">
+              <div class="mini_content_title form_title colour_light_turquois">Free Registration</div>
 
-            <div class="mini_text_section colour_white_text">
-              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div>
-            </div>
-
-            <div class="form_general_inner_section registration_inner_section">
-              <div class="inner_form_content">
-                <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-                  <%= f.error_notification %>
-
-                  <div class="form-inputs">
-                    <div class="input_section">
-                      <div><%= f.text_field :firstname, placeholder: "firstname", required: true, autofocus: true, placeholder: "First Name", label: false %></div>
-                      <div class="minor_info">This is used to identify you to other members.</div>
-                    </div>
-
-                    <div class="input_section">
-                      <div><%= f.text_field :lastname, placeholder: "lastname", required: true, autofocus: true, placeholder: "Last Name", label: false %></div>
-                      <div class="minor_info">This is used to identify you to other members.</div>
-                    </div>
-                    
-                    <div class="input_section">
-                      <div><%= f.input :email, required: true, autofocus: true, placeholder: "Email Address", label: false %></div>
-                      <div class="minor_info">Used as your login username and where we send your account notifications. We won't share this email address with other members.</div>
-                    </div>
-                    <div><%= f.association :category_gender, required: true, collection: CategoryGender.all, prompt: "Select Gender", label: false %></div>
-                    
-                    <div class="clear"></div>
-
-                    <div class="double_field">
-                      <ul>
-                        <li class="first_content"><%= f.association :category_country, required: true, collection: CategoryCountry.all, prompt: "Select Country", label: false, required: true %></li>
-                        <li class="second_content"><%= f.association :category_town, required: true, collection: CategoryTown.all, prompt: "Select Town", label: false, required: true %></li>
-                      </ul>
-                    </div>
-
-                    <div class="clear"></div>
-
-                    <div><%= f.association :category_segment, required: true, collection: CategorySegment.all, prompt: "Select Segment", label: false %></div>
-                    <div id="row_dim"><%= f.association :category_service, required: true, collection: CategoryService.all, prompt: "Select Service", label: false %></div>
-                    <div><%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %></div>
-                    <div><%= f.input :password_confirmation, required: true %></div>
-                    
-                    <div class="input_section">
-                      <span><%= f.input :terms, required: true, label: false%></span>
-                      <span class="minor_info">Please tick here to confirm that you have read and understood our <span class="weblink"><%= link_to "Terms and Conditions", terms_and_conditions_path %></span> and <span class="weblink"><%= link_to "Privacy Policy", privacy_and_cookie_policy_path %></span>.</span>
-                    </div>
-                  </div>
-
-                  <div class="form-actions">
-                    <%= f.button :submit, "Create A Free Account" %>
-                  </div>
-                <% end %>
-                <div class="form_links"><%= render "users/shared/links" %></div>
+              <div class="mini_text_section colour_white_text">
+                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div>
               </div>
-            </div>
 
+              <div class="form_general_inner_section registration_inner_section">
+                <div class="inner_form_content">
+                  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                    <%= f.error_notification %>
+
+                    <div class="form-inputs">
+                      <div class="input_section">
+                        <div><%= f.text_field :firstname, placeholder: "firstname", required: true, autofocus: true, placeholder: "First Name", label: false %></div>
+                        <div class="minor_info">This is used to identify you to other members.</div>
+                      </div>
+
+                      <div class="input_section">
+                        <div><%= f.text_field :lastname, placeholder: "lastname", required: true, autofocus: true, placeholder: "Last Name", label: false %></div>
+                        <div class="minor_info">This is used to identify you to other members.</div>
+                      </div>
+                      
+                      <div class="input_section">
+                        <div><%= f.input :email, required: true, autofocus: true, placeholder: "Email Address", label: false %></div>
+                        <div class="minor_info">Used as your login username and where we send your account notifications. We won't share this email address with other members.</div>
+                      </div>
+                      <div><%= f.association :category_gender, required: true, collection: CategoryGender.all, prompt: "Select Gender", label: false %></div>
+                      
+                      <div class="clear"></div>
+
+                      <div class="double_field">
+                        <ul>
+                          <li class="first_content"><%= f.association :category_country, required: true, collection: CategoryCountry.all, prompt: "Select Country", label: false, required: true %></li>
+                          <li class="second_content"><%= f.association :category_town, required: true, collection: CategoryTown.all, prompt: "Select Town", label: false, required: true %></li>
+                        </ul>
+                      </div>
+
+                      <div class="clear"></div>
+
+                      <div><%= f.association :category_segment, required: true, collection: CategorySegment.all, prompt: "Select Segment", label: false %></div>
+                      <div id="row_dim"><%= f.association :category_service, required: true, collection: CategoryService.all, prompt: "Select Service", label: false %></div>
+                      <div><%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %></div>
+                      <div><%= f.input :password_confirmation, required: true %></div>
+                      
+                      <div class="input_section">
+                        <span><%= f.input :terms, required: true, label: false%></span>
+                        <span class="minor_info">Please tick here to confirm that you have read and understood our <span class="weblink"><%= link_to "Terms and Conditions", terms_and_conditions_path %></span> and <span class="weblink"><%= link_to "Privacy Policy", privacy_and_cookie_policy_path %></span>.</span>
+                      </div>
+                    </div>
+
+                    <div class="form-actions">
+                      <%= f.button :submit, "Create A Free Account" %>
+                    </div>
+                  <% end %>
+                  <div class="form_links"><%= render "users/shared/links" %></div>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <!-- section -->
   </div>
-  <!-- section -->
 </div>

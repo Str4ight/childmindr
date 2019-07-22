@@ -38,17 +38,26 @@
   }
 }
 
-.content_designpg_section .inner_middle_content {
+.content_designpg_section .homepg_inner_content .inner_middle_content {
   background-color: transparent;
 }
 @media only screen and (min-width: 1250px) {
-  .content_designpg_section .inner_middle_content {
+  .content_designpg_section .homepg_inner_content .inner_middle_content,
+  .content_designpg_section .usertypes_inner_section .inner_middle_content,
+  .content_designpg_section .content_static_inner_pages .inner_middle_content,
+  .content_designpg_section .login_inner_content .inner_middle_content,
+  .content_designpg_section .register_inner_content .inner_middle_content,
+  .content_designpg_section .general_profile_edit_inner_section .inner_middle_content {
     width: 1200px;
     margin: auto;
   }
 }
 @media only screen and (min-width: 780px) {
-  .content_designpg_section .inner_middle_content {
+  .content_designpg_section .homepg_inner_content .inner_middle_content,
+  .content_designpg_section .usertypes_inner_section .inner_middle_content,
+  .content_designpg_section .content_static_inner_pages .inner_middle_content,
+  .content_designpg_section .login_inner_content .inner_middle_content,
+  .content_designpg_section .register_inner_content .inner_middle_content, {
     height: 550px;
   }
 }
@@ -766,30 +775,32 @@
 // -----------------------------
 //   workings
 // -----------------------------
-.content_designpg_section .user_show_inner_section .background_content {
-  height: 256px;
+
+@media only screen and (min-width: 1251px) {
+  .content_designpg_section .general_profile_edit_inner_section .background_content {
+    height: 256px;
+  }
 }
 
-.content_designpg_section .user_show_inner_section .main_img_cover .inner_img_cover {
-  // height: 95px !important;
+.content_designpg_section .general_profile_edit_inner_section .main_img_cover .inner_img_cover {
   height: 40px !important;
   border-radius: 0px !important;
-  // background-color: #F1EEEA;
-  // border: #F1EEEA;
   background-color: #fff;
   border: #fff;
 }
 
-.content_designpg_section .user_show_inner_section .tab_header ul li a {
+.content_designpg_section .general_profile_edit_inner_section .tab_header ul li a {
   height: 90px;
 }
 
-.content_designpg_section .user_show_inner_section .content_section {
+.content_designpg_section .general_profile_edit_inner_section .content_section {
   padding: 0px 0px 40px 0px !important;
   background-color: #fff;
 }
 
-
+.content_designpg_section .general_profile_edit_inner_section .middle_content {
+  z-index: 0 !important;
+}
 
 
 

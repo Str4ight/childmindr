@@ -71,42 +71,42 @@ class StaticPagesController < ApplicationController
   end
 
   def usersbabysitterspg
-    @search = User.babysitters.search(params[:q])
+    @search = User.client_providers.babysitters.search(params[:q])
     @users = @search.result(distinct: true).order("created_at DESC")
   end
 
   def userschildminderspg
-    @search = User.childminders.search(params[:q])
+    @search = User.client_providers.childminders.search(params[:q])
     @users = @search.result(distinct: true).order("created_at DESC")
   end
 
   def usersmaternitynursespg
-    @search = User.maternity_nurses.search(params[:q])
+    @search = User.client_providers.maternity_nurses.search(params[:q])
     @users = @search.result(distinct: true).order("created_at DESC")
   end
 
   def usersnanniespg
-    @search = User.nannies.search(params[:q])
+    @search = User.client_providers.nannies.search(params[:q])
     @users = @search.result(distinct: true).order("created_at DESC")
   end
 
   def usersaupairspg
-    @search = User.au_pairs.search(params[:q])
+    @search = User.client_providers.au_pairs.search(params[:q])
     @users = @search.result(distinct: true).order("created_at DESC")
   end
 
   def usersnurserynursespg
-    @search = User.nursery_nurse.search(params[:q])
+    @search = User.client_providers.nursery_nurse.search(params[:q])
     @users = @search.result(distinct: true).order("created_at DESC")
   end
 
   def usersprivatemidwivespg
-    @search = User.private_midwives.search(params[:q])
+    @search = User.client_providers.private_midwives.search(params[:q])
     @users = @search.result(distinct: true).order("created_at DESC")
   end
 
   def usershouseholdhelpspg
-    @search = User.household_helps.search(params[:q])
+    @search = User.client_providers.household_helps.search(params[:q])
     @users = @search.result(distinct: true).order("created_at DESC")
   end
   # ------------ user_types ------------
