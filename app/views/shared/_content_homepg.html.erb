@@ -36,8 +36,8 @@
               <div class="img_text_section">
                 <div class="mini_image_section"><%= image_tag("img_banner_04.png") %></div>
                 <div class="mini_text_section colour_green_text">
-                  <div class="mini_text_title">Lorem ipsum dolor sit amet</div>
-                  <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div>
+                  <div class="mini_text_title">Find A local childcare provider</div>
+                  <div>Parents can search for local childcare services such as babysitters, registered childminders, nannies, au pairs, nurseries etc and can also read reviews of local childcare providers. Searching is easy using our area search facility which shows the areas where childcare providers are located.</div>
                 </div>
                 <div class="search_content">
                   <%= search_form_for @search, url: child_carers_path do |f| %>
@@ -65,19 +65,20 @@
               <div class="mini_content_title colour_light_blue">our nurseries</div>
               <div class="img_text_section">
                 <div class="mini_image_section"><%= image_tag("img_banner_05.png") %></div>
-                <div class="mini_text_section colour_blue_text">
-                  <div class="mini_text_title">Lorem ipsum dolor sit amet</div>
-                  <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div>
+                <div class="mini_text_section colour_blue_text mini_text_overflow_left">
+                  <div class="mini_text_title">Find A local nursery</div>
+                  <div>A day nursery is a childcare centre that looks after children from birth to five years, though the exact age ranges vary from nursery to nursery. Staff at day nurseries are trained to develop a stimulating environment that will help your child to thrive. They will help your child learn, using a curriculum specially designed for children under five.</div><br/>
+                  <div>Find a local nursery in your area. Our search facility helps you choose the right nursery for you.</div>
                 </div>
                 <div class="search_content">
                   <%= search_form_for @search_school, url: schools_path do |f| %>
                     <ul>
-                      <li>
+                      <li class="hide">
                         <div class="serach_header">i am looking for a...</div>
                         <div><%= f.select :category_schooltype_id_eq, options_from_collection_for_select(CategorySchooltype.all, "id", "name", @search.category_service_id_eq), prompt: "Select Nursery" %></div>
                       </li>
                       <li>
-                        <div class="serach_header">in the following area...</div>
+                        <div class="serach_header">i am looking for a nursery in the following area...</div>
                         <div><%= f.select :category_town_id_eq, options_from_collection_for_select(CategoryTown.all, "id", "name", @search.category_town_id_eq), prompt: "Select Town" %></div>
                       </li>
                     </ul>
