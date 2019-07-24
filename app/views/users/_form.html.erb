@@ -25,16 +25,22 @@
     
     <div class="clear"></div>
 
-    <div class="medium-12 columns triple_field">
+    <div class="medium-12 columns double_main_field">
       <ul>
         <li class="first_section">
           <div class="form_label">first name</div>
           <div class="user_firstname_display"><%= "#{@user.firstname}" " #{@user.lastname}" %></div>
         </li>
         <li class="second_section"><%= f.association :category_gender, collection: CategoryGender.all, prompt: "select gender", label: "Gender" %></li>
-        <li class="third_section"><%= f.input :telephone, placeholder: "+233 24 20202 2007" %></li>
       </ul>
     </div>
+
+    <div class="double_main_field">
+        <ul>
+          <li class="first_section"><%= f.input :telephone, placeholder: "+233 24 20202 2007" %></li>
+          <li class="second_section"><%= f.input :email, placeholder: "#{@user.email}" %></li>
+        </ul>
+      </div>
 
     <div class="clear"></div>
 
