@@ -44,13 +44,13 @@ class User < ApplicationRecord
   scope :client_providers, ->() { joins(:category_segment).where('category_segments.name' => "Service Provider") }
   scope :client_parents, ->() { joins(:category_segment).where('category_segments.name' => "Parent") }
 
-  scope :au_pairs, ->() { joins(:category_service).where('category_services.name' => "Au Pair") }
   scope :babysitters, ->() { joins(:category_service).where('category_services.name' => "Babysitter") }
   scope :childminders, ->() { joins(:category_service).where('category_services.name' => "Childminder") }
   scope :maternity_nurses, ->() { joins(:category_service).where('category_services.name' => "Maternity Nurse") }
   scope :nannies, ->() { joins(:category_service).where('category_services.name' => "Nanny") }
   scope :nursery_nurse, ->() { joins(:category_service).where('category_services.name' => "Nursery Nurse") }
   scope :private_midwives, ->() { joins(:category_service).where('category_services.name' => "Private Midwife") }
+  scope :private_tutor, ->() { joins(:category_service).where('category_services.name' => "Private Tutor") }
   scope :household_helps, ->() { joins(:category_service).where('category_services.name' => "Household Help") }
 
   def slug_users
