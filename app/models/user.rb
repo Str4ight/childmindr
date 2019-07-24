@@ -27,6 +27,7 @@ class User < ApplicationRecord
 
   validates_presence_of :firstname, presence: true, message: "can't be blank"
   validates_presence_of :lastname, presence: true, message: "can't be blank"
+  validates_presence_of :telephone, presence: true, message: "can't be blank"
   validates :email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP }
   validates_presence_of :category_gender_id, presence: true, message: "can't be blank"
   validates_presence_of :category_country_id, presence: true, message: "can't be blank"

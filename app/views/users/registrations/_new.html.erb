@@ -43,6 +43,9 @@
                         <div><%= f.input :email, required: true, autofocus: true, placeholder: "Email Address", label: false %></div>
                         <div class="minor_info">Used as your login username and where we send your account notifications. We won't share this email address with other members.</div>
                       </div>
+                      <div class="input_section">
+                        <div><%= f.input :telephone, required: true, autofocus: true, placeholder: "Telephone Number", label: false %></div>
+                      </div>
                       <div><%= f.association :category_gender, required: true, collection: CategoryGender.all, prompt: "Select Gender", label: false %></div>
                       
                       <div class="clear"></div>
