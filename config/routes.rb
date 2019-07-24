@@ -40,7 +40,7 @@ Rails.application.routes.draw do
   get  'search/babysitters',          to: 'static_pages#usersbabysitterspg'
   get  'search/childminders',         to: 'static_pages#userschildminderspg'
   get  'search/nannies',              to: 'static_pages#usersnanniespg'
-  get  'search/au-pairs',             to: 'static_pages#usersaupairspg'
+  get  'search/private-tutors',             to: 'static_pages#usersprivatetutorpg'
   get  'search/nursery-nurses',       to: 'static_pages#usersnurserynursespg'
   get  'search/maternity-nurses',     to: 'static_pages#usersmaternitynursespg'
 

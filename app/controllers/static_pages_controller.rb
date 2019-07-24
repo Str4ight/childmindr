@@ -90,7 +90,7 @@ class StaticPagesController < ApplicationController
     @users = @search.result(distinct: true).order("created_at DESC")
   end
 
-  def usersaupairspg
+  def usersprivatetutorpg
     @search = User.client_providers.au_pairs.search(params[:q])
     @users = @search.result(distinct: true).order("created_at DESC")
   end

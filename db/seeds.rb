@@ -58,13 +58,13 @@ csk16 = Checklist.create!(name:'Mothers Help')
 
 
 CategoryService.delete_all
-csv01 = CategoryService.create!(name:'Au Pair')
-csv02 = CategoryService.create!(name:'Babysitter')
-csv03 = CategoryService.create!(name:'Childminder')
-csv04 = CategoryService.create!(name:'Maternity Nurse')
-csv05 = CategoryService.create!(name:'Nanny')
-csv06 = CategoryService.create!(name:'Nursery Nurse')
-csv07 = CategoryService.create!(name:'Private Midwife')
+csv01 = CategoryService.create!(name:'Babysitter')
+csv02 = CategoryService.create!(name:'Childminder')
+csv03 = CategoryService.create!(name:'Maternity Nurse')
+csv04 = CategoryService.create!(name:'Nanny')
+csv05 = CategoryService.create!(name:'Nursery Nurse')
+csv06 = CategoryService.create!(name:'Private Midwife')
+csv07 = CategoryService.create!(name:'Private Tutor')
 csv08 = CategoryService.create!(name:'Household Help')
 
 CategoryCountry.delete_all
