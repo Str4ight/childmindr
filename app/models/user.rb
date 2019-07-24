@@ -50,7 +50,7 @@ class User < ApplicationRecord
   scope :nannies, ->() { joins(:category_service).where('category_services.name' => "Nanny") }
   scope :nursery_nurse, ->() { joins(:category_service).where('category_services.name' => "Nursery Nurse") }
   scope :private_midwives, ->() { joins(:category_service).where('category_services.name' => "Private Midwife") }
-  scope :private_tutor, ->() { joins(:category_service).where('category_services.name' => "Private Tutor") }
+  scope :private_tutors, ->() { joins(:category_service).where('category_services.name' => "Private Tutor") }
   scope :household_helps, ->() { joins(:category_service).where('category_services.name' => "Household Help") }
 
   def slug_users

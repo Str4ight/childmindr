@@ -60,7 +60,7 @@
                       <div class="clear"></div>
 
                       <div><%= f.association :category_segment, required: true, collection: CategorySegment.all, prompt: "Select Segment", label: false %></div>
-                      <div id="row_dim"><%= f.association :category_service, required: true, collection: CategoryService.all, prompt: "Select Service", label: false %></div>
+                      <div id="row_dim"><%= f.association :category_service, required: true, collection: CategoryService.order(:name), prompt: "Select Service", label: false %></div>
                       <div><%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %></div>
                       <div><%= f.input :password_confirmation, required: true %></div>
                       

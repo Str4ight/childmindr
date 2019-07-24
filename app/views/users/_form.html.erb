@@ -52,7 +52,7 @@
       <div class="double_main_field">
         <ul>
           <li class="first_section"><%= f.input :price, label: "¢ Price (price / hr)", placeholder: "10" %></li>
-          <li class="second_section"><%= f.association :category_service, required: true, collection: CategoryService.all, prompt: "select service", label: "Service Category" %></li>
+          <li class="second_section"><%= f.association :category_service, required: true, collection: CategoryService.order(:name), prompt: "select service", label: "Service Category" %></li>
         </ul>
       </div>
       <div class="clear"></div>
