@@ -175,7 +175,8 @@
       <!-- admin_view -->
       <% if current_user.admin %>
         <div class="medium-12 columns admin_background">
-          <div class="admin_header">only displayed to admin</div>
+          <div class="admin_header">displayed only to admin</div>
+          <div class="dummy_data"><%= f.input :fake, label: "dummy data" %></div>
           <div><%= f.association :category_role, collection: CategoryRole.all, prompt: "select role", label: "Role" %></div>
         </div>
         <div class="medium-12 columns double_main_field admin_background hide">
