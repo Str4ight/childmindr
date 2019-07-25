@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190725071236) do
+ActiveRecord::Schema.define(version: 20190725071347) do
 
   create_table "category_ages", force: :cascade do |t|
     t.string "name"
@@ -201,6 +201,7 @@ ActiveRecord::Schema.define(version: 20190725071236) do
     t.string "town"
     t.integer "category_town_id"
     t.string "ref"
+    t.boolean "fake"
     t.index ["slug"], name: "index_schools_on_slug", unique: true
   end
 
