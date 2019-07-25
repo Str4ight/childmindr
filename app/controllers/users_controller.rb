@@ -70,6 +70,6 @@ class UsersController < ApplicationController
     end
 
     def user_params
-      params.require(:user).permit(:firstname, :lastname, :admin, :category_role_id, :category_segment_id, :birthdate, :terms, :postcode, :category_service_id, :category_gender_id, :category_country_id, :category_region_id, :category_zone_id, :category_town_id, :price, :about, :experience, :qualifications, :availability, :parent_id, :provider_id, :ref, :mondays, :tuesdays, :wednesdays, :thursdays, :fridays, :saturdays, :sundays, :mstart_time, :mend_time, :tstart_time, :tend_time, :wstart_time, :wend_time, :thstart_time, :thend_time, :fstart_time, :fend_time, :sstart_time, :send_time, :sustart_time, :suend_time, :approve, :image, :telephone, checklist_ids: [])
+      params.require(:user).permit(:firstname, :lastname, :admin, :category_role_id, :category_segment_id, :birthdate, :terms, :postcode, :category_service_id, :category_gender_id, :category_country_id, :category_region_id, :category_zone_id, :category_town_id, :price, :about, :experience, :qualifications, :availability, :parent_id, :provider_id, :ref, :mondays, :tuesdays, :wednesdays, :thursdays, :fridays, :saturdays, :sundays, :mstart_time, :mend_time, :tstart_time, :tend_time, :wstart_time, :wend_time, :thstart_time, :thend_time, :fstart_time, :fend_time, :sstart_time, :send_time, :sustart_time, :suend_time, :approve, :image, :telephone, :fake, checklist_ids: [])
     end
 end

@@ -83,6 +83,6 @@ class SchoolsController < ApplicationController
     end
 
     def school_params
-      params.require(:school).permit(:name, :image, :about, :service, :email, :telepone, :address, :latitude, :longitude, :postcode, :pupils, :offsetreportlink, :approve, :category_schooltype_id, :category_country_id, :category_region_id, :user_id, :start_age, :end_age, :category_zone_id, :town, :category_town_id, :ref)
+      params.require(:school).permit(:name, :image, :about, :service, :email, :telepone, :address, :latitude, :longitude, :postcode, :pupils, :offsetreportlink, :approve, :category_schooltype_id, :category_country_id, :category_region_id, :user_id, :start_age, :end_age, :category_zone_id, :town, :category_town_id, :ref, :fake)
     end
 end
