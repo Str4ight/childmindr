@@ -46,7 +46,7 @@
         <li class="first_section"><%= f.association :category_country, collection: CategoryCountry.all, prompt: "select country", label: "Select Country" %></li>
         <li class="second_section"><%= f.association :category_region, collection: CategoryRegion.all, prompt: "select city", label: "City" %></li>
         <li class="third_section">
-          <%= f.association :category_town, collection: CategoryTown.all, prompt: "select town", label: "town" %>
+          <%= f.association :category_town, collection: CategoryTown.order(:name), prompt: "select town", label: "town" %>
           <%# f.hidden_field :town %>
           <%# f.association :category_zone, collection: CategoryZone.all, prompt: "select a zone", label: "category zone" %>
           <%# f.grouped_collection_select :category_town_id, CategoryZone.order(:name), :category_towns, :name, :id, :name, include_blank: true, prompt: "town sub-category" %>

@@ -53,7 +53,7 @@
                       <div class="double_field">
                         <ul>
                           <li class="first_content"><%= f.association :category_country, required: true, collection: CategoryCountry.all, prompt: "Select Country", label: false, required: true %></li>
-                          <li class="second_content"><%= f.association :category_town, required: true, collection: CategoryTown.all, prompt: "Select Town", label: false, required: true %></li>
+                          <li class="second_content"><%= f.association :category_town, required: true, collection: CategoryTown.order(:name), prompt: "Select Town", label: false, required: true %></li>
                         </ul>
                       </div>
 

@@ -47,7 +47,7 @@
     <div class="medium-12 columns triple_field">
       <ul>
         <li class="first_section"><%= f.association :category_country, collection: CategoryCountry.all, prompt: "select country", label: false %></li>
-        <li class="first_section"><%= f.association :category_town, collection: CategoryTown.all, prompt: "select town", label: false %></li>
+        <li class="first_section"><%= f.association :category_town, collection: CategoryTown.order(:name), prompt: "select town", label: false %></li>
         <li class="third_section"><%= f.association :category_segment, collection: CategorySegment.all, prompt: "select segment", label: false %></li>
       </ul>
     </div>
